@@ -245,17 +245,29 @@
         "line-height:1.2",
         "font-weight:600",
         "letter-spacing:0.02em",
-        "color:rgba(238,238,255,0.72)",
-        "text-shadow:0 0 12px rgba(145,70,255,0.2)",
+        "color:rgba(245,245,255,0.9)",
+        "text-shadow:0 0 12px rgba(145,70,255,0.28)",
         "pointer-events:none",
         "user-select:none"
       ].join(";");
       document.body.appendChild(counter);
     }
+    counter.textContent = "1 visiteur en ligne";
 
     var namespace = "ai.underside.be";
     var dayStamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
     var minutePrefix = "presence-" + dayStamp + "-";
+    var tabId = null;
+
+    try {
+      tabId = sessionStorage.getItem("underside_tab_id");
+      if (!tabId) {
+        tabId = "tab-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 9);
+        sessionStorage.setItem("underside_tab_id", tabId);
+      }
+    } catch (err) {
+      tabId = "tab-fallback";
+    }
 
     function pad2(n) {
       return (n < 10 ? "0" : "") + n;
@@ -298,8 +310,35 @@
         });
     }
 
+    function getLocalPresenceEstimate() {
+      var nowTs = Date.now();
+      var prefix = "underside_tab_presence_";
+      var active = 0;
+      try {
+        localStorage.setItem(prefix + tabId, String(nowTs));
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+          var key = localStorage.key(i);
+          if (!key || key.indexOf(prefix) !== 0) continue;
+          var ts = Number(localStorage.getItem(key) || "0");
+          if (nowTs - ts <= 70000) {
+            active += 1;
+          } else {
+            localStorage.removeItem(key);
+          }
+        }
+      } catch (err) {
+        active = 1;
+      }
+      return Math.max(1, active);
+    }
+
+    function setCounterText(value) {
+      counter.textContent = value + " visiteur" + (value > 1 ? "s" : "") + " en ligne";
+    }
+
     function refreshPresence() {
       var now = new Date();
+      var localEstimate = getLocalPresenceEstimate();
       ensureMinuteHit(now)
         .then(function () {
           var prev = new Date(now.getTime() - 60000);
@@ -310,10 +349,10 @@
           var previous = values[1] || 0;
           // Estimated concurrent users from current + tail of previous minute activity.
           var estimated = Math.max(1, Math.round(current + previous * 0.35));
-          counter.textContent = estimated + " visiteur" + (estimated > 1 ? "s" : "") + " en ligne";
+          setCounterText(estimated);
         })
         .catch(function () {
-          counter.textContent = "";
+          setCounterText(localEstimate);
         });
     }
 
