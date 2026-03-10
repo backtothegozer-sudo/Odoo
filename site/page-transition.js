@@ -213,7 +213,9 @@
     }
 
     function refresh() {
-      var showAt = 340;
+      var path = (window.location.pathname || "").toLowerCase();
+      var isBlogOrNews = path.endsWith("/blog.html") || path.endsWith("/actualites.html");
+      var showAt = isBlogOrNews ? 180 : 340;
       btn.classList.toggle("is-visible", window.scrollY > showAt);
     }
 
