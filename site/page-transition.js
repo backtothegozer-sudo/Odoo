@@ -230,6 +230,97 @@
     refresh();
   }
 
+  function initLiveVisitorsCounter() {
+    var counter = document.querySelector(".live-visitors-counter");
+    if (!counter) {
+      counter = document.createElement("div");
+      counter.className = "live-visitors-counter";
+      counter.setAttribute("aria-live", "polite");
+      counter.style.cssText = [
+        "position:fixed",
+        "left:16px",
+        "bottom:calc(14px + env(safe-area-inset-bottom, 0px))",
+        "z-index:96",
+        "font-size:12px",
+        "line-height:1.2",
+        "font-weight:600",
+        "letter-spacing:0.02em",
+        "color:rgba(238,238,255,0.72)",
+        "text-shadow:0 0 12px rgba(145,70,255,0.2)",
+        "pointer-events:none",
+        "user-select:none"
+      ].join(";");
+      document.body.appendChild(counter);
+    }
+
+    var namespace = "ai.underside.be";
+    var dayStamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+    var minutePrefix = "presence-" + dayStamp + "-";
+
+    function pad2(n) {
+      return (n < 10 ? "0" : "") + n;
+    }
+
+    function minuteKey(dateObj) {
+      return minutePrefix + pad2(dateObj.getUTCHours()) + pad2(dateObj.getUTCMinutes());
+    }
+
+    function countApiUrl(mode, key) {
+      return "https://api.countapi.xyz/" + mode + "/" + namespace + "/" + key;
+    }
+
+    function fetchJson(url) {
+      return fetch(url, { cache: "no-store" }).then(function (res) {
+        if (!res.ok) throw new Error("countapi_unavailable");
+        return res.json();
+      });
+    }
+
+    function ensureMinuteHit(now) {
+      var key = minuteKey(now);
+      var sentMarkKey = "underside_presence_sent_" + key;
+      if (sessionStorage.getItem(sentMarkKey)) {
+        return Promise.resolve();
+      }
+      return fetchJson(countApiUrl("hit", key)).then(function () {
+        sessionStorage.setItem(sentMarkKey, "1");
+      });
+    }
+
+    function getMinuteCount(key) {
+      return fetchJson(countApiUrl("get", key))
+        .then(function (data) {
+          var value = data && typeof data.value === "number" ? data.value : 0;
+          return Math.max(0, value);
+        })
+        .catch(function () {
+          return 0;
+        });
+    }
+
+    function refreshPresence() {
+      var now = new Date();
+      ensureMinuteHit(now)
+        .then(function () {
+          var prev = new Date(now.getTime() - 60000);
+          return Promise.all([getMinuteCount(minuteKey(now)), getMinuteCount(minuteKey(prev))]);
+        })
+        .then(function (values) {
+          var current = values[0] || 0;
+          var previous = values[1] || 0;
+          // Estimated concurrent users from current + tail of previous minute activity.
+          var estimated = Math.max(1, Math.round(current + previous * 0.35));
+          counter.textContent = estimated + " visiteur" + (estimated > 1 ? "s" : "") + " en ligne";
+        })
+        .catch(function () {
+          counter.textContent = "";
+        });
+    }
+
+    refreshPresence();
+    window.setInterval(refreshPresence, 20000);
+  }
+
   function initMobileMenus() {
     var navs = document.querySelectorAll(".nav");
     if (!navs.length) return;
@@ -337,4 +428,5 @@
 
   ensureScrollTopBubble();
   initMobileMenus();
+  initLiveVisitorsCounter();
 })();
