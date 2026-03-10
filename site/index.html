@@ -1122,14 +1122,27 @@
       const motionToggle = document.getElementById("motionToggle");
       const isMobileView = window.matchMedia("(max-width: 900px)").matches || window.matchMedia("(pointer: coarse)").matches;
       const tilt = { x: 0, y: 0, enabled: false };
+      let motionStarted = false;
+      const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
 
       function applyOrientation(ev) {
         if (!tilt.enabled) return;
         const gamma = typeof ev.gamma === "number" ? ev.gamma : 0; // left/right
         const beta = typeof ev.beta === "number" ? ev.beta : 0; // front/back
-        const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
-        tilt.x = clamp(gamma / 45, -1, 1);
-        tilt.y = clamp(beta / 45, -1, 1);
+        const nextX = clamp(gamma / 35, -1, 1);
+        const nextY = clamp(beta / 35, -1, 1);
+        tilt.x = tilt.x * 0.72 + nextX * 0.28;
+        tilt.y = tilt.y * 0.72 + nextY * 0.28;
+      }
+
+      function applyMotion(ev) {
+        if (!tilt.enabled) return;
+        const acc = ev.accelerationIncludingGravity;
+        if (!acc) return;
+        const nextX = clamp((acc.x || 0) / 6, -1, 1);
+        const nextY = clamp((-acc.y || 0) / 6, -1, 1);
+        tilt.x = tilt.x * 0.68 + nextX * 0.32;
+        tilt.y = tilt.y * 0.68 + nextY * 0.32;
       }
 
       function setMotionEnabled(on) {
@@ -1138,18 +1151,29 @@
       }
 
       function startMotion() {
-        if (tilt.enabled) return;
+        if (motionStarted) {
+          setMotionEnabled(true);
+          return;
+        }
         window.addEventListener("deviceorientation", applyOrientation, true);
+        window.addEventListener("devicemotion", applyMotion, true);
+        motionStarted = true;
         setMotionEnabled(true);
       }
 
       async function enableMotionFromUserAction() {
         if (!("DeviceOrientationEvent" in window)) return;
         try {
+          let granted = true;
           if (typeof DeviceOrientationEvent.requestPermission === "function") {
             const state = await DeviceOrientationEvent.requestPermission();
-            if (state !== "granted") return;
+            granted = state === "granted";
           }
+          if (typeof DeviceMotionEvent !== "undefined" && typeof DeviceMotionEvent.requestPermission === "function") {
+            const mState = await DeviceMotionEvent.requestPermission();
+            granted = granted && mState === "granted";
+          }
+          if (!granted) return;
           startMotion();
         } catch (_) {
           // ignored
@@ -1278,14 +1302,18 @@
             c.vy += (dy / dist) * 0.02;
           }
           if (tilt.enabled) {
-            c.vx += tilt.x * 0.012;
-            c.vy += tilt.y * 0.012;
+            c.vx += tilt.x * 0.042;
+            c.vy += tilt.y * 0.042;
           }
 
           // move
           const speed = c.speed;
           c.x += c.vx * speed * 1.6;
           c.y += c.vy * speed * 1.6;
+          if (tilt.enabled) {
+            c.x += tilt.x * 0.68;
+            c.y += tilt.y * 0.68;
+          }
           c.vx *= 0.98;
           c.vy *= 0.98;
           if (c.x < 0 || c.x > width()) c.vx *= -1;
