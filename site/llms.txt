@@ -7,7 +7,7 @@
 
 ## Primary Pages
 - https://ai.underside.be/
-- https://ai.underside.be/blog.html
+- https://ai.underside.be/blog
 
 ## Articles
 - https://ai.underside.be/article-eviden-aws-souverain-2026.html

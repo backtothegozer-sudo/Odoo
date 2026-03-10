@@ -8,7 +8,7 @@
     "sitemap": "https://ai.underside.be/sitemap.xml",
     "robots": "https://ai.underside.be/robots.txt",
     "llms_txt": "https://ai.underside.be/llms.txt",
-    "blog": "https://ai.underside.be/blog.html"
+    "blog": "https://ai.underside.be/blog"
   },
   "connectors": [
     {
@@ -26,7 +26,7 @@
     {
       "id": "blog-knowledge",
       "type": "article-corpus",
-      "entrypoint": "https://ai.underside.be/blog.html",
+      "entrypoint": "https://ai.underside.be/blog",
       "notes": "Long-form sovereign AI analyses with source links."
     }
   ],
