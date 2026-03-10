@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique RGPD | Underside IA Souveraine</title>
+  <meta name="description" content="Politique RGPD d'Underside pour ai.underside.be: données collectées, finalités, durée de conservation, droits des personnes et contact." />
+  <link rel="canonical" href="https://ai.underside.be/gdpr" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Politique RGPD | Underside" />
+  <meta property="og:description" content="Informations de protection des données pour les visiteurs d'ai.underside.be." />
+  <meta property="og:url" content="https://ai.underside.be/gdpr" />
+  <meta property="og:image" content="https://ai.underside.be/favicon-512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Politique RGPD | Underside" />
+  <meta name="twitter:description" content="Informations de protection des données pour les visiteurs d'ai.underside.be." />
+  <meta name="twitter:image" content="https://ai.underside.be/favicon-512.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <style>
+    :root {
+      --bg: #05060b;
+      --ink: #f7f9ff;
+      --ink-2: #c4c9da;
+      --line: rgba(255, 255, 255, 0.14);
+      --grad-a: #e64bff;
+      --grad-b: #4b5bff;
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 50% -20%, rgba(140, 36, 160, 0.24), transparent 50%),
+        linear-gradient(180deg, #07080f 0%, #05060b 100%);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+    .wrap { width: min(1000px, 92vw); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(8, 9, 14, 0.82);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .nav {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand img { height: 50px; width: auto; display: block; }
+    .links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .links a {
+      color: var(--ink-2);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .links a:hover { color: #fff; }
+    main { padding: 34px 0 60px; }
+    .hero {
+      margin-bottom: 24px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(160deg, rgba(230, 75, 255, 0.16), rgba(16, 17, 26, 0.88) 58%);
+      box-shadow: var(--shadow);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.06;
+    }
+    .hero p { margin: 0; color: var(--ink-2); }
+    .card {
+      margin: 16px 0;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(10, 10, 12, 0.92);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.2;
+    }
+    p, li {
+      color: var(--ink-2);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    ul { margin: 10px 0 0; padding-left: 18px; }
+    .note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed rgba(255, 255, 255, 0.24);
+      border-radius: 12px;
+      color: var(--ink-2);
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 20px 0 42px;
+      color: var(--ink-2);
+      font-size: 13px;
+      text-align: center;
+    }
+    a.inline {
+      color: #f5d9ff;
+      text-decoration: underline;
+      text-decoration-color: rgba(230, 75, 255, 0.6);
+      text-underline-offset: 3px;
+    }
+    @media (max-width: 860px) {
+      .nav { height: auto; min-height: 82px; padding: 10px 0; align-items: flex-start; flex-direction: column; }
+      .links { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/"><img src="Underside2018_blanc.png" alt="Underside" /></a>
+      <nav class="links" aria-label="Navigation principale">
+        <a href="/#services">Services</a>
+        <a href="/#souverainete">Souveraineté</a>
+        <a href="/actualites">Actualités</a>
+        <a href="/blog">Blog</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <h1>Politique RGPD</h1>
+        <p>Version en vigueur au 10 mars 2026 pour le site <strong>ai.underside.be</strong>.</p>
+      </section>
+
+      <section class="card">
+        <h2>1. Responsable du traitement</h2>
+        <p>
+          Underside — 5 Avenue Georges Lemaitre, 6041 Charleroi, Belgique.<br />
+          TVA: BE0471.729.212<br />
+          Contact confidentialité: <a class="inline" href="mailto:info@underside.be">info@underside.be</a>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. Données collectées</h2>
+        <ul>
+          <li>Données transmises volontairement via formulaire ou e-mail: nom, société, e-mail, message.</li>
+          <li>Données techniques minimales de navigation: pages consultées, date/heure, agent utilisateur, adresse IP tronquée ou pseudonymisée selon l'outil d'analyse configuré.</li>
+          <li>Le site n'effectue pas de prise de décision automatisée produisant des effets juridiques sur les visiteurs.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3. Finalités et bases légales</h2>
+        <ul>
+          <li>Répondre aux demandes de contact et de diagnostic (exécution de mesures précontractuelles).</li>
+          <li>Assurer la sécurité, l'intégrité et le bon fonctionnement du site (intérêt légitime).</li>
+          <li>Mesurer l'audience de manière proportionnée et orienter les améliorations éditoriales (intérêt légitime, ou consentement si requis par votre configuration cookies).</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4. Destinataires et sous-traitants</h2>
+        <p>
+          Les données peuvent être traitées par des prestataires techniques (hébergement, e-mailing, analytics, CRM), uniquement dans le cadre d'un contrat de sous-traitance conforme au RGPD.
+          Les accès sont limités au strict besoin opérationnel.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>5. Durées de conservation</h2>
+        <ul>
+          <li>Demandes de contact: jusqu'à 24 mois après le dernier échange actif.</li>
+          <li>Données techniques de logs: durée courte proportionnée aux impératifs de sécurité et d'exploitation.</li>
+          <li>Données nécessaires à des obligations légales: durée imposée par la réglementation applicable.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>6. Vos droits</h2>
+        <p>
+          Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité (dans les conditions prévues par le RGPD).
+          Vous pouvez exercer ces droits via <a class="inline" href="mailto:info@underside.be">info@underside.be</a>.
+          Vous pouvez également introduire une réclamation auprès de l'autorité de contrôle compétente.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>7. Cookies et traceurs</h2>
+        <p>
+          Si des cookies non strictement nécessaires sont utilisés (analytics, marketing, préférences), un mécanisme de consentement explicite doit être présenté avant dépôt.
+          Les cookies strictement nécessaires au fonctionnement du site peuvent être déposés sans consentement préalable.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>8. Sécurité et transferts internationaux</h2>
+        <ul>
+          <li>Mesures techniques et organisationnelles adaptées: contrôle d'accès, chiffrement en transit, journalisation, sauvegardes.</li>
+          <li>Tout transfert hors EEE est encadré par des garanties appropriées (clauses contractuelles types, décision d'adéquation, ou équivalent applicable).</li>
+        </ul>
+      </section>
+
+      <p class="note">
+        Cette page constitue un socle opérationnel. Pour une conformité complète (registre des traitements, DPA, CMP cookies, procédures d'exercice des droits), une validation juridique finale est recommandée.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Underside</strong> · 5 Avenue Georges Lemaitre · 6041 Charleroi · Belgique · TVA: BE0471.729.212
+    </div>
+  </footer>
+
+  <script src="page-transition.js" defer></script>
+</body>
+</html>
