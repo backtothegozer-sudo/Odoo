@@ -2470,3 +2470,51 @@ After doing this, you may fix the identity used for this commit with:
  create mode 100644 site/favicon-work.png
 To github.com:backtothegozer-sudo/AI.git
    6b5fbb9..c01d316  main -> main
+[main 001177f] cron: auto-push 2026-03-10_11-48-54
+ Committer: Christophe Degraeve <christophedegraeve@Mac-de-Christophe-Degraeve.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 32 files changed, 4743 insertions(+), 65 deletions(-)
+ create mode 100644 .DS_Store
+ create mode 100644 README.md
+ create mode 100644 cron-push.log
+ create mode 100644 site/.well-known/mcp.json
+ create mode 100644 site/actualites.html
+ create mode 100644 site/apple-touch-icon.png
+ create mode 100644 site/article-chatgpt-excel-2026.html
+ create mode 100644 site/article-commission-cloud-ai-2025.html
+ create mode 100644 site/article-consilium-2026.html
+ create mode 100644 site/article-eurohpc-2026.html
+ create mode 100644 site/article-gpai-2025.html
+ create mode 100644 site/article-gtc-2026.html
+ create mode 100644 site/article-hypernova-60b-2026.html
+ create mode 100644 site/article-nvidia-resultats-2026.html
+ create mode 100644 site/article-openai-aws-2026.html
+ create mode 100644 site/article-openai-financement-2026.html
+ create mode 100644 site/blog.html
+ create mode 100644 site/decepticon-logo.jpg
+ create mode 100644 site/decepticon_logo_.png
+ create mode 100644 site/favicon-32x32.png
+ create mode 100644 site/favicon-512.png
+ create mode 100644 site/favicon-test-left.png
+ create mode 100644 site/favicon-test-right.png
+ create mode 100644 site/favicon-work.png
+ create mode 100644 site/favicon.ico
+ create mode 100644 site/llms.txt
+ create mode 100644 site/page-transition.css
+ create mode 100644 site/page-transition.js
+ create mode 100644 site/robots.txt
+ create mode 100644 site/site.webmanifest
+ create mode 100644 site/sitemap.xml
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/backtothegozer-sudo/AI.git/'
