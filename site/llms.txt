@@ -1,0 +1,25 @@
+# Underside - IA Souveraine
+
+> Ce site présente les services d'intégration d'IA souveraine d'Underside, avec un blog d'analyses technologiques orientées entreprises.
+
+## Canonical
+- https://ai.underside.be/
+
+## Primary Pages
+- https://ai.underside.be/
+- https://ai.underside.be/blog.html
+
+## Articles
+- https://ai.underside.be/article-chatgpt-excel-2026.html
+- https://ai.underside.be/article-hypernova-60b-2026.html
+- https://ai.underside.be/article-nvidia-resultats-2026.html
+- https://ai.underside.be/article-openai-financement-2026.html
+- https://ai.underside.be/article-commission-cloud-ai-2025.html
+- https://ai.underside.be/article-gtc-2026.html
+- https://ai.underside.be/article-openai-aws-2026.html
+- https://ai.underside.be/article-eurohpc-2026.html
+- https://ai.underside.be/article-consilium-2026.html
+- https://ai.underside.be/article-gpai-2025.html
+
+## Contact
+- https://ai.underside.be/#contact

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenAI x AWS: gouvernance hybride et souveraineté | Underside</title>
+  <meta name="description" content="Lecture technique du partenariat OpenAI x AWS: quelles charges externaliser, quelles charges conserver, et comment gouverner la conformité." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://ai.underside.be/article-openai-aws-2026.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="OpenAI x AWS: gouvernance hybride et souveraineté" />
+  <meta property="og:description" content="Cadre concret pour arbitrer cloud et on-premise dans une trajectoire IA souveraine." />
+  <meta property="og:url" content="https://ai.underside.be/article-openai-aws-2026.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="alternate" type="application/json" title="MCP Connectors" href="/.well-known/mcp.json" />
+  <style>
+    :root { --bg:#060607; --ink:#f5f7fb; --muted:#cbd2dc; --line:rgba(255,255,255,.12); --accent:#e64bff; --accent2:#4b5bff; }
+    * { box-sizing:border-box; } body { margin:0; font-family:Manrope,system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+    .wrap { max-width:980px; margin:0 auto; padding:0 24px; } header { padding:28px 0; border-bottom:1px solid rgba(255,255,255,.06); }
+    a { color:inherit; text-decoration:none; } .back { display:inline-block; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+    h1 { font-size:clamp(34px,5vw,52px); line-height:1.08; margin:28px 0 10px; } .meta { color:var(--muted); font-size:14px; }
+    article { padding:28px 0 40px; } .lead { font-size:20px; line-height:1.6; color:var(--ink); font-weight:600; }
+    h2 { margin:30px 0 10px; font-size:26px; line-height:1.2; } p { font-size:17px; line-height:1.84; color:var(--muted); }
+    .box { margin:24px 0; padding:20px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.03); }
+    .cta { display:inline-block; margin-top:12px; padding:11px 18px; border-radius:999px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; }
+    .share-bar { margin:14px 0 0; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .share-label { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+    .share-pill { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.04); font-size:0; color:var(--ink); }
+    .share-icon { font-size:14px; line-height:1; font-weight:700; }
+  </style>
+  <link rel="stylesheet" href="page-transition.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"OpenAI x AWS: gouvernance hybride et souveraineté","datePublished":"2026-03-09","dateModified":"2026-03-09","inLanguage":"fr-BE","author":{"@type":"Organization","name":"Underside"},"publisher":{"@type":"Organization","name":"Underside"},"mainEntityOfPage":"https://ai.underside.be/article-openai-aws-2026.html"}</script>
+</head>
+<body>
+  <header><div class="wrap"><a class="back" href="blog.html">Retour au blog</a></div></header>
+  <main class="wrap"><article>
+    <h1>OpenAI x AWS: gouvernance hybride et souveraineté</h1>
+    <p class="meta">Article créé le 9 mars 2026 · Événement analysé: 27 février 2026 · Source: OpenAI</p>
+      <div class="share-bar" aria-label="Partager cet article">
+        <span class="share-label">Partager</span>
+        <a class="share-pill" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fai.underside.be%2Farticle-openai-aws-2026.html" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+        <a class="share-pill" href="https://x.com/intent/tweet?text=OpenAI%20x%20AWS%3A%20gouvernance%20hybride%20et%20souverainet%C3%A9&url=https%3A%2F%2Fai.underside.be%2Farticle-openai-aws-2026.html" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+        <a class="share-pill" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fai.underside.be%2Farticle-openai-aws-2026.html" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+      </div>
+    <p class="lead">Le partenariat OpenAI x AWS accélère les capacités d’exécution enterprise. Pour une organisation souveraine, la question n’est pas “cloud ou non”, mais “quels traitements, sous quelles règles, avec quelles preuves”.</p>
+
+    <h2>1. Arbitrer sans improviser</h2>
+    <p>Le modèle hybride performant repose sur une matrice simple mais stricte: criticité de la donnée, sensibilité réglementaire, besoin de latence, besoin de scalabilité. Sans cette matrice, les décisions se prennent au cas par cas, avec une dérive rapide des coûts et des risques de conformité.</p>
+
+    <h2>2. Gouvernance technique minimale à imposer</h2>
+    <p>Trois niveaux doivent être imposés dès le départ: classification des données, exigences de chiffrement/identité, et journalisation auditable de tous les appels modèles. Ce socle permet de démontrer la conformité et d’éviter les zones grises entre équipes IT, sécurité et métiers.</p>
+
+    <h2>3. Impact business</h2>
+    <p>Bien gouverné, l’hybride offre le meilleur ratio vitesse/maîtrise: capacité de montée en charge sur les usages non sensibles, et contrôle maximal sur les processus critiques internes. C’est ce découpage qui sécurise l’adoption à grande échelle.</p>
+
+    <div class="box">
+      <strong>CTA opérationnel</strong>
+      <p>Construire une politique d’architecture hybride avec règles d’éligibilité des usages et contrôles de conformité outillés.</p>
+      <a class="cta" href="index.html#contact">Structurer la gouvernance hybride</a>
+    </div>
+
+    <p><a href="https://openai.com/index/amazon-partnership/" target="_blank" rel="noopener">Lire la source officielle</a></p>
+  </article></main>
+  <script src="page-transition.js" defer></script>
+</body>
+</html>

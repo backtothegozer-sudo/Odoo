@@ -1,0 +1,41 @@
+{
+  "name": "Underside MCP Discovery",
+  "version": "1.0.0",
+  "description": "MCP-ready discovery layer for AI indexing and contextual retrieval.",
+  "website": "https://ai.underside.be/",
+  "updated_at": "2026-03-09",
+  "resources": {
+    "sitemap": "https://ai.underside.be/sitemap.xml",
+    "robots": "https://ai.underside.be/robots.txt",
+    "llms_txt": "https://ai.underside.be/llms.txt",
+    "blog": "https://ai.underside.be/blog.html"
+  },
+  "connectors": [
+    {
+      "id": "site-content",
+      "type": "http-resource-index",
+      "entrypoint": "https://ai.underside.be/sitemap.xml",
+      "notes": "Primary crawl/index source for pages and articles."
+    },
+    {
+      "id": "llm-context",
+      "type": "llms-txt",
+      "entrypoint": "https://ai.underside.be/llms.txt",
+      "notes": "Concise context map optimized for AI assistants."
+    },
+    {
+      "id": "blog-knowledge",
+      "type": "article-corpus",
+      "entrypoint": "https://ai.underside.be/blog.html",
+      "notes": "Long-form sovereign AI analyses with source links."
+    }
+  ],
+  "planned_servers": [
+    {
+      "id": "underside-mcp-content",
+      "transport": "streamable-http",
+      "status": "planned",
+      "notes": "Future MCP server for structured content retrieval and semantic search."
+    }
+  ]
+}

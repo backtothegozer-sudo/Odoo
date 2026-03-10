@@ -13,6 +13,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.underside.be/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" type="application/json" title="MCP Connectors" href="/.well-known/mcp.json" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -86,12 +91,29 @@
         radial-gradient(600px 300px at 50% 70%, rgba(230, 75, 255, 0.55), transparent 75%),
         var(--paper);
     }
+    body.mobile-menu-open {
+      overflow: hidden;
+      touch-action: none;
+    }
     a { color: inherit; text-decoration: none; }
     .page {
       position: relative;
       overflow: hidden;
     }
     .grain { display: none; }
+    .mobile-menu-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 4, 8, 0.58);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.24s ease;
+    }
+    .mobile-menu-backdrop.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
 
     header {
       position: sticky;
@@ -101,6 +123,9 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       z-index: 10;
     }
+    body.mobile-menu-open header {
+      z-index: 110;
+    }
     .nav {
       max-width: 1200px;
       margin: 0 auto;
@@ -109,7 +134,36 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      flex-wrap: wrap;
+      row-gap: 10px;
     }
+    .burger-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(10, 10, 12, 0.8);
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0;
+      cursor: pointer;
+    }
+    .burger-btn span {
+      display: block;
+      width: 20px;
+      height: 2.5px;
+      background: #fff;
+      border-radius: 2px;
+      transform-origin: center;
+      transition: transform 0.22s ease, opacity 0.2s ease;
+    }
+    .nav.is-open .burger-btn span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav.is-open .burger-btn span:nth-child(2) { opacity: 0; }
+    .nav.is-open .burger-btn span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
     .brand {
       display: flex;
       align-items: center;
@@ -129,6 +183,10 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: rgba(245, 247, 251, 0.72);
+      flex: 1 1 auto;
+      min-width: 0;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     .cta {
       display: inline-flex;
@@ -144,23 +202,29 @@
       box-shadow: 0 12px 30px rgba(230, 75, 255, 0.35);
     }
     .cta:hover { transform: translateY(-2px); }
+    .cta-diagnostic {
+      animation: diagnosticBlink 3.8s ease-in-out infinite;
+    }
 
     .hero {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 6px 24px 60px;
+      padding: 0 24px 60px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      align-items: center;
+      column-gap: 40px;
+      row-gap: 0;
+      align-items: start;
       position: relative;
     }
     .evo {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3px 24px 0;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
     }
     .evo-panel {
+      --catch-y: 50%;
       border: none;
       border-radius: 18px;
       background: rgba(10, 10, 12, 0.35);
@@ -169,22 +233,39 @@
       position: relative;
       overflow: hidden;
     }
+    .evo-catch {
+      position: absolute;
+      left: 50%;
+      top: var(--catch-y);
+      transform: translate(-50%, -50%);
+      z-index: 25;
+      margin: 0;
+      width: min(1200px, 92vw);
+      text-align: center;
+      font-size: clamp(30px, 5vw, 68px);
+      line-height: 1.06;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      color: rgba(245, 247, 251, 0.95);
+      text-shadow: 0 10px 34px rgba(0, 0, 0, 0.55), 0 0 18px rgba(230, 75, 255, 0.25);
+      pointer-events: none;
+    }
     .evo-panel::after {
       content: "";
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0;
-      height: 50%;
-      background: linear-gradient(180deg, rgba(6, 6, 7, 0) 0%, rgba(6, 6, 7, 0.6) 45%, rgba(6, 6, 7, 1) 100%);
+      height: 22%;
+      background: linear-gradient(180deg, rgba(6, 6, 7, 0) 0%, rgba(6, 6, 7, 0.35) 70%, rgba(6, 6, 7, 0.75) 100%);
       pointer-events: none;
     }
     .evo-canvas {
       width: 100%;
-      height: 220px;
+      height: clamp(360px, 52vh, 620px);
       display: block;
       border-radius: 14px;
-      background: radial-gradient(240px 140px at 50% 60%, rgba(230, 75, 255, 0.18), transparent 70%);
+      background: radial-gradient(240px 140px at 50% var(--catch-y), rgba(230, 75, 255, 0.18), transparent 70%);
     }
     .hero .glowline {
       position: absolute;
@@ -208,6 +289,25 @@
       color: var(--ink-2);
       line-height: 1.6;
       margin: 0 0 24px;
+    }
+    .hero-main {
+      min-width: 0;
+    }
+    .hero-bridge {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: clamp(20px, 2.3vw, 30px);
+      font-weight: 700;
+      line-height: 1.34;
+      letter-spacing: 0.01em;
+    }
+    .hero-bridge-wrap {
+      min-width: 0;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
     .hero .pill {
       display: inline-flex;
@@ -497,9 +597,95 @@
       font-size: 13px;
     }
 
+    @media (max-width: 980px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+      }
+    }
+    @media (max-width: 900px) {
+      .nav {
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .burger-btn {
+        display: inline-flex;
+        position: relative;
+        z-index: 42;
+      }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(84vw, 360px);
+        height: 100dvh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 0;
+        padding: calc(var(--mobile-header-h, 84px) + 20px) 22px 24px;
+        border-left: 1px solid rgba(255, 255, 255, 0.16);
+        font-size: 19px;
+        letter-spacing: 0.01em;
+        text-transform: none;
+        font-weight: 600;
+        background: linear-gradient(180deg, rgba(20, 22, 38, 0.98), rgba(14, 16, 28, 0.98));
+        box-shadow: -30px 0 48px rgba(0, 0, 0, 0.42);
+        transform: translateX(100%);
+        transition: transform 0.32s cubic-bezier(0.22, 0.9, 0.25, 1);
+        z-index: 40;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        isolation: isolate;
+        opacity: 1;
+        filter: none;
+      }
+      .nav.is-open .nav-links {
+        transform: translateX(0);
+      }
+      .nav-links { z-index: 120; }
+      .burger-btn { z-index: 121; }
+    }
     @media (max-width: 720px) {
-      .nav-links { display: none; }
-      .cta { width: 100%; justify-content: center; }
+      .evo-panel {
+        --catch-y: 43%;
+      }
+      .hero-actions .cta,
+      .cta-block .cta { width: 100%; justify-content: center; }
+      .hero-actions {
+        margin-bottom: 18px;
+      }
+      .evo-panel {
+        min-height: calc(100dvh - var(--mobile-header-h, 84px));
+      }
+      .evo-canvas {
+        height: calc(100dvh - var(--mobile-header-h, 84px));
+        min-height: calc(100svh - var(--mobile-header-h, 84px));
+      }
+      .evo-catch {
+        font-size: clamp(32px, 10vw, 46px);
+      }
+    }
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "main main"
+          "bridge card";
+        align-items: start;
+      }
+      .hero-main {
+        grid-area: main;
+      }
+      .hero-bridge-wrap { grid-area: bridge; align-self: start; }
+      .hero-bridge { margin-top: 0; }
+      .hero-card {
+        grid-area: card;
+        align-self: start;
+      }
     }
 
     .reveal {
@@ -559,7 +745,18 @@
       0%, 49% { opacity: 1; }
       50%, 100% { opacity: 0; }
     }
+    @keyframes diagnosticBlink {
+      0%, 100% {
+        box-shadow: 0 12px 30px rgba(230, 75, 255, 0.30);
+        filter: brightness(1);
+      }
+      50% {
+        box-shadow: 0 16px 36px rgba(230, 75, 255, 0.55);
+        filter: brightness(1.12);
+      }
+    }
   </style>
+  <link rel="stylesheet" href="page-transition.css" />
 </head>
 <body>
   <div class="page">
@@ -578,36 +775,41 @@
         <div class="brand">
           <img src="Underside2018_blanc.png" alt="Underside" />
         </div>
+        <button class="burger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#clients">Références</a>
           <a href="#souverainete">Souveraineté</a>
           <a href="#process">Méthode</a>
-          <a href="#news">Actualités</a>
+          <a href="actualites.html">Actualités</a>
+          <a href="blog.html">Blog</a>
           <a href="#contact">Contact</a>
         </div>
-        <a class="cta" href="#contact">Prenons contact !</a>
       </nav>
     </header>
 
     <section class="evo">
       <div class="evo-panel">
+        <p class="evo-catch">Nous croyons en une IA éthique et souveraine.</p>
         <canvas id="evoCanvas" class="evo-canvas" width="1200" height="160" aria-label="Mini simulation visuelle de l'évolution"></canvas>
       </div>
     </section>
 
     <section class="hero">
       <div class="glowline" aria-hidden="true"></div>
-      <div>
+      <div class="hero-main">
         <h1 class="reveal pulse-text">Solutions d'IA souveraines, sécurisées et haute performance.<span class="c64-cursor" aria-hidden="true"></span></h1>
-        <p class="reveal delay-1">
+      </div>
+      <div class="hero-bridge-wrap">
+        <p class="hero-bridge reveal delay-1">
           Nous déployons des intelligences artificielles souveraines là où vos données vivent déjà.
           Des plateformes IA industrielles, robustes et durables en production,
           conçues pour les DSI, directions métiers et comités exécutifs.
         </p>
-        <div class="reveal delay-2" style="display:flex; gap:14px; flex-wrap:wrap;">
-          <a class="cta" href="#contact">Démarrer un diagnostic</a>
-          <a class="cta" style="background: transparent; color: var(--ink); border:1px solid var(--line); box-shadow:none;" href="#services">Voir nos services</a>
+        <div class="hero-actions reveal delay-2">
+          <a class="cta cta-diagnostic" href="#contact">Démarrer un diagnostic</a>
         </div>
       </div>
       <div class="hero-card reveal delay-2">
@@ -678,6 +880,7 @@
         <div class="client reveal">FN Herstal</div>
         <div class="client reveal delay-1">Chancellerie du Premier ministre</div>
         <div class="client reveal delay-2">Carrefour</div>
+        <div class="client reveal delay-3">Police Fédérale</div>
       </div>
     </section>
 
@@ -804,52 +1007,30 @@
     <section id="news" class="section band">
       <h2 class="reveal glow-underline">Actualités IA.</h2>
       <p class="lead reveal delay-1">
-        Mini‑veille ouverte sur l'écosystème IA: infrastructure, régulation, plateformes et usages.
-        Mise à jour: 8 mars 2026.
+        Les 3 dernières actualités. Pour la veille complète, consultez la page dédiée.
       </p>
       <div class="news-grid">
         <article class="news-card reveal">
+          <time datetime="2026-03-05">5 mars 2026</time>
+          <h3>OpenAI lance ChatGPT pour Excel (beta).</h3>
+          <p>Nouveau module Excel et intégrations de données financières pour les workflows d'analyse.</p>
+          <a href="https://openai.com/index/chatgpt-for-excel/" target="_blank" rel="noopener">Lire la source</a>
+        </article>
+        <article class="news-card reveal delay-1">
           <time datetime="2026-03-03">3 mars 2026</time>
-          <h3>NVIDIA confirme GTC 2026 (San Jose).</h3>
-          <p>La conférence mondiale sur l'IA et le calcul accéléré se tiendra du 16 au 19 mars 2026.</p>
+          <h3>NVIDIA annonce GTC 2026 et 1 000+ sessions IA.</h3>
+          <p>La conférence mondiale IA de NVIDIA se tient du 16 au 19 mars 2026 à San Jose.</p>
           <a href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener">Lire la source</a>
         </article>
-        <article class="news-card reveal delay-1">
+        <article class="news-card reveal delay-2">
           <time datetime="2026-02-27">27 fév. 2026</time>
           <h3>OpenAI et Amazon annoncent un partenariat stratégique.</h3>
-          <p>OpenAI lance son programme Frontier sur AWS avec 2 GW de capacité Trainium.</p>
+          <p>AWS distribuera Frontier, et OpenAI consommera 2 GW de capacité Trainium.</p>
           <a href="https://openai.com/index/amazon-partnership/" target="_blank" rel="noopener">Lire la source</a>
         </article>
-        <article class="news-card reveal delay-2">
-          <time datetime="2026-02-24">24 fév. 2026</time>
-          <h3>HyperNova 60B disponible en open access.</h3>
-          <p>Multiverse Computing publie son modèle 60B compressé sur Hugging Face.</p>
-          <a href="https://multiversecomputing.com/blog-hypernova-60b-open-access-hugging-face/" target="_blank" rel="noopener">Lire la source</a>
-        </article>
-        <article class="news-card reveal delay-3">
-          <time datetime="2026-01-20">20 janv. 2026</time>
-          <h3>EuroHPC: mandat élargi pour le supercalcul IA.</h3>
-          <p>Le conseil d'administration approuve une extension du mandat EuroHPC JU.</p>
-          <a href="https://eurohpc-ju.europa.eu/eurohpc-ju-governing-board-approves-extension-mandate-eurohpc-ju-2026-01-20_en" target="_blank" rel="noopener">Lire la source</a>
-        </article>
-        <article class="news-card reveal">
-          <time datetime="2026-01-19">19 janv. 2026</time>
-          <h3>L'Europe amende le règlement EuroHPC.</h3>
-          <p>Pour faciliter les AI gigafactories et les capacités de calcul en Europe.</p>
-          <a href="https://digital-strategy.ec.europa.eu/en/news/commission-welcomes-amendment-eurohpc-regulation" target="_blank" rel="noopener">Lire la source</a>
-        </article>
-        <article class="news-card reveal delay-1">
-          <time datetime="2026-01-16">16 janv. 2026</time>
-          <h3>UE: feu vert pour créer des AI gigafactories.</h3>
-          <p>Le Conseil de l'UE modifie le cadre EuroHPC pour faciliter de grandes infrastructures IA en Europe.</p>
-          <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/01/16/artificial-intelligence-council-paves-the-way-for-the-creation-of-ai-gigafactories/" target="_blank" rel="noopener">Lire la source</a>
-        </article>
-        <article class="news-card reveal delay-2">
-          <time datetime="2026-01-05">5 janv. 2026</time>
-          <h3>NVIDIA dévoile la plateforme Vera Rubin.</h3>
-          <p>Annonce au CES 2026 de la prochaine plateforme GPU dédiée à l'IA.</p>
-          <a href="https://www.theverge.com/2026/1/5/24338691/nvidia-ces-2026-rtx-gpus-5070-5090-huang" target="_blank" rel="noopener">Lire la source</a>
-        </article>
+      </div>
+      <div class="reveal delay-2" style="margin-top:22px;">
+        <a class="cta" href="actualites.html">Voir toutes les actualités</a>
       </div>
     </section>
 
@@ -871,6 +1052,7 @@
         <div style="display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between;">
           <strong>Underside</strong>
           <span>5 Avenue Georges Lemaitre · 6041 Charleroi · Belgique</span>
+          <span>TVA: BE0471.729.212</span>
           <span>© 2026 Underside</span>
         </div>
       </div>
@@ -878,6 +1060,18 @@
   </div>
   <script>
     (function () {
+      const header = document.querySelector("header");
+      function syncMobileHeaderHeight() {
+        if (!header) return;
+        const h = Math.ceil(header.getBoundingClientRect().height);
+        document.documentElement.style.setProperty("--mobile-header-h", `${h}px`);
+      }
+      syncMobileHeaderHeight();
+      window.addEventListener("resize", syncMobileHeaderHeight);
+      if (window.ResizeObserver && header) {
+        new ResizeObserver(syncMobileHeaderHeight).observe(header);
+      }
+
       const canvas = document.getElementById("evoCanvas");
       if (!canvas) return;
       const ctx = canvas.getContext("2d");
@@ -895,6 +1089,7 @@
       const width = () => canvas.getBoundingClientRect().width;
       const height = () => canvas.getBoundingClientRect().height;
       const palette = ["#e64bff", "#4b5bff", "#8a7bff", "#ff7adf"];
+      const MIN_CELLS = 8;
 
       const food = Array.from({ length: 18 }).map(() => ({
         x: Math.random() * width(),
@@ -902,16 +1097,20 @@
         value: 0.6 + Math.random() * 0.6,
       }));
 
-      const cells = Array.from({ length: 20 }).map((_, i) => ({
-        x: Math.random() * width(),
-        y: Math.random() * height(),
-        r: 4 + Math.random() * 4,
-        speed: 0.3 + Math.random() * 0.5,
-        vx: (Math.random() - 0.5) * 0.6,
-        vy: (Math.random() - 0.5) * 0.6,
-        hue: palette[i % palette.length],
-        energy: 0.8 + Math.random() * 0.6,
-      }));
+      function makeCell(i, x, y) {
+        return {
+          x: x ?? Math.random() * width(),
+          y: y ?? Math.random() * height(),
+          r: 4 + Math.random() * 4,
+          speed: 0.3 + Math.random() * 0.5,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
+          hue: palette[i % palette.length],
+          energy: 0.8 + Math.random() * 0.6,
+        };
+      }
+
+      const cells = Array.from({ length: 20 }).map((_, i) => makeCell(i));
 
       function spawnFood() {
         if (food.length < 26 && Math.random() < 0.35) {
@@ -920,6 +1119,16 @@
             y: Math.random() * height(),
             value: 0.6 + Math.random() * 0.6,
           });
+        }
+      }
+
+      function keepPopulationAlive() {
+        if (cells.length >= MIN_CELLS) return;
+        const missing = MIN_CELLS - cells.length;
+        for (let i = 0; i < missing; i++) {
+          const fx = food.length ? food[(i + cells.length) % food.length].x : undefined;
+          const fy = food.length ? food[(i + cells.length) % food.length].y : undefined;
+          cells.push(makeCell(cells.length + i, fx, fy));
         }
       }
 
@@ -1041,10 +1250,12 @@
         ctx.globalAlpha = 1;
 
         spawnFood();
+        keepPopulationAlive();
         requestAnimationFrame(step);
       }
       step();
     })();
   </script>
+  <script src="page-transition.js" defer></script>
 </body>
 </html>

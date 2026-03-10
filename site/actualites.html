@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Actualités IA Souveraine — Underside</title>
+  <meta name="description" content="Actualités IA souveraine: infrastructure, régulation, plateformes et usages. Veille classée par date pour les entreprises et institutions." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ai.underside.be/actualites.html" />
+  <meta property="og:title" content="Actualités IA Souveraine — Underside" />
+  <meta property="og:description" content="Veille IA souveraine classée par date: Europe, infrastructure, modèles, production." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ai.underside.be/actualites.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #f5f7fb;
+      --ink-2: #cbd2dc;
+      --paper: #060607;
+      --accent: #e64bff;
+      --accent-2: #4b5bff;
+      --line: rgba(255, 255, 255, 0.12);
+      --shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Manrope", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(900px 520px at 50% 0%, rgba(230, 75, 255, 0.14), rgba(75, 91, 255, 0.10) 35%, transparent 72%), var(--paper);
+    }
+    body.mobile-menu-open { overflow: hidden; touch-action: none; }
+    a { color: inherit; text-decoration: none; }
+
+    .mobile-menu-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 4, 8, 0.58);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.24s ease;
+    }
+    .mobile-menu-backdrop.is-active { opacity: 1; pointer-events: auto; }
+
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(6, 6, 7, 0.66);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    body.mobile-menu-open header { z-index: 110; }
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      row-gap: 10px;
+    }
+    .brand img { height: 28px; display: block; }
+    .burger-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(10, 10, 12, 0.8);
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0;
+      cursor: pointer;
+    }
+    .burger-btn span {
+      display: block;
+      width: 20px;
+      height: 2.5px;
+      background: #fff;
+      border-radius: 2px;
+      transform-origin: center;
+      transition: transform 0.22s ease, opacity 0.2s ease;
+    }
+    .nav.is-open .burger-btn span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav.is-open .burger-btn span:nth-child(2) { opacity: 0; }
+    .nav.is-open .burger-btn span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    .links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(245,247,251,0.75);
+      flex: 1 1 auto;
+      min-width: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero { padding: 56px 0 24px; }
+    h1 { margin: 0 0 10px; font-size: clamp(34px, 5vw, 54px); line-height: 1.05; }
+    .lead { margin: 0; max-width: 920px; color: var(--ink-2); font-size: 18px; line-height: 1.6; }
+
+    .grid {
+      padding: 24px 0 72px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .news-card {
+      background: rgba(10, 10, 12, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .news-card time {
+      font-size: 12px;
+      color: rgba(245, 247, 251, 0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .news-card h2 {
+      margin: 0;
+      font-size: 23px;
+      line-height: 1.28;
+      text-wrap: balance;
+    }
+    .news-card p { margin: 0; color: var(--ink-2); line-height: 1.68; }
+    .news-card a {
+      margin-top: 4px;
+      display: inline-flex;
+      font-size: 14px;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      color: rgba(245, 247, 251, 0.92);
+    }
+    .share-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:4px; }
+    .share-mini { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,0.04); font-size:0; color:var(--ink); text-decoration:none; }
+    .share-icon { font-size:13px; line-height:1; font-weight:700; }
+
+    footer {
+      padding: 22px 0 60px;
+      color: var(--ink-2);
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 980px) {
+      .links { gap: 12px; font-size: 12px; letter-spacing: 0.08em; }
+    }
+    @media (max-width: 900px) {
+      .nav { position: relative; justify-content: space-between; align-items: center; }
+      .burger-btn { display: inline-flex; position: relative; z-index: 121; }
+      .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(84vw, 360px);
+        height: 100dvh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 0;
+        padding: calc(var(--mobile-header-h, 84px) + 20px) 22px 24px;
+        border-left: 1px solid rgba(255, 255, 255, 0.16);
+        font-size: 19px;
+        letter-spacing: 0.01em;
+        text-transform: none;
+        font-weight: 600;
+        background: linear-gradient(180deg, rgba(20, 22, 38, 0.98), rgba(14, 16, 28, 0.98));
+        box-shadow: -30px 0 48px rgba(0, 0, 0, 0.42);
+        transform: translateX(100%);
+        transition: transform 0.32s cubic-bezier(0.22, 0.9, 0.25, 1);
+        z-index: 120;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        isolation: isolate;
+      }
+      .nav.is-open .links { transform: translateX(0); }
+    }
+  </style>
+  <link rel="stylesheet" href="page-transition.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Actualités IA Souveraine - Underside",
+      "url": "https://ai.underside.be/actualites.html",
+      "inLanguage": "fr-BE"
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Accueil Underside">
+          <img src="Underside2018_blanc.png" alt="Underside" />
+        </a>
+        <button class="burger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="links">
+          <a href="index.html#services">Services</a>
+          <a href="index.html#clients">Références</a>
+          <a href="index.html#souverainete">Souveraineté</a>
+          <a href="index.html#process">Méthode</a>
+          <a href="actualites.html">Actualités</a>
+          <a href="blog.html">Blog</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Actualités IA souveraine</h1>
+      <p class="lead">Veille classée par date (du plus récent au plus ancien). Mise à jour: 9 mars 2026.</p>
+    </section>
+
+    <section class="grid">
+      <article class="news-card">
+        <time datetime="2026-03-05">5 mars 2026</time>
+        <h2>OpenAI lance ChatGPT pour Excel (beta).</h2>
+        <p>Nouveau module Excel et intégrations de données financières pour les workflows d'analyse.</p>
+        <a href="https://openai.com/index/chatgpt-for-excel/" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fopenai.com%2Findex%2Fchatgpt-for-excel%2F" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=OpenAI%20lance%20ChatGPT%20pour%20Excel%20%28beta%29.&url=https%3A%2F%2Fopenai.com%2Findex%2Fchatgpt-for-excel%2F" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fopenai.com%2Findex%2Fchatgpt-for-excel%2F" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <time datetime="2026-03-03">3 mars 2026</time>
+        <h2>NVIDIA annonce GTC 2026 et 1 000+ sessions IA.</h2>
+        <p>La conférence mondiale IA de NVIDIA se tient du 16 au 19 mars 2026 à San Jose.</p>
+        <a href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fnvidianews.nvidia.com%2Fnews%2Fnvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=NVIDIA%20annonce%20GTC%202026%20et%201%20000%2B%20sessions%20IA.&url=https%3A%2F%2Fnvidianews.nvidia.com%2Fnews%2Fnvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnvidianews.nvidia.com%2Fnews%2Fnvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <time datetime="2026-02-27">27 fév. 2026</time>
+        <h2>OpenAI et Amazon annoncent un partenariat stratégique.</h2>
+        <p>AWS distribuera Frontier, et OpenAI consommera 2 GW de capacité Trainium.</p>
+        <a href="https://openai.com/index/amazon-partnership/" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fopenai.com%2Findex%2Famazon-partnership%2F" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=OpenAI%20et%20Amazon%20annoncent%20un%20partenariat%20strat%C3%A9gique.&url=https%3A%2F%2Fopenai.com%2Findex%2Famazon-partnership%2F" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fopenai.com%2Findex%2Famazon-partnership%2F" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <time datetime="2026-02-27">27 fév. 2026</time>
+        <h2>OpenAI annonce un financement de 110 milliards USD.</h2>
+        <p>Nouveau tour avec SoftBank, NVIDIA et Amazon pour accélérer l'infrastructure IA.</p>
+        <a href="https://openai.com/index/scaling-ai-for-everyone/" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fopenai.com%2Findex%2Fscaling-ai-for-everyone%2F" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=OpenAI%20annonce%20un%20financement%20de%20110%20milliards%20USD.&url=https%3A%2F%2Fopenai.com%2Findex%2Fscaling-ai-for-everyone%2F" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fopenai.com%2Findex%2Fscaling-ai-for-everyone%2F" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <time datetime="2026-02-25">25 fév. 2026</time>
+        <h2>NVIDIA publie des résultats records portés par l'IA.</h2>
+        <p>Le segment Data Center atteint un nouveau record trimestriel dans le fiscal 2026.</p>
+        <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fnvidianews.nvidia.com%2Fnews%2Fnvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=NVIDIA%20publie%20des%20r%C3%A9sultats%20records%20port%C3%A9s%20par%20l%27IA.&url=https%3A%2F%2Fnvidianews.nvidia.com%2Fnews%2Fnvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnvidianews.nvidia.com%2Fnews%2Fnvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <time datetime="2026-01-20">20 janv. 2026</time>
+        <h2>EuroHPC étend son mandat pour les AI Gigafactories.</h2>
+        <p>Le nouveau cadre européen étend officiellement les objectifs IA et quantiques de l'initiative.</p>
+        <a href="https://www.eurohpc-ju.europa.eu/eurohpc-jus-mandate-expanded-under-new-regulation-amendment-2026-01-20_en" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.eurohpc-ju.europa.eu%2Feurohpc-jus-mandate-expanded-under-new-regulation-amendment-2026-01-20_en" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=EuroHPC%20%C3%A9tend%20son%20mandat%20pour%20les%20AI%20Gigafactories.&url=https%3A%2F%2Fwww.eurohpc-ju.europa.eu%2Feurohpc-jus-mandate-expanded-under-new-regulation-amendment-2026-01-20_en" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eurohpc-ju.europa.eu%2Feurohpc-jus-mandate-expanded-under-new-regulation-amendment-2026-01-20_en" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <time datetime="2026-01-16">16 janv. 2026</time>
+        <h2>Le Conseil de l'UE ouvre la voie aux AI Gigafactories.</h2>
+        <p>Adoption d'un amendement EuroHPC pour accélérer l'infrastructure IA en Europe.</p>
+        <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/01/16/artificial-intelligence-council-paves-the-way-for-the-creation-of-ai-gigafactories/" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.consilium.europa.eu%2Fen%2Fpress%2Fpress-releases%2F2026%2F01%2F16%2Fartificial-intelligence-council-paves-the-way-for-the-creation-of-ai-gigafactories%2F" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=Le%20Conseil%20de%20l%27UE%20ouvre%20la%20voie%20aux%20AI%20Gigafactories.&url=https%3A%2F%2Fwww.consilium.europa.eu%2Fen%2Fpress%2Fpress-releases%2F2026%2F01%2F16%2Fartificial-intelligence-council-paves-the-way-for-the-creation-of-ai-gigafactories%2F" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.consilium.europa.eu%2Fen%2Fpress%2Fpress-releases%2F2026%2F01%2F16%2Fartificial-intelligence-council-paves-the-way-for-the-creation-of-ai-gigafactories%2F" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <time datetime="2025-12-09">9 déc. 2025</time>
+        <h2>Anthropic et Accenture étendent leur partenariat enterprise.</h2>
+        <p>Nouvelle offre commune pour passer des pilotes IA à la production à grande échelle.</p>
+        <a href="https://www.anthropic.com/news/anthropic-accenture-partnership" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.anthropic.com%2Fnews%2Fanthropic-accenture-partnership" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=Anthropic%20et%20Accenture%20%C3%A9tendent%20leur%20partenariat%20enterprise.&url=https%3A%2F%2Fwww.anthropic.com%2Fnews%2Fanthropic-accenture-partnership" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.anthropic.com%2Fnews%2Fanthropic-accenture-partnership" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <time datetime="2025-07-10">10 juil. 2025</time>
+        <h2>Publication du Code de conduite GPAI de l'UE.</h2>
+        <p>La Commission publie un cadre volontaire pour la conformité des modèles IA à usage général.</p>
+        <a href="https://digital-strategy.ec.europa.eu/en/news/general-purpose-ai-code-practice-now-available" target="_blank" rel="noopener">Lire la source</a>
+        <div class="share-row" aria-label="Partager cette actualité">
+          <a class="share-mini" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdigital-strategy.ec.europa.eu%2Fen%2Fnews%2Fgeneral-purpose-ai-code-practice-now-available" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="sr-only" style="position:absolute;left:-9999px;">LinkedIn</span></a>
+          <a class="share-mini" href="https://x.com/intent/tweet?text=Publication%20du%20Code%20de%20conduite%20GPAI%20de%20l%27UE.&url=https%3A%2F%2Fdigital-strategy.ec.europa.eu%2Fen%2Fnews%2Fgeneral-purpose-ai-code-practice-now-available" target="_blank" rel="noopener" aria-label="Partager sur X"><span class="share-icon" aria-hidden="true">X</span><span class="sr-only" style="position:absolute;left:-9999px;">X</span></a>
+          <a class="share-mini" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdigital-strategy.ec.europa.eu%2Fen%2Fnews%2Fgeneral-purpose-ai-code-practice-now-available" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="sr-only" style="position:absolute;left:-9999px;">Facebook</span></a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <strong>Underside</strong>
+      <span>5 Avenue Georges Lemaitre · 6041 Charleroi · Belgique</span>
+      <span>TVA: BE0471.729.212</span>
+      <span>© 2026 Underside</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.querySelector("header");
+      function syncMobileHeaderHeight() {
+        if (!header) return;
+        var h = Math.ceil(header.getBoundingClientRect().height);
+        document.documentElement.style.setProperty("--mobile-header-h", h + "px");
+      }
+      syncMobileHeaderHeight();
+      window.addEventListener("resize", syncMobileHeaderHeight);
+      if (window.ResizeObserver && header) {
+        new ResizeObserver(syncMobileHeaderHeight).observe(header);
+      }
+    })();
+  </script>
+  <script src="page-transition.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog IA Souveraine | Underside | Intégration IA pour entreprises</title>
+  <meta name="description" content="Blog Underside: analyses approfondies des nouveautés en IA souveraine, infrastructure, conformité européenne et architecture enterprise. 10 articles détaillés avec actions concrètes." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="author" content="Underside" />
+  <meta name="theme-color" content="#060607" />
+  <link rel="canonical" href="https://ai.underside.be/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog IA Souveraine | Underside" />
+  <meta property="og:description" content="10 analyses détaillées des dernières avancées IA souveraine pour DSI, métiers et directions générales." />
+  <meta property="og:url" content="https://ai.underside.be/blog.html" />
+  <meta property="og:site_name" content="Underside" />
+  <meta property="og:locale" content="fr_BE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog IA Souveraine | Underside" />
+  <meta name="twitter:description" content="Analyses IA souveraine: architecture, conformité, GPU, cloud hybride, exécution." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="alternate" type="application/json" title="MCP Connectors" href="/.well-known/mcp.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #f5f7fb;
+      --ink-2: #cbd2dc;
+      --paper: #060607;
+      --accent: #e64bff;
+      --accent-2: #4b5bff;
+      --line: rgba(255, 255, 255, 0.12);
+      --shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Manrope", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 520px at 50% 0%, rgba(230, 75, 255, 0.14), rgba(75, 91, 255, 0.10) 35%, transparent 72%),
+        var(--paper);
+    }
+    body.mobile-menu-open {
+      overflow: hidden;
+      touch-action: none;
+    }
+    a { color: inherit; text-decoration: none; }
+    .mobile-menu-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 4, 8, 0.58);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.24s ease;
+    }
+    .mobile-menu-backdrop.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(6, 6, 7, 0.66);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    body.mobile-menu-open header {
+      z-index: 110;
+    }
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      row-gap: 10px;
+    }
+    .burger-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(10, 10, 12, 0.8);
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0;
+      cursor: pointer;
+    }
+    .burger-btn span {
+      display: block;
+      width: 20px;
+      height: 2.5px;
+      background: #fff;
+      border-radius: 2px;
+      transform-origin: center;
+      transition: transform 0.22s ease, opacity 0.2s ease;
+    }
+    .nav.is-open .burger-btn span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav.is-open .burger-btn span:nth-child(2) { opacity: 0; }
+    .nav.is-open .burger-btn span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .brand img { height: 28px; display: block; }
+    .links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(245,247,251,0.75);
+      flex: 1 1 auto;
+      min-width: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero { padding: 56px 0 28px; }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+    }
+    .lead {
+      margin: 0;
+      max-width: 920px;
+      color: var(--ink-2);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .grid {
+      padding: 20px 0 70px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .post {
+      background: rgba(10, 10, 12, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+    .post time {
+      font-size: 12px;
+      color: rgba(245, 247, 251, 0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .post h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.28;
+      text-wrap: balance;
+    }
+    .post h2 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .post p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.72;
+      color: var(--ink-2);
+    }
+    .meta {
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .source {
+      font-size: 13px;
+      color: rgba(245,247,251,0.75);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .cta-mini {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      background: rgba(255,255,255,0.04);
+    }
+    .bottom {
+      margin: 12px 0 80px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(10, 10, 12, 0.88);
+      padding: 22px;
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .bottom p { margin: 0; color: var(--ink-2); }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 10px 24px rgba(230, 75, 255, 0.35);
+      color: #fff;
+    }
+    @media (max-width: 980px) {
+      .links { gap: 12px; font-size: 12px; letter-spacing: 0.08em; }
+    }
+    @media (max-width: 900px) {
+      .nav { position: relative; justify-content: space-between; align-items: center; }
+      .burger-btn { display: inline-flex; position: relative; z-index: 42; }
+      .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(84vw, 360px);
+        height: 100dvh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 0;
+        padding: calc(var(--mobile-header-h, 84px) + 20px) 22px 24px;
+        border-left: 1px solid rgba(255, 255, 255, 0.16);
+        font-size: 19px;
+        letter-spacing: 0.01em;
+        text-transform: none;
+        font-weight: 600;
+        background: linear-gradient(180deg, rgba(20, 22, 38, 0.98), rgba(14, 16, 28, 0.98));
+        box-shadow: -30px 0 48px rgba(0, 0, 0, 0.42);
+        transform: translateX(100%);
+        transition: transform 0.32s cubic-bezier(0.22, 0.9, 0.25, 1);
+        z-index: 40;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        isolation: isolate;
+        opacity: 1;
+        filter: none;
+      }
+      .nav.is-open .links { transform: translateX(0); }
+      .links { z-index: 120; }
+      .burger-btn { z-index: 121; }
+    }
+  </style>
+  <link rel="stylesheet" href="page-transition.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog IA Souveraine - Underside",
+      "url": "https://ai.underside.be/blog.html",
+      "inLanguage": "fr-BE",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Underside",
+        "url": "https://ai.underside.be"
+      },
+      "blogPost": [
+        {"@type":"BlogPosting","headline":"ChatGPT pour Excel: accélération métier et exigences de souveraineté","datePublished":"2026-03-10"},
+        {"@type":"BlogPosting","headline":"HyperNova 60B en open access: accélérateur de souveraineté IA","datePublished":"2026-03-10"},
+        {"@type":"BlogPosting","headline":"Résultats NVIDIA 2026: signal critique pour l'IA souveraine","datePublished":"2026-03-10"},
+        {"@type":"BlogPosting","headline":"110 milliards pour OpenAI: quel impact sur l'IA souveraine","datePublished":"2026-03-10"},
+        {"@type":"BlogPosting","headline":"Commission européenne: cloud + IA au service de la souveraineté","datePublished":"2026-03-10"},
+        {"@type":"BlogPosting","headline":"GTC 2026: accélération NVIDIA pour l’IA de production","datePublished":"2026-03-09"},
+        {"@type":"BlogPosting","headline":"OpenAI x AWS: nouvelle donne sur l’infrastructure IA","datePublished":"2026-03-09"},
+        {"@type":"BlogPosting","headline":"EuroHPC élargit son mandat: cap sur les AI Gigafactories","datePublished":"2026-03-09"},
+        {"@type":"BlogPosting","headline":"Conseil de l’UE: cadre officiel pour les AI Gigafactories","datePublished":"2026-03-09"},
+        {"@type":"BlogPosting","headline":"Code de pratique GPAI: nouveau référentiel de conformité","datePublished":"2026-03-09"}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="links" aria-label="Navigation principale">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#souverainete">Souveraineté</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Blog IA souveraine: 10 analyses longues, orientées décision.</h1>
+      <p class="lead">Dernière mise à jour: 10 mars 2026. Chaque article détaille le contexte technologique, les implications architecture/conformité et un plan d’action directement exploitable par une DSI, une direction métier ou un comité exécutif.</p>
+    </section>
+
+    <section class="grid" aria-label="Articles de blog IA souveraine">
+      <article class="post">
+        <time datetime="2026-03-10">Créé le 10 mars 2026</time>
+        <h2><a href="article-chatgpt-excel-2026.html">ChatGPT pour Excel: accélération métier et exigences de souveraineté.</a></h2>
+        <p>L'arrivée de ChatGPT dans Excel ouvre un nouveau levier de productivité, mais impose une gouvernance stricte des données sensibles, des accès et de la traçabilité pour rester sur une trajectoire IA souveraine.</p>
+        <div class="meta">
+          <a class="source" href="https://openai.com/index/chatgpt-for-excel/" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-chatgpt-excel-2026.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-10">Créé le 10 mars 2026</time>
+        <h2><a href="article-hypernova-60b-2026.html">HyperNova 60B en open access: accélérateur de souveraineté IA.</a></h2>
+        <p>La publication d'un modèle 60B compressé en open access ouvre une voie concrète pour réduire la dépendance aux API fermées: plus de contrôle sur l'hébergement, meilleure réversibilité et arbitrages coût/performance plus favorables.</p>
+        <div class="meta">
+          <a class="source" href="https://multiversecomputing.com/blog-hypernova-60b-open-access-hugging-face/" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-hypernova-60b-2026.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-10">Créé le 10 mars 2026</time>
+        <h2><a href="article-nvidia-resultats-2026.html">Résultats NVIDIA 2026: signal critique pour l'IA souveraine.</a></h2>
+        <p>Les résultats financiers NVIDIA confirment une tension durable sur la capacité GPU. Pour les entreprises, la souveraineté IA devient une stratégie de résilience: garantir l'accès au calcul, préserver la réversibilité et prioriser les usages critiques.</p>
+        <div class="meta">
+          <a class="source" href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-nvidia-resultats-2026.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-10">Créé le 10 mars 2026</time>
+        <h2><a href="article-openai-financement-2026.html">110 milliards pour OpenAI: quel impact sur l'IA souveraine.</a></h2>
+        <p>L'annonce du financement d'OpenAI rebat les cartes de l'infrastructure IA mondiale. Pour les entreprises européennes, l'enjeu devient de combiner vitesse d'innovation, réversibilité et contrôle des composants critiques.</p>
+        <div class="meta">
+          <a class="source" href="https://openai.com/index/scaling-ai-for-everyone/" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-openai-financement-2026.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-10">Créé le 10 mars 2026</time>
+        <h2><a href="article-commission-cloud-ai-2025.html">Commission européenne: cloud + IA au service de la souveraineté.</a></h2>
+        <p>L’appel d’offres européen “Cloud and AI Development Services” marque un tournant: la souveraineté numérique devient une exigence structurée dans les choix cloud/IA du secteur public, avec des effets directs sur les standards enterprise.</p>
+        <div class="meta">
+          <a class="source" href="https://digital-strategy.ec.europa.eu/en/news/new-tender-cloud-and-ai-development-services-announced-european-commission" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-commission-cloud-ai-2025.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-09">Créé le 9 mars 2026</time>
+        <h2><a href="article-gtc-2026.html">GTC 2026: accélération NVIDIA pour l’IA de production.</a></h2>
+        <p>L’annonce GTC 2026 confirme l’importance des GPU dans la performance IA, mais surtout la nécessité d’une architecture complète de production: orchestration, observabilité, sécurité et pilotage financier en continu.</p>
+        <div class="meta">
+          <a class="source" href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-gtc-2026.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-09">Créé le 9 mars 2026</time>
+        <h2><a href="article-openai-aws-2026.html">OpenAI x AWS: nouvelle donne sur l’infrastructure IA.</a></h2>
+        <p>Le partenariat modifie le compromis entre vitesse d’exécution et maîtrise de la donnée. La clé devient la gouvernance hybride: définir précisément ce qui reste on-premise, ce qui part en cloud, et sous quelles preuves de conformité.</p>
+        <div class="meta">
+          <a class="source" href="https://openai.com/index/amazon-partnership/" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-openai-aws-2026.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-09">Créé le 9 mars 2026</time>
+        <h2><a href="article-eurohpc-2026.html">EuroHPC élargit son mandat: cap sur les AI Gigafactories.</a></h2>
+        <p>L’évolution d’EuroHPC renforce la crédibilité d’options souveraines en Europe. Pour les entreprises, c’est une opportunité d’aligner stratégie IA, contraintes réglementaires et trajectoire industrielle à 24 mois.</p>
+        <div class="meta">
+          <a class="source" href="https://www.eurohpc-ju.europa.eu/eurohpc-jus-mandate-expanded-under-new-regulation-amendment-2026-01-20_en" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-eurohpc-2026.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-09">Créé le 9 mars 2026</time>
+        <h2><a href="article-consilium-2026.html">Conseil de l’UE: cadre officiel pour les AI Gigafactories.</a></h2>
+        <p>La décision du Conseil de l’UE réduit l’incertitude stratégique. Elle apporte un socle institutionnel utile pour planifier des investissements IA robustes, traçables et compatibles avec les exigences de souveraineté.</p>
+        <div class="meta">
+          <a class="source" href="https://www.consilium.europa.eu/en/press/press-releases/2026/01/16/artificial-intelligence-council-paves-the-way-for-the-creation-of-ai-gigafactories/" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-consilium-2026.html">Lire l'article complet</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-03-09">Créé le 9 mars 2026</time>
+        <h2><a href="article-gpai-2025.html">Code de pratique GPAI: nouveau référentiel de conformité.</a></h2>
+        <p>Le code GPAI donne un cadre exploitable pour structurer les obligations de conformité IA. L’enjeu n’est plus seulement juridique: il devient opérationnel, via des contrôles, des preuves et une gouvernance outillée.</p>
+        <div class="meta">
+          <a class="source" href="https://digital-strategy.ec.europa.eu/en/news/general-purpose-ai-code-practice-now-available" target="_blank" rel="noopener">Source</a>
+          <a class="cta-mini" href="article-gpai-2025.html">Lire l'article complet</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="bottom">
+      <p>Vous voulez transformer ces signaux technologiques en feuille de route IA souveraine exécutable ?</p>
+      <a class="cta" href="index.html#contact">Demander un diagnostic</a>
+    </section>
+  </main>
+  <script src="page-transition.js" defer></script>
+</body>
+</html>
