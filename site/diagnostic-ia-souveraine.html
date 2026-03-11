@@ -238,11 +238,6 @@
       padding-inline: 20px;
       white-space: nowrap;
     }
-    #ctaSendPlan {
-      min-width: 220px;
-      padding-inline: 20px;
-      white-space: nowrap;
-    }
     .result-head {
       display: flex;
       align-items: center;
@@ -471,11 +466,10 @@
         </ul>
         <div class="meta" id="resultMeta">Format: top 5 actions à lancer sur 90 jours.</div>
         <div class="actions" style="margin-top:18px;">
-          <a id="ctaDiagnostic" class="btn btn-primary is-hidden" href="/#contact">Démarrer un diagnostic</a>
-          <button id="ctaSendPlan" class="btn is-hidden" type="button">Demander une rencontre</button>
+          <button id="ctaDiagnostic" class="btn btn-primary is-hidden" type="button">Demander une rencontre</button>
           <a id="ctaGdpr" class="btn" href="/gdpr">Politique RGPD</a>
         </div>
-        <div class="soft">Version sans service tiers: profil sauvegardé localement. L’option e-mail ouvre votre client mail pour envoi direct à Underside.</div>
+        <div class="soft">Version sans service tiers: profil sauvegardé localement. Le bouton “Demander une rencontre” ouvre votre client mail avec un message déjà pré-rempli.</div>
       </article>
     </section>
   </main>
@@ -496,7 +490,6 @@
       var vizStateNode = document.getElementById("vizState");
       var vizModeNode = document.getElementById("vizMode");
       var ctaDiagnostic = document.getElementById("ctaDiagnostic");
-      var ctaSendPlan = document.getElementById("ctaSendPlan");
       var saveStateText = document.getElementById("saveStateText");
       var STORAGE_KEY = "underside_diag_draft_v1";
 
@@ -980,7 +973,6 @@
         metaNode.textContent = greeting + company + "Priorité: lancer un pilote cadré sous 6 semaines puis industrialiser sur 90 jours.";
         scoreNode.textContent = "Top " + top.length + " priorités";
         if (ctaDiagnostic) ctaDiagnostic.classList.remove("is-hidden");
-        if (ctaSendPlan) ctaSendPlan.classList.remove("is-hidden");
       }
 
       function showWaitingState() {
@@ -988,7 +980,6 @@
         metaNode.textContent = "Complétez au minimum le secteur et la fonction pour générer vos axes.";
         axesNode.innerHTML = '<li class="axis" style="animation-delay:0ms;"><strong>Commencez par votre secteur et votre fonction</strong><span>Les informations optionnelles affinent ensuite la granularité de la recommandation.</span></li>';
         if (ctaDiagnostic) ctaDiagnostic.classList.add("is-hidden");
-        if (ctaSendPlan) ctaSendPlan.classList.add("is-hidden");
       }
 
       function updateRecommendations(triggerPulse) {
@@ -1018,13 +1009,12 @@
         metaNode.textContent = "Format: top 5 actions à lancer sur 90 jours.";
         axesNode.innerHTML = '<li class="axis" style="animation-delay:0ms;"><strong>Commencez par votre secteur et votre fonction</strong><span>Nous afficherons une proposition priorisée (impact, conformité, industrialisation).</span></li>';
         if (ctaDiagnostic) ctaDiagnostic.classList.add("is-hidden");
-        if (ctaSendPlan) ctaSendPlan.classList.add("is-hidden");
         setSaveStateText("Profil supprimé.");
         viz.refresh();
       });
 
-      if (ctaSendPlan) {
-        ctaSendPlan.addEventListener("click", function () {
+      if (ctaDiagnostic) {
+        ctaDiagnostic.addEventListener("click", function () {
           var data = collectFormData();
           var axes = getDisplayedAxisTitles().slice(0, 5);
           var nomComplet = data.nom || "Nom non précisé";
