@@ -130,10 +130,10 @@
     var style = document.createElement("style");
     style.id = "lang-switch-style";
     style.textContent = [
-      ".lang-switch{display:inline-flex;align-items:center;gap:6px;padding:4px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(10,10,14,.62);backdrop-filter:blur(8px);}",
+      ".lang-switch{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:140;display:inline-flex;align-items:center;gap:6px;padding:4px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(10,10,14,.62);backdrop-filter:blur(8px);}",
       ".lang-switch button{border:0;background:transparent;color:rgba(235,236,242,.78);font-size:11px;letter-spacing:.06em;padding:6px 9px;border-radius:999px;cursor:pointer;}",
       ".lang-switch button.is-active{color:#fff;background:linear-gradient(135deg, rgba(230,75,255,.42), rgba(75,91,255,.42));}",
-      "@media (max-width:900px){.lang-switch{position:fixed;top:calc(var(--mobile-header-h,84px) + 8px);right:12px;z-index:130;}}"
+      "@media (max-width:900px){.lang-switch{bottom:calc(12px + env(safe-area-inset-bottom));z-index:150;}}"
     ].join("");
     document.head.appendChild(style);
   }
@@ -141,7 +141,6 @@
   function initLanguageRouting() {
     var path = window.location.pathname || "/";
     if (/google[0-9a-z]+\.html$/i.test(path)) return false;
-    if (window.location.protocol === "file:") return false;
 
     var key = "underside_lang_pref";
     var current = currentLangFromPath(path);
@@ -152,11 +151,23 @@
       saved = "";
     }
     var detected = /^en/i.test(navigator.language || "") ? "en" : "fr";
-    var target = saved || detected;
-    // Keep FR as the default public entry while EN is still under maturation.
-    if (current === "fr") {
-      target = "fr";
+    var target = "";
+
+    // 1) Respect explicit user preference everywhere.
+    if (saved === "fr" || saved === "en") {
+      target = saved;
+    } else {
+      // 2) No stored choice: use browser language only on home entrypoints.
+      var isRootEntry = false;
+      if (window.location.protocol === "file:") {
+        isRootEntry = /\/site\/(en\/)?index\.html$/i.test(path);
+      } else {
+        isRootEntry = path === "/" || path === "/index.html" || path === "/en" || path === "/en/" || path === "/en/index.html";
+      }
+      if (!isRootEntry) return false;
+      target = detected;
     }
+
     if (target !== current) {
       var nextPath = equivalentPathForLang(path, target);
       window.location.replace(nextPath + window.location.search + window.location.hash);
@@ -170,14 +181,10 @@
     if (/google[0-9a-z]+\.html$/i.test(path)) return;
 
     ensureLanguageSwitchStyles();
-    var nav = document.querySelector("header .nav") || document.querySelector("header .wrap");
-    if (!nav) return;
-    if (nav.querySelector(".lang-switch")) return;
+    if (document.querySelector(".lang-switch")) return;
 
     var key = "underside_lang_pref";
     var current = currentLangFromPath(path);
-    // Do not expose EN navigation from FR pages for now.
-    if (current !== "en") return;
     var wrap = document.createElement("div");
     wrap.className = "lang-switch";
 
@@ -209,7 +216,7 @@
 
     wrap.appendChild(makeBtn("fr", "FR"));
     wrap.appendChild(makeBtn("en", "EN"));
-    nav.appendChild(wrap);
+    (document.body || document.documentElement).appendChild(wrap);
   }
 
   function ensureAudioContext() {
