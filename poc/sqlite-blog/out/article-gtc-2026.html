@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GTC 2026: ce que change NVIDIA pour une IA souveraine industrielle | Underside</title>
+  <meta name="description" content="Analyse détaillée GTC 2026: impacts architecture, MLOps, sécurité et coûts pour les déploiements IA souverains en entreprise." />
+  <link rel="canonical" href="https://ai.underside.be/article-gtc-2026.html" />
+  <link rel="alternate" hreflang="fr" href="https://ai.underside.be/article-gtc-2026.html" />
+  <link rel="alternate" hreflang="en" href="https://ai.underside.be/en/article-gtc-2026.html" />
+  <link rel="alternate" hreflang="x-default" href="https://ai.underside.be/article-gtc-2026.html" />
+  
+    <style>
+      :root { --bg:#060607; --ink:#f5f7fb; --muted:#cbd2dc; --line:rgba(255,255,255,.12); --a:#e64bff; --b:#4b5bff; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font-family: Manrope, -apple-system, system-ui, sans-serif; }
+      .wrap { width: min(1000px, 92vw); margin: 0 auto; }
+      header { border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(6,6,7,.82); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 5; }
+      .top { display:flex; justify-content:space-between; align-items:center; min-height:72px; gap:16px; }
+      .brand { font-weight: 800; letter-spacing: .01em; text-decoration:none; color:var(--ink); font-size: 30px; }
+      .lang-switch { display:inline-flex; gap:6px; padding:4px; border:1px solid var(--line); border-radius:999px; background: rgba(11,12,18,.75); }
+      .lang-btn { text-decoration:none; color:var(--ink); opacity:.82; border-radius:999px; padding:6px 10px; font-size:12px; }
+      .lang-btn.is-active { opacity:1; background: linear-gradient(135deg,var(--a),var(--b)); }
+      .lang-btn.is-disabled { opacity:.35; padding:6px 10px; font-size:12px; }
+      main { padding: 28px 0 48px; }
+      h1 { margin: 0 0 10px; font-size: clamp(30px, 4.8vw, 54px); line-height: 1.05; }
+      p.lead { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.55; }
+      .grid { display:grid; gap:16px; margin-top:22px; }
+      .card { border:1px solid var(--line); border-radius:18px; padding:18px; background: rgba(255,255,255,.03); }
+      .card h2 { margin: 0 0 8px; font-size: clamp(22px, 2.8vw, 30px); }
+      .meta { margin: 0 0 8px; color: var(--muted); font-size: 13px; }
+      .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+      .tag { font-size: 12px; color: #ead9ff; border:1px solid rgba(230,75,255,.5); background: rgba(230,75,255,.15); border-radius:999px; padding:4px 10px; }
+      .cta { display:inline-block; margin-top:12px; text-decoration:none; color:#fff; padding:10px 14px; border-radius:999px; background: linear-gradient(135deg,var(--a),var(--b)); }
+      article .body p { color: var(--muted); line-height: 1.8; font-size: 17px; }
+      article .body h2 { margin-top: 24px; font-size: 24px; }
+      footer { border-top: 1px solid rgba(255,255,255,.08); padding: 18px 0 28px; color: var(--muted); font-size: 13px; }
+    </style>
+    
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <a class="brand" href="index.html">Underside.</a>
+      <div class="lang-switch"><a class="lang-btn is-active" href="article-gtc-2026.html">FR</a><a class="lang-btn " href="en/article-gtc-2026.html">EN</a></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <article class="card">
+      <p class="meta">2026-03-09</p>
+      <h1>GTC 2026: ce que change NVIDIA pour une IA souveraine industrielle</h1>
+      <p class="lead">GTC 2026 confirme un point majeur: la valeur IA ne vient pas uniquement du matériel, mais de la capacité à l’intégrer dans une chaîne industrielle complète, gouvernée et mesurable.</p>
+      <div class="tags"><span class="tag">Conformité</span><span class="tag">Infrastructure</span><span class="tag">Souveraineté</span></div>
+      <section class="body"><p class="lead">GTC 2026 confirme un point majeur: la valeur IA ne vient pas uniquement du matériel, mais de la capacité à l’intégrer dans une chaîne industrielle complète, gouvernée et mesurable.</p>
+
+      <h2>1. Le vrai sujet: de la puissance brute à l’architecture opérable</h2>
+      <p>Dans beaucoup d’entreprises, la conversation reste centrée sur le choix de GPU. C’est nécessaire, mais insuffisant. Le coût global et la performance réelle dépendent surtout de la manière dont les workloads sont orchestrés: ordonnancement, quotas, isolation des environnements, observabilité de bout en bout, et politiques de priorité entre équipes.</p>
+      <p>Une architecture souveraine ajoute des contraintes supplémentaires: localisation des données, traçabilité des traitements, gestion des accès à privilèges et capacité d’audit. Sans ces dimensions, une infrastructure rapide peut devenir un risque opérationnel et réglementaire.</p>
+
+      <h2>2. Impacts concrets pour une DSI</h2>
+      <ul>
+        <li>Formaliser des classes de workloads (RAG interne, copilotes métiers, batch analytique, agents) avec SLA et budgets dédiés.</li>
+        <li>Déployer une observabilité spécifique IA: latence, coût par requête, dérive, taux de refus, incidents sécurité.</li>
+        <li>Mettre en place une gouvernance d’accès fine sur les datasets d’entraînement, de validation et d’inférence.</li>
+      </ul>
+
+      <h2>3. Ce qu’il faut décider en comité de pilotage</h2>
+      <p>La décision la plus rentable est de définir une cible d’industrialisation à 12 mois, avec des jalons trimestriels: baselines de performance, budget plafonné, qualité de service minimale et conditions de conformité obligatoires. Cette logique évite la dérive des POC et accélère la mise en production.</p>
+
+      <div class="box">
+        <strong>CTA opérationnel</strong>
+        <p>Lancer un plan GPU/IA souveraine en 90 jours: cadrage des cas d’usage, design d’architecture, feuille de route sécurité et modèle de coûts.</p>
+        <a class="cta" href="index.html#contact">Démarrer un diagnostic</a>
+      </div>
+
+      <p><a href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener">Lire la source officielle</a></p></section>
+      <p><a class="cta" href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener">Source</a></p>
+      <p><a href="index.html" style="color:var(--muted);text-decoration:none;">Retour à la liste</a></p>
+    </article>
+  </main>
+  <footer>
+    <div class="wrap">POC SQLite Blog · Français</div>
+  </footer>
+</body>
+</html>

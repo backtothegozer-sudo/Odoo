@@ -979,7 +979,13 @@
         if (ctaDiagnostic) ctaDiagnostic.classList.remove("is-hidden");
       }
 
+      var lastRecommendationKey = "";
+      function buildRecommendationKey(secteur, fonction, entreprise, nom, taille) {
+        return [secteur, fonction, entreprise, nom, taille].join("|");
+      }
+
       function showWaitingState() {
+        lastRecommendationKey = "__waiting__";
         scoreNode.textContent = "Champs requis";
         metaNode.textContent = "Complétez au minimum le secteur et la fonction pour générer vos axes.";
         axesNode.innerHTML = '<li class="axis" style="animation-delay:0ms;"><strong>Commencez par votre secteur et votre fonction</strong><span>Les informations optionnelles affinent ensuite la granularité de la recommandation.</span></li>';
@@ -996,6 +1002,12 @@
           showWaitingState();
           return;
         }
+        var currentKey = buildRecommendationKey(secteur, fonction, entreprise, nom, taille);
+        if (currentKey === lastRecommendationKey) {
+          if (triggerPulse) viz.pulse();
+          return;
+        }
+        lastRecommendationKey = currentKey;
         renderAxes(nom, entreprise, secteur, fonction, taille);
         if (triggerPulse) viz.pulse();
       }
@@ -1013,6 +1025,7 @@
         metaNode.textContent = "Format: top 5 actions à lancer sur 90 jours.";
         axesNode.innerHTML = '<li class="axis" style="animation-delay:0ms;"><strong>Commencez par votre secteur et votre fonction</strong><span>Nous afficherons une proposition priorisée (impact, conformité, industrialisation).</span></li>';
         if (ctaDiagnostic) ctaDiagnostic.classList.add("is-hidden");
+        lastRecommendationKey = "";
         setSaveStateText("Profil supprimé.");
         viz.refresh();
       });

@@ -261,6 +261,30 @@
       text-shadow: 0 10px 34px rgba(0, 0, 0, 0.55), 0 0 18px rgba(230, 75, 255, 0.25);
       pointer-events: none;
     }
+    .evo-line {
+      display: inline-block;
+      will-change: transform;
+      transition: transform 0.52s cubic-bezier(0.22, 0.8, 0.2, 1);
+    }
+    .evo-word-slot {
+      position: relative;
+      display: inline-block;
+      vertical-align: baseline;
+    }
+    .evo-word {
+      display: inline-block;
+      white-space: nowrap;
+      will-change: transform, opacity;
+      transition: opacity 0.34s ease, transform 0.34s ease;
+    }
+    .evo-word.is-leaving {
+      opacity: 0;
+      transform: translateY(0.28em);
+    }
+    .evo-word.is-entering {
+      opacity: 0;
+      transform: translateY(-0.06em);
+    }
     .evo-panel::after {
       content: "";
       position: absolute;
@@ -846,7 +870,7 @@
 
     <section class="evo">
       <div class="evo-panel">
-        <p class="evo-catch">Nous croyons en une IA éthique et souveraine.</p>
+        <p class="evo-catch"><span class="evo-line">Nous croyons en une IA <span class="evo-word-slot"><span class="evo-word">éthique</span></span>.</span></p>
         <button id="motionToggle" class="motion-toggle" type="button" aria-label="Activer le mouvement" title="Activer le mouvement">◉</button>
         <canvas id="evoCanvas" class="evo-canvas" width="1200" height="160" aria-label="Mini simulation visuelle de l'évolution"></canvas>
       </div>
@@ -1126,6 +1150,52 @@
       window.addEventListener("resize", syncMobileHeaderHeight);
       if (window.ResizeObserver && header) {
         new ResizeObserver(syncMobileHeaderHeight).observe(header);
+      }
+
+      const catchWordNode = document.querySelector(".evo-catch .evo-word");
+      const catchLineNode = document.querySelector(".evo-catch .evo-line");
+      if (catchWordNode) {
+        const words = ["éthique", "souveraine", "optimisée"];
+        let wordIndex = 0;
+        let isAnimatingWord = false;
+        catchWordNode.textContent = words[wordIndex];
+
+        function smoothLineRelayout(mutateWord) {
+          if (!catchLineNode) {
+            mutateWord();
+            return;
+          }
+          const beforeLeft = catchLineNode.getBoundingClientRect().left;
+          mutateWord();
+          const afterLeft = catchLineNode.getBoundingClientRect().left;
+          const dx = beforeLeft - afterLeft;
+          if (Math.abs(dx) < 0.5) return;
+          catchLineNode.style.transition = "none";
+          catchLineNode.style.transform = "translateX(" + dx + "px)";
+          catchLineNode.getBoundingClientRect();
+          catchLineNode.style.transition = "";
+          catchLineNode.style.transform = "translateX(0)";
+        }
+
+        window.setInterval(function () {
+          if (isAnimatingWord) return;
+          isAnimatingWord = true;
+          catchWordNode.classList.add("is-leaving");
+          window.setTimeout(function () {
+            wordIndex = (wordIndex + 1) % words.length;
+            smoothLineRelayout(function () {
+              catchWordNode.textContent = words[wordIndex];
+            });
+            catchWordNode.classList.remove("is-leaving");
+            catchWordNode.classList.add("is-entering");
+            window.requestAnimationFrame(function () {
+              catchWordNode.classList.remove("is-entering");
+            });
+            window.setTimeout(function () {
+              isAnimatingWord = false;
+            }, 360);
+          }, 240);
+        }, 5200);
       }
 
       const canvas = document.getElementById("evoCanvas");
