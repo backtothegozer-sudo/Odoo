@@ -10,6 +10,7 @@
 - https://ai.underside.be/blog
 
 ## Articles
+- https://ai.underside.be/article-bell-coveo-souverain-2026.html
 - https://ai.underside.be/article-crowdstrike-stackit-2026.html
 - https://ai.underside.be/article-eviden-aws-souverain-2026.html
 - https://ai.underside.be/article-espagne-ipcei-ia-2026.html
