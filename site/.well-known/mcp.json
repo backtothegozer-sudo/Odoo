@@ -1,13 +1,15 @@
 {
   "name": "Underside MCP Discovery",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP-ready discovery layer for AI indexing and contextual retrieval.",
   "website": "https://ai.underside.be/",
-  "updated_at": "2026-03-09",
+  "updated_at": "2026-03-11",
   "resources": {
     "sitemap": "https://ai.underside.be/sitemap.xml",
     "robots": "https://ai.underside.be/robots.txt",
     "llms_txt": "https://ai.underside.be/llms.txt",
+    "homepage": "https://ai.underside.be/",
+    "news": "https://ai.underside.be/actualites",
     "blog": "https://ai.underside.be/blog"
   },
   "connectors": [

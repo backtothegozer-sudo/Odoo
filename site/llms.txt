@@ -7,23 +7,30 @@
 
 ## Primary Pages
 - https://ai.underside.be/
+- https://ai.underside.be/actualites
 - https://ai.underside.be/blog
+- https://ai.underside.be/gdpr
+
+## Technical Discovery
+- https://ai.underside.be/sitemap.xml
+- https://ai.underside.be/robots.txt
+- https://ai.underside.be/.well-known/mcp.json
 
 ## Articles
 - https://ai.underside.be/article-bell-coveo-souverain-2026.html
-- https://ai.underside.be/article-crowdstrike-stackit-2026.html
-- https://ai.underside.be/article-eviden-aws-souverain-2026.html
-- https://ai.underside.be/article-espagne-ipcei-ia-2026.html
 - https://ai.underside.be/article-chatgpt-excel-2026.html
+- https://ai.underside.be/article-commission-cloud-ai-2025.html
+- https://ai.underside.be/article-consilium-2026.html
+- https://ai.underside.be/article-crowdstrike-stackit-2026.html
+- https://ai.underside.be/article-espagne-ipcei-ia-2026.html
+- https://ai.underside.be/article-eurohpc-2026.html
+- https://ai.underside.be/article-eviden-aws-souverain-2026.html
+- https://ai.underside.be/article-gpai-2025.html
+- https://ai.underside.be/article-gtc-2026.html
 - https://ai.underside.be/article-hypernova-60b-2026.html
 - https://ai.underside.be/article-nvidia-resultats-2026.html
-- https://ai.underside.be/article-openai-financement-2026.html
-- https://ai.underside.be/article-commission-cloud-ai-2025.html
-- https://ai.underside.be/article-gtc-2026.html
 - https://ai.underside.be/article-openai-aws-2026.html
-- https://ai.underside.be/article-eurohpc-2026.html
-- https://ai.underside.be/article-consilium-2026.html
-- https://ai.underside.be/article-gpai-2025.html
+- https://ai.underside.be/article-openai-financement-2026.html
 
 ## Contact
 - https://ai.underside.be/#contact
