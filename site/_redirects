@@ -1,3 +1,8 @@
 /blog /blog.html 200
 /actualites /actualites.html 200
 /gdpr /gdpr.html 200
+/en /en/index.html 200
+/en/blog /en/blog.html 200
+/en/actualites /en/actualites.html 200
+/en/gdpr /en/gdpr.html 200
+/en/diagnostic-ia-souveraine /en/diagnostic-ia-souveraine.html 200

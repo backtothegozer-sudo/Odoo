@@ -96,6 +96,122 @@
     document.body.classList.remove("is-page-leaving");
   });
 
+  function currentLangFromPath(pathname) {
+    if (window.location.protocol === "file:") {
+      return pathname.indexOf("/site/en/") !== -1 ? "en" : "fr";
+    }
+    return pathname.indexOf("/en/") === 0 || pathname === "/en" ? "en" : "fr";
+  }
+
+  function equivalentPathForLang(pathname, targetLang) {
+    var path = pathname || "/";
+    if (window.location.protocol === "file:") {
+      if (targetLang === "en") {
+        if (path.indexOf("/site/en/") !== -1) return path;
+        return path.replace("/site/", "/site/en/");
+      }
+      return path.replace("/site/en/", "/site/");
+    }
+    if (path === "/index.html") path = "/";
+    if (path === "/en/index.html") path = "/en/";
+    if (targetLang === "en") {
+      if (path === "/") return "/en/";
+      if (path === "/en") return "/en/";
+      if (path.indexOf("/en/") === 0) return path;
+      return "/en" + path;
+    }
+    if (path === "/en" || path === "/en/") return "/";
+    if (path.indexOf("/en/") === 0) return path.slice(3);
+    return path;
+  }
+
+  function ensureLanguageSwitchStyles() {
+    if (document.getElementById("lang-switch-style")) return;
+    var style = document.createElement("style");
+    style.id = "lang-switch-style";
+    style.textContent = [
+      ".lang-switch{display:inline-flex;align-items:center;gap:6px;padding:4px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(10,10,14,.62);backdrop-filter:blur(8px);}",
+      ".lang-switch button{border:0;background:transparent;color:rgba(235,236,242,.78);font-size:11px;letter-spacing:.06em;padding:6px 9px;border-radius:999px;cursor:pointer;}",
+      ".lang-switch button.is-active{color:#fff;background:linear-gradient(135deg, rgba(230,75,255,.42), rgba(75,91,255,.42));}",
+      "@media (max-width:900px){.lang-switch{position:fixed;top:calc(var(--mobile-header-h,84px) + 8px);right:12px;z-index:130;}}"
+    ].join("");
+    document.head.appendChild(style);
+  }
+
+  function initLanguageRouting() {
+    var path = window.location.pathname || "/";
+    if (/google[0-9a-z]+\.html$/i.test(path)) return false;
+    if (window.location.protocol === "file:") return false;
+
+    var key = "underside_lang_pref";
+    var current = currentLangFromPath(path);
+    var saved = "";
+    try {
+      saved = window.localStorage.getItem(key) || "";
+    } catch (err) {
+      saved = "";
+    }
+    var detected = /^en/i.test(navigator.language || "") ? "en" : "fr";
+    var target = saved || detected;
+    // Keep FR as the default public entry while EN is still under maturation.
+    if (current === "fr") {
+      target = "fr";
+    }
+    if (target !== current) {
+      var nextPath = equivalentPathForLang(path, target);
+      window.location.replace(nextPath + window.location.search + window.location.hash);
+      return true;
+    }
+    return false;
+  }
+
+  function initLanguageSwitch() {
+    var path = window.location.pathname || "/";
+    if (/google[0-9a-z]+\.html$/i.test(path)) return;
+
+    ensureLanguageSwitchStyles();
+    var nav = document.querySelector("header .nav") || document.querySelector("header .wrap");
+    if (!nav) return;
+    if (nav.querySelector(".lang-switch")) return;
+
+    var key = "underside_lang_pref";
+    var current = currentLangFromPath(path);
+    // Do not expose EN navigation from FR pages for now.
+    if (current !== "en") return;
+    var wrap = document.createElement("div");
+    wrap.className = "lang-switch";
+
+    function setPref(lang) {
+      try {
+        window.localStorage.setItem(key, lang);
+      } catch (err) {
+        // ignore
+      }
+    }
+
+    function makeBtn(lang, label) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = label;
+      btn.className = lang === current ? "is-active" : "";
+      btn.setAttribute("aria-label", "Switch language to " + label);
+      btn.addEventListener("click", function () {
+        setPref(lang);
+        var nextPath = equivalentPathForLang(window.location.pathname || "/", lang);
+        if (nextPath === (window.location.pathname || "/")) {
+          window.location.reload();
+          return;
+        }
+        window.location.href = nextPath + window.location.search + window.location.hash;
+      });
+      return btn;
+    }
+
+    wrap.appendChild(makeBtn("fr", "FR"));
+    wrap.appendChild(makeBtn("en", "EN"));
+    nav.appendChild(wrap);
+  }
+
   function ensureAudioContext() {
     if (audioCtx) return audioCtx;
     var Ctx = window.AudioContext || window.webkitAudioContext;
@@ -335,6 +451,8 @@
     trackCanvasSecret(touch.clientX, touch.clientY, ev.target);
   }, { capture: true, passive: true });
 
+  if (initLanguageRouting()) return;
+  initLanguageSwitch();
   ensureScrollTopBubble();
   initMobileMenus();
 })();
