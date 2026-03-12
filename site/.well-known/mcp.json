@@ -1,23 +1,27 @@
 {
   "name": "Underside MCP Discovery",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "MCP-ready discovery layer for AI indexing and contextual retrieval.",
   "website": "https://ai.underside.be/",
-  "updated_at": "2026-03-11",
+  "updated_at": "2026-03-12",
   "resources": {
     "sitemap": "https://ai.underside.be/sitemap.xml",
     "robots": "https://ai.underside.be/robots.txt",
     "llms_txt": "https://ai.underside.be/llms.txt",
-    "homepage": "https://ai.underside.be/",
-    "news": "https://ai.underside.be/actualites",
-    "blog": "https://ai.underside.be/blog"
+    "homepage_fr": "https://ai.underside.be/",
+    "homepage_en": "https://ai.underside.be/en/",
+    "news_fr": "https://ai.underside.be/actualites",
+    "news_en": "https://ai.underside.be/en/actualites",
+    "blog_fr": "https://ai.underside.be/blog",
+    "blog_en": "https://ai.underside.be/en/blog",
+    "google_verification": "https://ai.underside.be/google7af869e5e0e8f999.html"
   },
   "connectors": [
     {
       "id": "site-content",
       "type": "http-resource-index",
       "entrypoint": "https://ai.underside.be/sitemap.xml",
-      "notes": "Primary crawl/index source for pages and articles."
+      "notes": "Primary crawl/index source for pages and articles, including FR/EN alternates."
     },
     {
       "id": "llm-context",

@@ -1,18 +1,18 @@
 # Underside - IA Souveraine
 
-> Ce site présente les services d'intégration d'IA souveraine d'Underside, avec un blog d'analyses technologiques orientées entreprises.
+> Site vitrine et éditorial sur l'IA souveraine pour les entreprises, avec contenu en français et en anglais.
 
 ## Canonical
 - https://ai.underside.be/
 
-## Primary Pages
+## Primary Pages (FR)
 - https://ai.underside.be/
 - https://ai.underside.be/actualites
 - https://ai.underside.be/blog
 - https://ai.underside.be/diagnostic-ia-souveraine
 - https://ai.underside.be/gdpr
 
-## English Pages
+## Primary Pages (EN)
 - https://ai.underside.be/en/
 - https://ai.underside.be/en/actualites
 - https://ai.underside.be/en/blog
@@ -23,8 +23,10 @@
 - https://ai.underside.be/sitemap.xml
 - https://ai.underside.be/robots.txt
 - https://ai.underside.be/.well-known/mcp.json
+- https://ai.underside.be/google7af869e5e0e8f999.html
 
-## Articles
+## Articles (FR)
+- https://ai.underside.be/article-redhat-telenor-souverain-2026.html
 - https://ai.underside.be/article-bell-coveo-souverain-2026.html
 - https://ai.underside.be/article-chatgpt-excel-2026.html
 - https://ai.underside.be/article-commission-cloud-ai-2025.html
@@ -39,6 +41,23 @@
 - https://ai.underside.be/article-nvidia-resultats-2026.html
 - https://ai.underside.be/article-openai-aws-2026.html
 - https://ai.underside.be/article-openai-financement-2026.html
+
+## Articles (EN)
+- https://ai.underside.be/en/article-redhat-telenor-souverain-2026.html
+- https://ai.underside.be/en/article-bell-coveo-souverain-2026.html
+- https://ai.underside.be/en/article-chatgpt-excel-2026.html
+- https://ai.underside.be/en/article-commission-cloud-ai-2025.html
+- https://ai.underside.be/en/article-consilium-2026.html
+- https://ai.underside.be/en/article-crowdstrike-stackit-2026.html
+- https://ai.underside.be/en/article-espagne-ipcei-ia-2026.html
+- https://ai.underside.be/en/article-eurohpc-2026.html
+- https://ai.underside.be/en/article-eviden-aws-souverain-2026.html
+- https://ai.underside.be/en/article-gpai-2025.html
+- https://ai.underside.be/en/article-gtc-2026.html
+- https://ai.underside.be/en/article-hypernova-60b-2026.html
+- https://ai.underside.be/en/article-nvidia-resultats-2026.html
+- https://ai.underside.be/en/article-openai-aws-2026.html
+- https://ai.underside.be/en/article-openai-financement-2026.html
 
 ## Contact
 - https://ai.underside.be/#contact

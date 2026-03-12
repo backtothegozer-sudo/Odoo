@@ -3,5 +3,10 @@ Allow: /
 Allow: /.well-known/
 Allow: /google7af869e5e0e8f999.html
 
+User-agent: Googlebot
+Allow: /
+Allow: /.well-known/
+Allow: /google7af869e5e0e8f999.html
+
 Host: ai.underside.be
 Sitemap: https://ai.underside.be/sitemap.xml
