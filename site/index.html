@@ -107,7 +107,7 @@
     a { color: inherit; text-decoration: none; }
     .page {
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
     .grain { display: none; }
     .mobile-menu-backdrop {
@@ -370,6 +370,48 @@
     .hero-bridge-wrap {
       min-width: 0;
     }
+    .event-highlight {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(230, 75, 255, 0.35);
+      background: linear-gradient(135deg, rgba(230, 75, 255, 0.14), rgba(75, 91, 255, 0.1));
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+    }
+    .event-highlight strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .event-highlight span {
+      color: var(--ink-2);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+    .event-highlight .event-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(10, 10, 12, 0.72);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .event-highlight .event-link:hover {
+      transform: translateY(-1px);
+      border-color: rgba(230, 75, 255, 0.6);
+    }
     .hero-actions {
       display: flex;
       gap: 14px;
@@ -629,6 +671,25 @@
       text-transform: uppercase;
       color: #fff;
     }
+    .news-card.event-card {
+      border-color: rgba(230, 75, 255, 0.35);
+      background:
+        linear-gradient(130deg, rgba(230, 75, 255, 0.16), rgba(75, 91, 255, 0.08) 48%, rgba(10, 10, 12, 0.92)),
+        rgba(10, 10, 12, 0.92);
+    }
+    .news-card.event-card .pill-mini {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(10, 10, 12, 0.7);
+      color: #f5f7fb;
+    }
 
     .decision-makers {
       display: grid;
@@ -732,6 +793,12 @@
       .burger-btn { z-index: 121; }
     }
     @media (max-width: 720px) {
+      .event-highlight {
+        grid-template-columns: 1fr;
+      }
+      .event-highlight .event-link {
+        width: 100%;
+      }
       .evo-panel {
         --catch-y: 43%;
       }
@@ -886,6 +953,13 @@
         <h1 class="reveal pulse-text">Solutions d'IA souveraines, sécurisées et haute performance.<span class="c64-cursor" aria-hidden="true"></span></h1>
       </div>
       <div class="hero-bridge-wrap">
+        <div class="event-highlight reveal">
+          <div>
+            <strong>Évènement privé — 24 avril 2026</strong>
+            <span>15h00–17h00 · Café IA souveraine chez Underside</span>
+          </div>
+          <a class="event-link" href="evenements.html">Réserver ma place</a>
+        </div>
         <p class="hero-bridge reveal delay-1">
           Nous déployons des intelligences artificielles souveraines là où vos données vivent déjà.
           Des plateformes IA industrielles, robustes et durables en production,
@@ -1093,6 +1167,13 @@
         Les 3 dernières actualités. Pour la veille complète, consultez la page dédiée.
       </p>
       <div class="news-grid">
+        <article class="news-card event-card reveal">
+          <span class="pill-mini">Évènement</span>
+          <time datetime="2026-04-24">24 avril 2026</time>
+          <h3>L'IA dans votre entreprise : innovation ou perte de contrôle ?</h3>
+          <p>Un café exclusif Underside pour cadrer une trajectoire IA souveraine, sécurisée et maîtrisée, avec démonstration live.</p>
+          <a href="evenements.html">Réserver ma place</a>
+        </article>
         <article class="news-card reveal">
           <time datetime="2026-03-11">11 mars 2026</time>
           <h3>NTT DATA dévoile des AI factories avec NVIDIA.</h3>

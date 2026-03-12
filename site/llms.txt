@@ -11,6 +11,7 @@
 - https://ai.underside.be/blog
 - https://ai.underside.be/diagnostic-ia-souveraine
 - https://ai.underside.be/gdpr
+- https://ai.underside.be/evenements
 
 ## Primary Pages (EN)
 - https://ai.underside.be/en/

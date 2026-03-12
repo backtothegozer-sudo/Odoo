@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Évènements IA souveraine | Underside</title>
+  <link rel="icon" href="logo-underside-fav.svg?v=20260312b" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico?v=20260312b" sizes="any" />
+  <link rel="shortcut icon" href="favicon.ico?v=20260312b" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=20260312b" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=20260312b" />
+
+  <meta name="description" content="Évènement Underside: café exclusif sur l'IA souveraine en entreprise et dans le secteur public. Architecture, conformité, sécurité et démonstration concrète." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="évènement IA souveraine, café IA, Underside, IA entreprise, conformité IA, sécurité IA, Belgique" />
+  <link rel="canonical" href="https://ai.underside.be/evenements" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Évènements IA souveraine | Underside" />
+  <meta property="og:description" content="Participez à un café exclusif chez Underside pour découvrir une IA souveraine, sécurisée et maîtrisée." />
+  <meta property="og:url" content="https://ai.underside.be/evenements" />
+  <meta property="og:image" content="https://ai.underside.be/favicon-512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Évènements IA souveraine | Underside" />
+  <meta name="twitter:description" content="Café exclusif Underside: déployer une IA souveraine en production." />
+  <meta name="twitter:image" content="https://ai.underside.be/favicon-512.png" />
+
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="alternate" type="application/json" title="MCP Connectors" href="/.well-known/mcp.json" />
+  <link rel="stylesheet" href="page-transition.css" />
+
+  <style>
+    :root {
+      --bg: #05060b;
+      --ink: #f7f9ff;
+      --ink-2: #c4c9da;
+      --paper: #060607;
+      --line: rgba(255, 255, 255, 0.14);
+      --accent: #e64bff;
+      --accent-2: #4b5bff;
+      --card: rgba(17, 19, 31, 0.8);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Manrope", "Inter", system-ui, -apple-system, sans-serif;
+      background:
+        radial-gradient(900px 520px at 50% 0%, rgba(230, 75, 255, 0.14), rgba(75, 91, 255, 0.10) 35%, transparent 72%),
+        var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+    .wrap { width: min(1180px, 92vw); margin: 0 auto; }
+    .fade-in { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(10px);
+      background: rgba(8, 9, 14, 0.82);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+    }
+    .brand img { height: 28px; width: auto; display: block; }
+    .links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .links a {
+      color: var(--ink-2);
+      text-decoration: none;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .links a:hover { color: #fff; }
+
+    main { padding: 30px 0 100px; }
+    section { margin-top: 20px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background-color: #0a0b12;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(24px, 4vw, 44px);
+      background:
+        linear-gradient(90deg,
+          rgba(236, 146, 255, 0.22) 0%,
+          rgba(212, 118, 244, 0.2) 22%,
+          rgba(170, 86, 210, 0.22) 48%,
+          rgba(120, 60, 165, 0.24) 72%,
+          rgba(54, 31, 84, 0.86) 100%
+        ),
+        radial-gradient(120% 120% at 20% 0%, rgba(255,255,255,0.08), transparent 65%);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
+    }
+    .hero-fractal {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: transparent;
+      z-index: 0;
+      opacity: 0.48;
+      pointer-events: none;
+    }
+    .hero.fade-in {
+      opacity: 1;
+      transform: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #efe8ff;
+      margin-bottom: 12px;
+      background: rgba(10,10,12,0.45);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 6vw, 62px);
+      line-height: 1.03;
+      letter-spacing: -0.02em;
+      max-width: 980px;
+    }
+    .subtitle {
+      margin: 12px 0 20px;
+      color: var(--ink-2);
+      font-size: clamp(18px, 2.4vw, 22px);
+      line-height: 1.4;
+      max-width: 940px;
+    }
+    .quick {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .chip {
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 13px;
+      color: #f2f3fb;
+      background: rgba(10, 10, 12, 0.65);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .lead {
+      margin: 0;
+      color: var(--ink-2);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 20px;
+      background:
+        linear-gradient(135deg, rgba(230, 75, 255, 0.08), rgba(75, 91, 255, 0.08)),
+        var(--card);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .program {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+    .program li {
+      list-style: none;
+      border: 1px dashed rgba(255,255,255,0.18);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: rgba(20, 22, 36, 0.68);
+      color: var(--ink-2);
+    }
+    .program strong { color: #fff; }
+
+    .list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--ink-2);
+      line-height: 1.7;
+    }
+
+    .profile h3,
+    .benefit h3,
+    .faq h3,
+    .why h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    .profile p,
+    .benefit p,
+    .faq p,
+    .why p {
+      margin: 0;
+      color: var(--ink-2);
+      line-height: 1.65;
+    }
+
+    .signup {
+      margin-top: 16px;
+      border: 1px solid rgba(230, 75, 255, 0.36);
+      border-radius: 20px;
+      padding: clamp(20px, 3vw, 30px);
+      background: linear-gradient(145deg, rgba(230, 75, 255, 0.16), rgba(20, 22, 36, 0.88) 45%);
+    }
+    .signup p { color: var(--ink-2); margin: 0 0 14px; }
+    .limited {
+      display: inline-block;
+      margin: 0 0 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 7px 12px;
+      font-size: 12px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .form {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .form .full { grid-column: 1 / -1; }
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #d8dcf0;
+    }
+    input, textarea, select {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(8,8,10,0.85);
+      color: #fff;
+      font-size: 15px;
+      padding: 11px 12px;
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: rgba(230, 75, 255, 0.8);
+      box-shadow: 0 0 0 3px rgba(230, 75, 255, 0.2);
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    .btn {
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, #d644ff 0%, #4b5bff 100%);
+      padding: 12px 22px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: transform .2s ease, filter .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.07); }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background:
+        linear-gradient(135deg, rgba(230, 75, 255, 0.06), rgba(75, 91, 255, 0.06)),
+        rgba(17, 19, 31, 0.8);
+      padding: 14px;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+      color: #fff;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item p { margin-top: 10px; }
+
+    .cta-final {
+      margin-top: 18px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 20px;
+      padding: 24px;
+      display: grid;
+      gap: 12px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(230, 75, 255, 0.16), rgba(10,10,12,0.9) 58%);
+    }
+    .cta-final p { margin: 0; color: var(--ink-2); }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--ink-2);
+      font-size: 13px;
+      text-align: center;
+      padding: 24px 0 36px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      .brand img { height: 28px; }
+      .links { gap: 12px; }
+      .form { grid-template-columns: 1fr; }
+      .quick { gap: 8px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "L'IA dans votre entreprise : innovation ou perte de contrôle ?",
+      "description": "Café exclusif Underside pour découvrir comment déployer une IA souveraine, sécurisée et maîtrisée dans votre environnement.",
+      "startDate": "2026-04-24T15:00:00+02:00",
+      "endDate": "2026-04-24T17:00:00+02:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Underside",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BE"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Underside",
+        "url": "https://ai.underside.be/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://ai.underside.be/evenements#inscription",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/LimitedAvailability"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Retour à l'accueil">
+        <img src="Underside2018_blanc.png" alt="Underside" />
+      </a>
+      <nav class="links" aria-label="Navigation principale">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#souverainete">Souveraineté</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero fade-in" id="top">
+        <canvas class="hero-fractal" id="heroFractal" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <span class="eyebrow">Évènement privé Underside</span>
+          <h1>L'IA dans votre entreprise : innovation ou perte de contrôle&nbsp;?</h1>
+          <p class="subtitle">Participez à un café exclusif chez Underside pour découvrir comment déployer une IA souveraine, sécurisée et maîtrisée dans votre propre environnement.</p>
+          <div class="quick" aria-label="Informations rapides">
+            <span class="chip">24 avril 2026</span>
+            <span class="chip">15h00 – 17h00</span>
+            <span class="chip">Chez Underside</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card fade-in">
+        <h2>Pourquoi cet évènement</h2>
+        <p class="lead">De nombreuses entreprises ont déjà lancé des tests IA. Le potentiel est réel, mais trop souvent sans cadre opérationnel complet sur la confidentialité, la résidence des données, l'auditabilité, la dépendance fournisseur, la conformité et la sécurité en production. Dans ce contexte, l'IA souveraine devient un sujet stratégique pour les organisations européennes qui veulent avancer vite, sans perdre la maîtrise.</p>
+      </section>
+
+      <section class="fade-in">
+        <h2>Ce que vous allez obtenir</h2>
+        <div class="grid-4">
+          <article class="card benefit">
+            <h3>Risques réels</h3>
+            <p>Comprendre les risques opérationnels et réglementaires liés aux IA publiques dans un contexte entreprise, gouvernemental ou public.</p>
+          </article>
+          <article class="card benefit">
+            <h3>Architecture applicable</h3>
+            <p>Découvrir une architecture d'IA souveraine applicable à votre système d'information (SI), avec un niveau de sécurité adapté.</p>
+          </article>
+          <article class="card benefit">
+            <h3>Démonstrations concrètes</h3>
+            <p>Voir des cas d'usage de LLM privés et d'assistants IA orientés production, sans effet “gadget”.</p>
+          </article>
+          <article class="card benefit">
+            <h3>Feuille de route initiale</h3>
+            <p>Identifier les premières étapes pour lancer un projet IA dans un cadre maîtrisé et mesurable.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card fade-in">
+        <h2>Au programme</h2>
+        <ul class="program" aria-label="Programme de l'évènement">
+          <li><strong>15h00</strong> Accueil café</li>
+          <li><strong>15h15</strong> Pourquoi l'IA souveraine devient un enjeu stratégique</li>
+          <li><strong>15h35</strong> Architecture, sécurité et conformité</li>
+          <li><strong>16h00</strong> Démonstration concrète de solutions IA souveraines</li>
+          <li><strong>16h30</strong> Questions, échanges et networking</li>
+          <li><strong>17h00</strong> Fin de l'événement</li>
+        </ul>
+      </section>
+
+      <section class="card fade-in">
+        <h2>Démonstration live</h2>
+        <p class="lead">Les participants assisteront à une démonstration concrète d'un usage IA déployé dans un environnement maîtrisé, avec un accent sur la protection des données, la gouvernance, la traçabilité, l'intégration au système d'information et la valeur métier. L'objectif est de montrer un format réaliste, directement transposable à un cadre entreprise, gouvernemental ou public.</p>
+      </section>
+
+      <section class="fade-in">
+        <h2>Pour qui</h2>
+        <div class="grid-2">
+          <article class="card profile">
+            <h3>DSI / CIO</h3>
+            <p>Structurer une trajectoire IA compatible avec les contraintes du système d'information, les coûts, la sécurité et l'exploitation.</p>
+          </article>
+          <article class="card profile">
+            <h3>RSSI / Sécurité</h3>
+            <p>Évaluer les modèles de contrôle, la surface de risque et les mécanismes de gouvernance nécessaires.</p>
+          </article>
+          <article class="card profile">
+            <h3>Innovation / Transformation</h3>
+            <p>Accélérer les cas d'usage IA tout en conservant un cadre technique et réglementaire robuste.</p>
+          </article>
+          <article class="card profile">
+            <h3>Directions métiers</h3>
+            <p>Identifier des usages à forte valeur avec des délais de mise en œuvre crédibles.</p>
+          </article>
+          <article class="card profile">
+            <h3>Dirigeants</h3>
+            <p>Arbitrer les choix stratégiques entre performance, maîtrise des données et dépendance fournisseur.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card fade-in">
+        <h2>Pourquoi Underside</h2>
+        <ul class="list">
+          <li>Expertise d'intégration d'IA souveraine en environnement entreprise, gouvernemental et public.</li>
+          <li>Approche de bout en bout: cadrage, architecture, déploiement, sécurité et MLOps.</li>
+          <li>Positionnement orienté production et résultats opérationnels, sans promesses gadget.</li>
+          <li>Compréhension concrète des enjeux du système d'information, de conformité et de gouvernance.</li>
+        </ul>
+      </section>
+
+      <section class="signup fade-in" id="inscription">
+        <h2>Réservez votre place</h2>
+        <p>Inscription simple et rapide. Nous vous confirmons votre place par e-mail avec les informations pratiques.</p>
+        <span class="limited">Places limitées</span>
+
+        <form class="form" id="eventForm" novalidate>
+          <label>
+            Nom
+            <input type="text" id="nom" name="nom" autocomplete="name" required />
+          </label>
+          <label>
+            Prénom
+            <input type="text" id="prenom" name="prenom" autocomplete="given-name" required />
+          </label>
+          <label>
+            Entreprise
+            <input type="text" id="entreprise" name="entreprise" autocomplete="organization" required />
+          </label>
+          <label>
+            Fonction
+            <input type="text" id="fonction" name="fonction" required />
+          </label>
+          <label class="full">
+            E-mail professionnel
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="full">
+            Message (optionnel)
+            <textarea id="message" name="message" placeholder="Contexte, nombre de participants, objectifs..."></textarea>
+          </label>
+          <div class="full">
+            <button class="btn" type="submit">Confirmer mon inscription</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="fade-in">
+        <h2>FAQ</h2>
+        <div class="grid-2">
+          <article class="faq-item faq">
+            <h3>Cet événement est-il gratuit&nbsp;?</h3>
+            <p>Oui, l'évènement est gratuit sur inscription préalable, dans la limite des places disponibles.</p>
+          </article>
+          <article class="faq-item faq">
+            <h3>À qui s'adresse cet événement&nbsp;?</h3>
+            <p>Aux décideurs IT, sécurité, innovation, métiers et direction générale qui cadrent l'IA en entreprise, dans les entités gouvernementales et dans le secteur public.</p>
+          </article>
+          <article class="faq-item faq">
+            <h3>Puis-je venir avec un collègue&nbsp;?</h3>
+            <p>Oui. Indiquez-le dans le message lors de votre inscription, nous confirmerons selon la capacité restante.</p>
+          </article>
+          <article class="faq-item faq">
+            <h3>Y aura-t-il des démonstrations concrètes&nbsp;?</h3>
+            <p>Oui, avec un focus sur des scénarios réalistes et transposables à un environnement système d'information maîtrisé.</p>
+          </article>
+          <article class="faq-item faq">
+            <h3>Combien de temps dure l'évènement&nbsp;?</h3>
+            <p>Deux heures: de 15h00 à 17h00, avec un temps d'échange prévu en fin de session.</p>
+          </article>
+          <article class="faq-item faq">
+            <h3>Comment confirmer mon inscription&nbsp;?</h3>
+            <p>Via le formulaire ci-dessus. Votre client e-mail s'ouvrira avec un message pré-rempli pour validation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-final fade-in">
+        <h2>Prêt à cadrer votre trajectoire IA souveraine&nbsp;?</h2>
+        <p>Rejoignez-nous pour un échange ciblé, concret et orienté décision.</p>
+        <div>
+          <a class="btn" href="#inscription">Réserver ma place</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Underside — Intégration d'IA souveraine.<br />
+      TVA : BE 0471.729.212
+    </div>
+  </footer>
+
+  <script src="page-transition.js" defer></script>
+  <script>
+    (function () {
+      const revealTargets = document.querySelectorAll('.fade-in:not(.hero)');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealTargets.forEach((el) => obs.observe(el));
+
+      const form = document.getElementById('eventForm');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        const nom = document.getElementById('nom').value.trim();
+        const prenom = document.getElementById('prenom').value.trim();
+        const entreprise = document.getElementById('entreprise').value.trim();
+        const fonction = document.getElementById('fonction').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const subject = encodeURIComponent("Inscription évènement IA souveraine - 24 avril 2026");
+        const body = encodeURIComponent(
+          "Bonjour Underside,\n\n" +
+          "Je souhaite réserver une place pour l'évènement:\n" +
+          "L'IA dans votre entreprise : innovation ou perte de contrôle ?\n" +
+          "Date: 24 avril 2026\n" +
+          "Horaire: 15h00 - 17h00\n\n" +
+          "Informations participant:\n" +
+          "Nom: " + nom + "\n" +
+          "Prénom: " + prenom + "\n" +
+          "Entreprise: " + entreprise + "\n" +
+          "Fonction: " + fonction + "\n" +
+          "E-mail: " + email + "\n\n" +
+          "Message: " + (message || "-") + "\n\n" +
+          "Merci."
+        );
+
+        window.location.href = "mailto:info@underside.be?subject=" + subject + "&body=" + body;
+      });
+
+      const fractalCanvas = document.getElementById('heroFractal');
+      if (fractalCanvas) {
+        const ctx = fractalCanvas.getContext('2d');
+        const DPR = Math.min(window.devicePixelRatio || 1, 2);
+        let width = 0;
+        let height = 0;
+        let rafId;
+        const hero = fractalCanvas.closest('.hero');
+
+        const resize = () => {
+          const rect = hero.getBoundingClientRect();
+          width = Math.max(1, Math.floor(rect.width));
+          height = Math.max(1, Math.floor(rect.height));
+          fractalCanvas.width = Math.floor(width * DPR);
+          fractalCanvas.height = Math.floor(height * DPR);
+          fractalCanvas.style.width = width + 'px';
+          fractalCanvas.style.height = height + 'px';
+          ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+        };
+
+        const drawBranch = (x, y, len, angle, depth, sway) => {
+          if (depth <= 0 || len < 2) return;
+          const x2 = x + Math.cos(angle) * len;
+          const y2 = y + Math.sin(angle) * len;
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.lineTo(x2, y2);
+          ctx.lineWidth = Math.max(0.8, depth * 0.24);
+          ctx.stroke();
+
+          const spread = 0.56 + sway;
+          const decay = 0.74;
+          drawBranch(x2, y2, len * decay, angle - spread, depth - 1, sway * 0.9);
+          drawBranch(x2, y2, len * decay, angle + spread, depth - 1, sway * 0.9);
+        };
+
+        const render = (t) => {
+          const time = t * 0.001;
+          ctx.clearRect(0, 0, width, height);
+
+          const rightX = width * 0.56;
+          const rightW = width - rightX;
+          const centerX = rightX + rightW * 0.56;
+          const centerY = height * 0.56;
+          const baseY = height * 0.99;
+          const baseLen = Math.min(width, height) * 0.34;
+
+          ctx.save();
+          ctx.globalCompositeOperation = 'lighter';
+          const grad = ctx.createLinearGradient(rightX, 0, width, height);
+          grad.addColorStop(0, 'rgba(230, 75, 255, 0.9)');
+          grad.addColorStop(1, 'rgba(75, 91, 255, 0.86)');
+          ctx.strokeStyle = grad;
+          ctx.shadowColor = 'rgba(230, 75, 255, 0.4)';
+          ctx.shadowBlur = 9;
+          for (let i = 0; i < 3; i += 1) {
+            const sway = Math.sin(time * 0.5 + i * 1.2) * 0.1;
+            drawBranch(
+              centerX + (i - 1) * rightW * 0.12,
+              baseY + Math.cos(time * 0.35 + i) * 4,
+              baseLen * (1 - i * 0.08),
+              -Math.PI / 2 + sway * 0.32,
+              7,
+              sway
+            );
+          }
+          ctx.restore();
+
+          const glow = ctx.createRadialGradient(centerX, centerY, 10, centerX, centerY, rightW * 0.95);
+          glow.addColorStop(0, 'rgba(230,75,255,0.16)');
+          glow.addColorStop(1, 'rgba(75,91,255,0)');
+          ctx.fillStyle = glow;
+          ctx.fillRect(0, 0, width, height);
+
+          rafId = requestAnimationFrame(render);
+        };
+
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        rafId = requestAnimationFrame(render);
+        window.addEventListener('pagehide', () => cancelAnimationFrame(rafId));
+      }
+    })();
+  </script>
+</body>
+</html>
