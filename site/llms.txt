@@ -19,6 +19,7 @@
 - https://ai.underside.be/en/blog
 - https://ai.underside.be/en/diagnostic-ia-souveraine
 - https://ai.underside.be/en/gdpr
+- https://ai.underside.be/en/evenements
 
 ## Technical Discovery
 - https://ai.underside.be/sitemap.xml
