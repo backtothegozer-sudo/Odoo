@@ -159,6 +159,48 @@
     .share-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:4px; }
     .share-mini { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,0.04); font-size:0; color:var(--ink); text-decoration:none; }
     .share-icon { font-size:13px; line-height:1; font-weight:700; }
+    .news-card.is-shown {
+      animation: newsReveal 0.46s cubic-bezier(0.22, 0.9, 0.25, 1) both;
+      animation-delay: var(--reveal-delay, 0ms);
+    }
+    .load-sentinel {
+      display: none;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: -34px 0 44px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(230,75,255,0.12), rgba(75,91,255,0.12));
+      color: rgba(245, 247, 251, 0.8);
+      font: inherit;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.2s ease;
+    }
+    .load-sentinel:hover {
+      transform: translateY(-1px);
+      border-color: rgba(190, 135, 255, 0.75);
+      background: linear-gradient(135deg, rgba(230,75,255,0.18), rgba(75,91,255,0.2));
+    }
+    .load-sentinel.is-active { display: inline-flex; }
+    .load-sentinel[hidden] { display: none !important; }
+    .load-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #e64bff, #4b5bff);
+      box-shadow: 0 0 12px rgba(230,75,255,0.45);
+      animation: loadPulse 1.8s ease-in-out infinite;
+      flex: 0 0 auto;
+    }
     .cta-band {
       margin: 2px 0 76px;
       border: 1px solid var(--line);
@@ -251,6 +293,14 @@
       .cta-band .cta-main {
         width: 100%;
       }
+    }
+    @keyframes newsReveal {
+      from { opacity: 0; transform: translateY(10px) scale(0.992); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes loadPulse {
+      0%, 100% { opacity: 0.45; transform: scale(0.88); }
+      50% { opacity: 1; transform: scale(1.08); }
     }
   </style>
   <link rel="stylesheet" href="../page-transition.css" />
@@ -438,6 +488,10 @@
         </div>
       </article>
     </section>
+    <button id="newsLoadSentinel" class="load-sentinel" type="button" hidden aria-label="Show more updates">
+      <span class="load-dot" aria-hidden="true"></span>
+      <span id="newsLoadHint">Scroll to load more</span>
+    </button>
 
     <section class="cta-band" aria-label="News call to action">
       <p>Want to turn this news flow into concrete decisions for your IS? Get a sovereign AI framing focused on risk, compliance, and execution.</p>
@@ -468,6 +522,77 @@
       if (window.ResizeObserver && header) {
         new ResizeObserver(syncMobileHeaderHeight).observe(header);
       }
+
+      function initNewsProgressiveLoading() {
+        var cards = Array.prototype.slice.call(document.querySelectorAll(".grid .news-card"));
+        var sentinel = document.getElementById("newsLoadSentinel");
+        var hint = document.getElementById("newsLoadHint");
+        if (!cards.length || !sentinel) return;
+
+        var batchSize = 8;
+        var renderLimit = batchSize;
+        var hasScrolled = window.scrollY > 12;
+
+        function markScrolled() {
+          if (window.scrollY <= 12) return;
+          hasScrolled = true;
+          window.removeEventListener("scroll", markScrolled);
+        }
+        window.addEventListener("scroll", markScrolled, { passive: true });
+
+        function render() {
+          var visible = Math.min(renderLimit, cards.length);
+          cards.forEach(function (card, idx) {
+            var show = idx < visible;
+            var wasVisible = card.dataset.visible === "1";
+            card.style.display = show ? "grid" : "none";
+            card.dataset.visible = show ? "1" : "0";
+            if (show && !wasVisible) {
+              card.style.setProperty("--reveal-delay", (idx % batchSize) * 42 + "ms");
+              card.classList.remove("is-shown");
+              void card.offsetWidth;
+              card.classList.add("is-shown");
+            } else if (!show) {
+              card.classList.remove("is-shown");
+              card.style.removeProperty("--reveal-delay");
+            }
+          });
+
+          var hasMore = visible < cards.length;
+          sentinel.hidden = !hasMore;
+          sentinel.classList.toggle("is-active", hasMore);
+          if (hint && hasMore) {
+            var remaining = cards.length - visible;
+            var next = Math.min(batchSize, remaining);
+            hint.textContent = "Scroll to load " + next + " more update" + (next > 1 ? "s" : "");
+          }
+        }
+
+        function revealNext(force) {
+          if (renderLimit >= cards.length) return;
+          if (!force && !hasScrolled) return;
+          renderLimit = Math.min(renderLimit + batchSize, cards.length);
+          render();
+        }
+
+        sentinel.addEventListener("click", function () {
+          revealNext(true);
+        });
+
+        if ("IntersectionObserver" in window) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              revealNext(false);
+            });
+          }, { rootMargin: "0px 0px 280px 0px", threshold: 0.01 });
+          observer.observe(sentinel);
+        }
+
+        render();
+      }
+
+      initNewsProgressiveLoading();
     })();
   </script>
   <script src="../page-transition.js" defer></script>
