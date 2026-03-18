@@ -28,6 +28,7 @@
 - https://ai.underside.be/google7af869e5e0e8f999.html
 
 ## Articles (FR)
+- https://ai.underside.be/article-ipec-ia-industrielle-souveraine-2026.html
 - https://ai.underside.be/article-eu-ai-week-souverainete-2026.html
 - https://ai.underside.be/article-nttdata-ai-factories-souverain-2026.html
 - https://ai.underside.be/article-schwarz-digits-aleph-alpha-workspace-2026.html
@@ -50,6 +51,7 @@
 - https://ai.underside.be/article-openai-financement-2026.html
 
 ## Articles (EN)
+- https://ai.underside.be/en/article-ipec-ia-industrielle-souveraine-2026.html
 - https://ai.underside.be/en/article-eu-ai-week-souverainete-2026.html
 - https://ai.underside.be/en/article-nttdata-ai-factories-souverain-2026.html
 - https://ai.underside.be/en/article-schwarz-digits-aleph-alpha-workspace-2026.html
