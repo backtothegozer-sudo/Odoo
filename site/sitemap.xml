@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://ai.underside.be/actualites</loc>
-    <lastmod>2026-03-18</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/actualites" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/actualites" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/actualites" />
@@ -20,12 +20,39 @@
   </url>
   <url>
     <loc>https://ai.underside.be/blog</loc>
-    <lastmod>2026-03-18</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/blog" />
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ai.underside.be/article-nvidia-nebius-ai-factory-souveraine-2026.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/article-nvidia-nebius-ai-factory-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/article-nvidia-nebius-ai-factory-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/article-nvidia-nebius-ai-factory-souveraine-2026.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai.underside.be/article-digital-europe-capacites-souveraines-2026.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/article-digital-europe-capacites-souveraines-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/article-digital-europe-capacites-souveraines-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/article-digital-europe-capacites-souveraines-2026.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai.underside.be/article-crusoe-edge-zones-ia-souveraine-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/article-crusoe-edge-zones-ia-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/article-crusoe-edge-zones-ia-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/article-crusoe-edge-zones-ia-souveraine-2026.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai.underside.be/article-ipec-ia-industrielle-souveraine-2026.html</loc>
@@ -254,7 +281,7 @@
   </url>
   <url>
     <loc>https://ai.underside.be/en/actualites</loc>
-    <lastmod>2026-03-18</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/actualites" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/actualites" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/actualites" />
@@ -263,12 +290,48 @@
   </url>
   <url>
     <loc>https://ai.underside.be/en/blog</loc>
-    <lastmod>2026-03-18</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/blog" />
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ai.underside.be/en/article-nvidia-nebius-ai-factory-souveraine-2026.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/article-nvidia-nebius-ai-factory-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/article-nvidia-nebius-ai-factory-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/article-nvidia-nebius-ai-factory-souveraine-2026.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai.underside.be/en/article-digital-europe-capacites-souveraines-2026.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/article-digital-europe-capacites-souveraines-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/article-digital-europe-capacites-souveraines-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/article-digital-europe-capacites-souveraines-2026.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai.underside.be/en/article-crusoe-edge-zones-ia-souveraine-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/article-crusoe-edge-zones-ia-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/article-crusoe-edge-zones-ia-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/article-crusoe-edge-zones-ia-souveraine-2026.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai.underside.be/en/article-ipec-ia-industrielle-souveraine-2026.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai.underside.be/article-ipec-ia-industrielle-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai.underside.be/en/article-ipec-ia-industrielle-souveraine-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai.underside.be/article-ipec-ia-industrielle-souveraine-2026.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai.underside.be/en/article-eu-ai-week-souverainete-2026.html</loc>
