@@ -28,6 +28,8 @@
 - https://ai.underside.be/google7af869e5e0e8f999.html
 
 ## Articles (FR)
+- https://ai.underside.be/article-atos-agentic-studios-souverain-2026.html
+- https://ai.underside.be/article-eu-japan-digital-week-souverainete-2026.html
 - https://ai.underside.be/article-accenture-mistral-autonomie-souveraine-2026.html
 - https://ai.underside.be/article-sap-cccs-souverain-2026.html
 - https://ai.underside.be/article-palantir-nvidia-aios-souveraine-2026.html
@@ -59,6 +61,8 @@
 - https://ai.underside.be/article-openai-financement-2026.html
 
 ## Articles (EN)
+- https://ai.underside.be/en/article-atos-agentic-studios-souverain-2026.html
+- https://ai.underside.be/en/article-eu-japan-digital-week-souverainete-2026.html
 - https://ai.underside.be/en/article-accenture-mistral-autonomie-souveraine-2026.html
 - https://ai.underside.be/en/article-sap-cccs-souverain-2026.html
 - https://ai.underside.be/en/article-palantir-nvidia-aios-souveraine-2026.html
