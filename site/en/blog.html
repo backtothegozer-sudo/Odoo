@@ -3,1120 +3,355 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sovereign AI Blog Belgium & France | Underside</title>
-  <link rel="icon" href="../logo-underside-fav.svg?v=20260312b" type="image/svg+xml" />
-  <link rel="icon" href="../favicon.ico?v=20260312b" sizes="any" />
-  <link rel="shortcut icon" href="../favicon.ico?v=20260312b" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=20260312b" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=20260312b" />
-
-  <meta name="description" content="Underside blog on sovereign AI in Belgium and France: in-depth analyses on infrastructure, compliance, architecture, and production deployment." />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <meta name="author" content="Underside" />
-  <meta name="theme-color" content="#060607" />
-  <link rel="canonical" href="https://ai.underside.be/en/blog" />
-  <link rel="alternate" hreflang="fr" href="https://ai.underside.be/blog" />
-  <link rel="alternate" hreflang="en" href="https://ai.underside.be/en/blog" />
-  <link rel="alternate" hreflang="x-default" href="https://ai.underside.be/blog" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sovereign AI Blog Belgium & France | Underside" />
-  <meta property="og:description" content="Sovereign AI analysis for Belgium and France: architecture, compliance, security, and production execution." />
-  <meta property="og:url" content="https://ai.underside.be/en/blog" />
-  <meta property="og:image" content="https://ai.underside.be/favicon-512.png" />
-  <meta property="og:site_name" content="Underside" />
-  <meta property="og:locale" content="en_US" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://ai.underside.be/favicon-512.png" />
-  <meta name="twitter:title" content="Sovereign AI Blog Belgium & France | Underside" />
-  <meta name="twitter:description" content="Sovereign AI analysis in Belgium and France: architecture, compliance, GPU, hybrid cloud, execution." />
-
-<link rel="manifest" href="../site.webmanifest" />
-  <link rel="alternate" type="application/json" title="MCP Connectors" href="../.well-known/mcp.json" />
+  <title>Odoo Blog | Underside</title>
+  <meta name="description" content="Underside Odoo blog: 12 practical starter articles to scope, deploy and optimize your ERP program." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://odoo.underside.be/en/blog" />
+  <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
+  <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
+  <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
+  <link rel="icon" href="../logo-underside-fav.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../page-transition.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
+      --bg: #05060b;
+      --panel: rgba(10, 10, 14, 0.9);
+      --line: rgba(255, 255, 255, 0.12);
       --ink: #f5f7fb;
-      --ink-2: #cbd2dc;
-      --paper: #060607;
+      --ink-soft: #cbd2dc;
       --accent: #e64bff;
       --accent-2: #4b5bff;
-      --line: rgba(255, 255, 255, 0.12);
-      --shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+      --shadow: 0 18px 44px rgba(0, 0, 0, 0.38);
     }
+
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Manrope", system-ui, -apple-system, sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(900px 520px at 50% 0%, rgba(230, 75, 255, 0.14), rgba(75, 91, 255, 0.10) 35%, transparent 72%),
-        var(--paper);
+        radial-gradient(900px 540px at 50% -10%, rgba(230, 75, 255, 0.22), transparent 62%),
+        radial-gradient(700px 300px at 50% 100%, rgba(75, 91, 255, 0.18), transparent 68%),
+        var(--bg);
     }
-    body.mobile-menu-open {
-      overflow: hidden;
-      touch-action: none;
+
+    .page {
+      min-height: 100vh;
     }
-    a { color: inherit; text-decoration: none; }
-    .mobile-menu-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(4, 4, 8, 0.58);
-      z-index: 100;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.24s ease;
-    }
-    .mobile-menu-backdrop.is-active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(6, 6, 7, 0.66);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    body.mobile-menu-open header {
-      z-index: 110;
-    }
+
     .nav {
-      min-height: 84px;
+      max-width: 1180px;
+      margin: 0 auto;
+      height: 92px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-      row-gap: 10px;
+      gap: 14px;
+      padding: 0 24px;
     }
-    .burger-btn {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(10, 10, 12, 0.8);
-      color: #fff;
+
+    .brand {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 4px;
-      padding: 0;
-      cursor: pointer;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
-    .burger-btn span {
+
+    .brand img {
+      width: 120px;
+      height: auto;
       display: block;
-      width: 20px;
-      height: 2.5px;
-      background: #fff;
-      border-radius: 2px;
-      transform-origin: center;
-      transition: transform 0.22s ease, opacity 0.2s ease;
     }
-    .nav.is-open .burger-btn span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-    .nav.is-open .burger-btn span:nth-child(2) { opacity: 0; }
-    .nav.is-open .burger-btn span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .brand img { height: 28px; display: block; }
-    .links {
+
+    .nav-links {
       display: flex;
-      gap: 18px;
+      align-items: center;
+      gap: 16px;
       font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(245,247,251,0.75);
-      flex: 1 1 auto;
-      min-width: 0;
-      justify-content: center;
-      flex-wrap: wrap;
+      letter-spacing: 0.08em;
     }
-    .hero { padding: 56px 0 28px; }
+
+    .nav-links a {
+      color: rgba(245, 247, 251, 0.84);
+      text-decoration: none;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .hero,
+    .content {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero {
+      padding-top: 34px;
+      padding-bottom: 18px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      padding: 8px 14px;
+      border: 1px solid rgba(230, 75, 255, 0.45);
+      border-radius: 999px;
+      background: rgba(230, 75, 255, 0.14);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #f3dcff;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #8a7bff;
+    }
+
     h1 {
-      margin: 0 0 14px;
-      font-size: clamp(34px, 5vw, 54px);
-      line-height: 1.05;
-      letter-spacing: 0.01em;
+      margin: 0 0 12px;
+      font-size: clamp(34px, 6vw, 56px);
+      line-height: 1.03;
+      letter-spacing: -0.02em;
     }
+
     .lead {
       margin: 0;
-      max-width: 920px;
-      color: var(--ink-2);
+      color: var(--ink-soft);
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.65;
+      max-width: 72ch;
     }
-    .blog-controls {
-      margin-top: 22px;
+
+    .lang-switch {
+      margin-top: 16px;
+      display: inline-flex;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .lang-switch a {
+      color: rgba(245, 247, 251, 0.75);
+      text-decoration: underline;
+      text-decoration-color: rgba(230, 75, 255, 0.55);
+      text-underline-offset: 3px;
+    }
+
+    .lang-switch a.current {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .content {
+      padding-top: 18px;
+      padding-bottom: 70px;
       display: grid;
       gap: 14px;
     }
-    .search-wrap {
-      position: relative;
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 14px;
-      background: linear-gradient(120deg, rgba(230,75,255,0.08), rgba(75,91,255,0.08));
-      overflow: hidden;
-    }
-    .search-wrap::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,0.08) 50%, transparent 75%);
-      transform: translateX(-120%);
-      animation: searchSheen 6s ease-in-out infinite;
-      pointer-events: none;
-    }
-    .blog-search {
-      width: 100%;
-      border: 0;
-      outline: none;
-      background: rgba(10, 10, 12, 0.72);
-      color: var(--ink);
-      font: inherit;
-      padding: 12px 14px;
-      font-size: 15px;
-      letter-spacing: 0.01em;
-    }
-    .blog-search::placeholder { color: rgba(245,247,251,0.5); }
-    .filter-status {
-      font-size: 12px;
-      color: rgba(245,247,251,0.72);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .tag-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .tag-filter {
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.04);
-      color: var(--ink);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font: inherit;
-      font-size: 12px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
-    }
-    .tag-filter:hover { transform: translateY(-1px); }
-    .tag-filter.is-active,
-    .tag-filter[aria-pressed="true"] {
-      background: linear-gradient(135deg, rgba(230,75,255,0.26), rgba(75,91,255,0.3));
-      border-color: rgba(190, 135, 255, 0.75);
-    }
-    .post-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 2px;
-    }
-    .tag-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 11px;
-      letter-spacing: 0.03em;
-      font-weight: 700;
-      border: 1px solid rgba(255,255,255,0.16);
-      text-transform: uppercase;
-      color: #f7f9ff;
-      background: rgba(255,255,255,0.07);
-    }
-    .tag-pill.is-extra {
-      opacity: 0;
-      transform: translateY(6px) scale(0.96);
-      transition: opacity 0.26s ease, transform 0.26s ease;
-    }
-    .tag-pill.is-extra.is-visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-    .tag-pill[hidden] {
-      display: none !important;
-    }
-    .tag-pill-more {
-      cursor: pointer;
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.24);
-      color: rgba(247,249,255,0.88);
-    }
-    .tag-pill-more:hover {
-      background: rgba(255,255,255,0.11);
-      border-color: rgba(255,255,255,0.38);
-    }
-    .tag-infrastructure { background: rgba(75,91,255,0.22); border-color: rgba(124,135,255,0.55); }
-    .tag-souverainete { background: rgba(230,75,255,0.22); border-color: rgba(230,75,255,0.5); }
-    .tag-conformite { background: rgba(98,220,255,0.17); border-color: rgba(98,220,255,0.52); }
-    .tag-cloud { background: rgba(143,122,255,0.2); border-color: rgba(143,122,255,0.5); }
-    .tag-llm { background: rgba(255,113,196,0.2); border-color: rgba(255,113,196,0.56); }
-    .tag-finance { background: rgba(255,196,98,0.2); border-color: rgba(255,196,98,0.56); }
-    .tag-secteur-public { background: rgba(127,238,186,0.2); border-color: rgba(127,238,186,0.55); }
-    .tag-productivite { background: rgba(252,255,127,0.2); border-color: rgba(252,255,127,0.52); }
-    .no-results {
-      display: none;
-      margin: 0 0 70px;
-      padding: 18px;
-      border: 1px dashed rgba(255,255,255,0.22);
-      border-radius: 14px;
-      color: var(--ink-2);
-      background: rgba(255,255,255,0.03);
-    }
-    .no-results.is-visible { display: block; }
-    .load-sentinel {
-      display: none;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: -38px 0 36px;
-      padding: 8px 12px;
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 999px;
-      background: linear-gradient(135deg, rgba(230,75,255,0.12), rgba(75,91,255,0.12));
-      color: rgba(245, 247, 251, 0.8);
-      font: inherit;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      cursor: pointer;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.2s ease;
-    }
-    .load-sentinel:hover {
-      transform: translateY(-1px);
-      border-color: rgba(190, 135, 255, 0.75);
-      background: linear-gradient(135deg, rgba(230,75,255,0.18), rgba(75,91,255,0.2));
-    }
-    .load-sentinel.is-active { display: inline-flex; }
-    .load-sentinel[hidden] { display: none !important; }
-    .load-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #e64bff, #4b5bff);
-      box-shadow: 0 0 12px rgba(230,75,255,0.45);
-      animation: loadPulse 1.8s ease-in-out infinite;
-      flex: 0 0 auto;
-    }
-    .grid {
-      padding: 20px 0 70px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
+
     .post {
-      background: rgba(10, 10, 12, 0.9);
       border: 1px solid var(--line);
-      border-radius: 20px;
+      border-radius: 18px;
+      background: var(--panel);
       box-shadow: var(--shadow);
-      padding: 22px;
-      display: grid;
-      gap: 12px;
-      align-content: start;
+      padding: 24px;
     }
-    .post.is-shown {
-      animation: postReveal 0.46s cubic-bezier(0.22, 0.9, 0.25, 1) both;
-      animation-delay: var(--reveal-delay, 0ms);
-    }
-    .post time {
-      font-size: 12px;
-      color: rgba(245, 247, 251, 0.65);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-    .post h2 {
-      margin: 0;
-      font-size: 24px;
-      line-height: 1.28;
-      text-wrap: balance;
-    }
-    .post h2 a:hover { text-decoration: underline; text-underline-offset: 3px; }
-    .post p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.72;
-      color: var(--ink-2);
-    }
+
     .meta {
-      margin-top: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
+      margin: 0 0 8px;
+      color: rgba(245, 247, 251, 0.65);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
-    .source {
-      font-size: 13px;
-      color: rgba(245,247,251,0.75);
-      text-decoration: underline;
-      text-underline-offset: 2px;
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1.18;
     }
-    .cta-mini {
-      display: inline-flex;
-      align-items: center;
-      padding: 9px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-size: 13px;
-      letter-spacing: 0.02em;
-      background: rgba(255,255,255,0.04);
+
+    .post p {
+      margin: 0 0 10px;
+      color: var(--ink-soft);
+      line-height: 1.68;
+      font-size: 16px;
     }
-    .bottom {
-      margin: 12px 0 80px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(10, 10, 12, 0.88);
-      padding: 22px;
-      display: flex;
-      gap: 12px;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+
+    .post p:last-child {
+      margin-bottom: 0;
     }
-    .bottom p { margin: 0; color: var(--ink-2); }
-    .legal-row {
-      margin: -56px 0 46px;
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 20px 24px 44px;
+      color: rgba(245, 247, 251, 0.7);
       text-align: center;
       font-size: 13px;
-      color: var(--ink-2);
     }
-    .legal-row a {
-      color: var(--ink-2);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      padding: 11px 18px;
-      border-radius: 999px;
-      font-size: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 10px 24px rgba(230, 75, 255, 0.35);
-      color: #fff;
-    }
-    @media (max-width: 980px) {
-      .links { gap: 12px; font-size: 12px; letter-spacing: 0.08em; }
-    }
-    @media (max-width: 900px) {
-      .nav { position: relative; justify-content: space-between; align-items: center; }
-      .burger-btn { display: inline-flex; position: relative; z-index: 42; }
-      .links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: min(84vw, 360px);
-        height: 100dvh;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 16px;
-        margin-top: 0;
-        padding: calc(var(--mobile-header-h, 84px) + 20px) 22px 24px;
-        border-left: 1px solid rgba(255, 255, 255, 0.16);
-        font-size: 19px;
-        letter-spacing: 0.01em;
-        text-transform: none;
-        font-weight: 600;
-        background: rgba(5, 6, 11, 0.82);
-        backdrop-filter: blur(10px);
-        box-shadow: -30px 0 48px rgba(0, 0, 0, 0.42);
-        transform: translateX(100%);
-        transition: transform 0.32s cubic-bezier(0.22, 0.9, 0.25, 1);
-        z-index: 40;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        isolation: isolate;
-        opacity: 1;
-        filter: none;
+
+    @media (max-width: 920px) {
+      .nav {
+        height: auto;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        align-items: flex-start;
       }
-      .nav.is-open .links { transform: translateX(0); }
-      .links { z-index: 120; }
-      .burger-btn { z-index: 121; }
-    }
-    @keyframes searchSheen {
-      0%, 75%, 100% { transform: translateX(-120%); }
-      35% { transform: translateX(120%); }
-    }
-    @keyframes postReveal {
-      from { opacity: 0; transform: translateY(10px) scale(0.992); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    @keyframes loadPulse {
-      0%, 100% { opacity: 0.45; transform: scale(0.88); }
-      50% { opacity: 1; transform: scale(1.08); }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero,
+      .content {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .post {
+        padding: 18px;
+      }
     }
   </style>
-  <link rel="stylesheet" href="../page-transition.css" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Sovereign AI Blog - Underside",
-      "url": "https://ai.underside.be/en/blog",
-      "inLanguage": "en-BE",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Underside",
-        "url": "https://ai.underside.be"
-      },
-      "blogPost": [
-        {"@type":"BlogPosting","headline":"Atos Sovereign Agentic Studios: a new sovereign AI operating model","datePublished":"2026-03-26"},
-        {"@type":"BlogPosting","headline":"EU-Japan Digital Week 2026: a new sovereign AI execution front","datePublished":"2026-03-26"},
-        {"@type":"BlogPosting","headline":"Accenture x Mistral AI: strategic autonomy enters sovereign AI execution","datePublished":"2026-03-25"},
-        {"@type":"BlogPosting","headline":"SAP Sovereign Cloud for Canada: a concrete sovereign AI execution signal","datePublished":"2026-03-24"},
-        {"@type":"BlogPosting","headline":"AMD x Upstage: Korea accelerates sovereign AI infrastructure","datePublished":"2026-03-23"},
-        {"@type":"BlogPosting","headline":"Palantir x NVIDIA: a reference architecture to operationalize sovereign AI","datePublished":"2026-03-22"},
-        {"@type":"BlogPosting","headline":"Cloud & AI Development Act: European cloud leaders call for executable AI sovereignty","datePublished":"2026-03-21"},
-        {"@type":"BlogPosting","headline":"NVIDIA x Nebius: a major sovereign AI signal at gigawatt scale","datePublished":"2026-03-20"},
-        {"@type":"BlogPosting","headline":"Digital Europe 2026: Brussels strengthens sovereign AI capacity","datePublished":"2026-03-20"},
-        {"@type":"BlogPosting","headline":"Crusoe Edge Zones: sovereign AI moves to fast local deployment","datePublished":"2026-03-19"},
-        {"@type":"BlogPosting","headline":"IPEC 2026: the European Commission spotlights sovereign industrial AI","datePublished":"2026-03-18"},
-        {"@type":"BlogPosting","headline":"EU AI Week 2026: Europe puts sovereign AI on an execution track","datePublished":"2026-03-16"},
-        {"@type":"BlogPosting","headline":"NTT DATA x NVIDIA: enterprise AI factories move sovereign AI into industrial execution","datePublished":"2026-03-15"},
-        {"@type":"BlogPosting","headline":"Schwarz Digits, Aleph Alpha, STACKIT and TU Dresden launch Sovereign AI Workspace","datePublished":"2026-03-14"},
-        {"@type":"BlogPosting","headline":"EU Apply AI strategy accelerates European technological sovereignty","datePublished":"2026-03-13"},
-        {"@type":"BlogPosting","headline":"Polarise: new 30 MW sovereign AI data center in Bavaria","datePublished":"2026-03-12"},
-        {"@type":"BlogPosting","headline":"Red Hat x Telenor AI Factory: a new Nordic sovereign AI benchmark","datePublished":"2026-03-12"},
-        {"@type":"BlogPosting","headline":"Bell x Coveo: new sovereign AI building block in Canada","datePublished":"2026-03-11"},
-        {"@type":"BlogPosting","headline":"CrowdStrike x Schwarz Digits: sovereign AI cybersecurity scales up","datePublished":"2026-03-10"},
-        {"@type":"BlogPosting","headline":"Eviden x AWS European Sovereign Cloud: a milestone for sovereign AI","datePublished":"2026-03-10"},
-        {"@type":"BlogPosting","headline":"Espagne: 100 M€ for l'IPCEI-AI, a strong sovereignty signal","datePublished":"2026-03-10"},
-        {"@type":"BlogPosting","headline":"ChatGPT for Excel: business acceleration and sovereignty requirements","datePublished":"2026-03-10"},
-        {"@type":"BlogPosting","headline":"HyperNova 60B en open access: sovereign AI accelerator","datePublished":"2026-03-10"},
-        {"@type":"BlogPosting","headline":"NVIDIA 2026 results: a critical signal for sovereign AI","datePublished":"2026-03-10"},
-        {"@type":"BlogPosting","headline":"110 milliards for OpenAI: what impact on sovereign AI","datePublished":"2026-03-10"},
-        {"@type":"BlogPosting","headline":"European Commission: cloud + AI serving sovereignty","datePublished":"2026-03-10"},
-        {"@type":"BlogPosting","headline":"GTC 2026: NVIDIA acceleration for production AI","datePublished":"2026-03-09"},
-        {"@type":"BlogPosting","headline":"OpenAI x AWS: a new infrastructure equation for AI","datePublished":"2026-03-09"},
-        {"@type":"BlogPosting","headline":"EuroHPC expands its mandate: focus on AI Gigafactories","datePublished":"2026-03-09"},
-        {"@type":"BlogPosting","headline":"EU Council: official framework for AI Gigafactories","datePublished":"2026-03-09"},
-        {"@type":"BlogPosting","headline":"GPAI Code of Practice: a new compliance baseline","datePublished":"2026-03-09"}
-      ]
-    }
-  </script>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="index.html"><img src="../Underside2018_blanc.png" alt="Underside" /></a>
-      <button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="links" aria-label="Navigation principale">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#souverainete">Sovereignty</a>
-        <a href="actualites.html">News</a>
-        <a href="blog.html">Blog</a>
-        <a href="index.html#contact">Contact</a>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <a class="brand" href="index.html">
+          <img src="../Underside2018_blanc.png" alt="Underside" />
+        </a>
+        <button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="index.html#services">Services</a>
+          <a href="index.html#modules">Modules</a>
+          <a href="index.html#method">Method</a>
+          <a href="index.html#clients">References</a>
+          <a class="active" href="blog.html">Blog</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Sovereign AI Blog: 31 long-form, decision-oriented analyses.</h1>
-      <p class="lead">Last update: 26 March 2026. Each article details technology context, architecture/compliance implications, and an action plan for organizations operating in Belgium and France.</p>
-    </section>
-
-    <section class="blog-controls" aria-label="Blog search and filters">
-      <div class="search-wrap">
-        <input id="blogSearch" class="blog-search" type="search" placeholder="Search by keywords (e.g., GPU, compliance, cloud, sovereignty)" aria-label="Search articles by keyword" />
-      </div>
-      <div class="filter-status" id="blogFilterStatus">31 articles shown</div>
-      <div class="tag-filters" aria-label="Filtrer the articles par tag" id="tagFilters">
-        <button class="tag-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="tag-filter" type="button" data-filter="souverainete" aria-pressed="false">Sovereignty</button>
-        <button class="tag-filter" type="button" data-filter="infrastructure" aria-pressed="false">Infrastructure</button>
-        <button class="tag-filter" type="button" data-filter="conformite" aria-pressed="false">Compliance</button>
-        <button class="tag-filter" type="button" data-filter="cloud" aria-pressed="false">Cloud</button>
-        <button class="tag-filter" type="button" data-filter="llm" aria-pressed="false">LLM</button>
-        <button class="tag-filter" type="button" data-filter="finance" aria-pressed="false">Finance</button>
-        <button class="tag-filter" type="button" data-filter="secteur-public" aria-pressed="false">Public sector</button>
-        <button class="tag-filter" type="button" data-filter="productivite" aria-pressed="false">Productivity</button>
-      </div>
-    </section>
-
-    <section class="grid" aria-label="Sovereign AI blog articles">
-      <article class="post" data-tags="souverainete conformite infrastructure">
-        <time datetime="2026-03-26">Created on 26 March 2026</time>
-        <h2><a href="article-atos-agentic-studios-souverain-2026.html">Atos Sovereign Agentic Studios: a new sovereign AI operating model.</a></h2>
-        <p>Atos' official 12 March 2026 announcement formalizes the move from agentic AI pilots to sovereign production execution, with explicit governance, security, and control requirements for critical environments.</p>
-
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-conformite">Compliance</span><span class="tag-pill tag-infrastructure">Infrastructure</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.globenewswire.com/news-release/2026/03/12/3254317/0/en/atos-group-launches-sovereign-agentic-studios-to-bring-ai-safely-into-production-across-organizations.html" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-atos-agentic-studios-souverain-2026.html">Read full article</a>
+    <main>
+      <section class="hero">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Underside Odoo Blog</p>
+        <h1>12 starter articles for your Odoo knowledge base.</h1>
+        <p class="lead">Short, practical and operations-focused content to help your teams scope, deploy and improve ERP delivery without timeline drift.</p>
+        <div class="lang-switch">
+          <a href="../blog.html">FR</a>
+          <a class="current" href="blog.html">EN</a>
         </div>
-      </article>
+      </section>
 
-      <article class="post" data-tags="souverainete secteur-public infrastructure">
-        <time datetime="2026-03-26">Created on 26 March 2026</time>
-        <h2><a href="article-eu-japan-digital-week-souverainete-2026.html">EU-Japan Digital Week 2026: a new sovereign AI execution front.</a></h2>
-        <p>The official opening of EU-Japan Digital Week on 23 March 2026 deepens cooperation on AI, semiconductors, and HPC, a concrete driver for technology sovereignty execution.</p>
+      <section class="content">
+        <article class="post" id="article-01">
+          <p class="meta">April 15, 2026 · 6 min · Scoping</p>
+          <h2>1. How to start an Odoo project: scope in 3 workshops</h2>
+          <p>A fast project kickoff is not always a good kickoff. The three workshops that matter are: business goals, real-life processes, and deployment priorities. The objective is not to debate every Odoo option, but to define what must work by day 30 after go-live.</p>
+          <p>In practice, we recommend one leadership workshop, one operations workshop, and one finance workshop. This structure aligns expectations, avoids late arbitration, and secures a deliverable first phase.</p>
+        </article>
 
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-infrastructure">Infrastructure</span></div>
-        <div class="meta">
-          <a class="source" href="https://inpacehub.eu/2026/03/13/eu-japan-digital-week-2026/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-eu-japan-digital-week-souverainete-2026.html">Read full article</a>
-        </div>
-      </article>
+        <article class="post" id="article-02">
+          <p class="meta">April 14, 2026 · 5 min · Architecture</p>
+          <h2>2. Standard vs custom: making the decision without overspending</h2>
+          <p>The reflex of "let's build custom" is often more expensive than expected, especially when standard configuration can solve the issue. A practical rule is to customize only when it creates a clear operational advantage or addresses a strong compliance constraint.</p>
+          <p>Before coding, write a mini business case: build cost, maintenance cost, user impact, and upgrade risk. This discipline prevents the accumulation of custom modules that provide little long-term value.</p>
+        </article>
 
-      <article class="post" data-tags="souverainete infrastructure conformite">
-        <time datetime="2026-03-25">Created on 25 March 2026</time>
-        <h2><a href="article-accenture-mistral-autonomie-souveraine-2026.html">Accenture x Mistral AI: strategic autonomy enters sovereign AI execution.</a></h2>
-        <p>Accenture's official 26 February 2026 release confirms a multi-year collaboration with Mistral AI to scale secure-by-design AI deployments aligned with regional strategic-autonomy requirements.</p>
+        <article class="post" id="article-03">
+          <p class="meta">April 13, 2026 · 7 min · Data</p>
+          <h2>3. Data migration: an anti-regression method</h2>
+          <p>The quality of migrated data defines how much users trust the new ERP. A reliable migration uses three cycles: cleanup, test import, and business validation. Each cycle needs measurable expectations, explicit rejection criteria, and owner accountability.</p>
+          <p>The key is to assign one data owner per department. Without ownership, errors bounce between teams and resurface at go-live. With ownership, data quality improves quickly and stays under control.</p>
+        </article>
 
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://newsroom.accenture.com/news/2026/accenture-and-mistral-ai-accelerate-enterprise-reinvention-with-scalable-ai-that-delivers-strategic-autonomy-for-customers" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-accenture-mistral-autonomie-souveraine-2026.html">Read full article</a>
-        </div>
-      </article>
+        <article class="post" id="article-04">
+          <p class="meta">April 12, 2026 · 6 min · Adoption</p>
+          <h2>4. User adoption: avoiding the tunnel effect</h2>
+          <p>Training users only at the end of the project is a common mistake. Adoption must start during prototyping with concrete, role-based scenarios and short feedback loops. The earlier teams test real workflows, the lower the rejection rate in production.</p>
+          <p>A practical setup combines targeted demos, team-specific quick guides, and weekly friction reviews. The goal is not to teach "all of Odoo", but to make critical daily tasks smooth and repeatable.</p>
+        </article>
 
-      <article class="post" data-tags="souverainete conformite cloud">
-        <time datetime="2026-03-24">Created on 24 March 2026</time>
-        <h2><a href="article-sap-cccs-souverain-2026.html">SAP Sovereign Cloud for Canada: a concrete sovereign AI execution signal.</a></h2>
-        <p>SAP Canada's official 12 March 2026 publication confirms CCCS assessments for SAP Sovereign Cloud for Canada, a practical marker for production-grade sovereign AI in regulated environments.</p>
+        <article class="post" id="article-05">
+          <p class="meta">April 11, 2026 · 5 min · Integration</p>
+          <h2>5. Connecting Odoo to e-commerce without technical debt</h2>
+          <p>A strong e-commerce integration is more than order sync. You also need robust handling of statuses, refunds, stock availability, and logistics exceptions. Without this foundation, teams spend too much time fixing inconsistencies manually.</p>
+          <p>Prioritize critical flows first: order, payment, stock, invoice. Add retry logic and anomaly alerts from day one. This approach lowers support effort and protects growth as transaction volume increases.</p>
+        </article>
 
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-conformite">Compliance</span><span class="tag-pill tag-cloud">Cloud</span></div>
-        <div class="meta">
-          <a class="source" href="https://news.sap.com/canada/2026/03/sap-strengthens-compliance-in-canada-with-canadian-centre-for-cyber-security-cccs-cloud-assessments-of-sap-sovereign-cloud-for-canada/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-sap-cccs-souverain-2026.html">Read full article</a>
-        </div>
-      </article>
+        <article class="post" id="article-06">
+          <p class="meta">April 10, 2026 · 6 min · Governance</p>
+          <h2>6. Running a multi-company deployment</h2>
+          <p>In a multi-company context, success depends on balancing standardization and local autonomy. The most robust model defines a common core (finance, master data, security) while allowing controlled local variants for operational processes.</p>
+          <p>Document what is global, what is local, and who decides when conflicts appear. Without clear governance, exceptions multiply, test cycles get heavier, and delivery timelines become unpredictable.</p>
+        </article>
 
-      <article class="post" data-tags="souverainete infrastructure conformite">
-        <time datetime="2026-03-23">Created on 23 March 2026</time>
-        <h2><a href="article-amd-upstage-souverain-2026.html">AMD x Upstage: Korea accelerates sovereign AI infrastructure.</a></h2>
-        <p>AMD's official 18 March 2026 release confirms an expanded Upstage partnership, combining immediate GPU rollout and a production trajectory for national-scale sovereign AI capabilities.</p>
+        <article class="post" id="article-07">
+          <p class="meta">April 9, 2026 · 5 min · Finance</p>
+          <h2>7. Automating invoicing while keeping accounting control</h2>
+          <p>Automation is useful only when accounting rules are explicit and testable. Before enabling automatic invoices, secure VAT logic, exception handling, and validation workflows. Otherwise, you save time on entry but lose time in correction.</p>
+          <p>Keep controls lightweight but strict: variance logs, reconciliation views, and a weekly finance-operations review during the first production weeks.</p>
+        </article>
 
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.amd.com/en/newsroom/press-releases/2026-3-18-amd-and-upstage-expand-strategic-collaboratio.html" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-amd-upstage-souverain-2026.html">Read full article</a>
-        </div>
-      </article>
+        <article class="post" id="article-08">
+          <p class="meta">April 8, 2026 · 6 min · Supply</p>
+          <h2>8. Inventory and logistics: stabilizing flows in 6 weeks</h2>
+          <p>Most stock issues do not come from Odoo itself; they come from gaps between documented processes and real warehouse behavior. To stabilize quickly, start with high-frequency flows: receiving, picking, shipping, and cycle counting.</p>
+          <p>Track three KPIs: theoretical-vs-actual stock variance, processing lead time, and picking anomaly rate. With weekly review and ownership, measurable gains usually appear within the first month.</p>
+        </article>
 
-      <article class="post" data-tags="souverainete infrastructure conformite">
-        <time datetime="2026-03-22">Created on 22 March 2026</time>
-        <h2><a href="article-palantir-nvidia-aios-souveraine-2026.html">Palantir x NVIDIA: a reference architecture to operationalize sovereign AI.</a></h2>
-        <p>The official 12 March 2026 announcement introduces a "Sovereign AI OS" reference stack designed to run sensitive AI workloads with stronger executable control from infrastructure to governance.</p>
+        <article class="post" id="article-09">
+          <p class="meta">April 7, 2026 · 5 min · Security</p>
+          <h2>9. Security and access rights: building a robust model</h2>
+          <p>An effective access model reflects real responsibilities, not an idealized org chart. Define clear role profiles, avoid individual one-off permissions, and trace sensitive approvals from the beginning.</p>
+          <p>Access reviews should be planned during implementation and repeated in run mode. This discipline reduces operational errors, fraud risk, and handover friction when teams change.</p>
+        </article>
 
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.businesswire.com/news/home/20260312795208/en/Palantir-and-NVIDIA-Team-to-Deliver-Sovereign-AI-Operating-System-Reference-Architecture" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-palantir-nvidia-aios-souveraine-2026.html">Read full article</a>
-        </div>
-      </article>
+        <article class="post" id="article-10">
+          <p class="meta">April 6, 2026 · 6 min · Performance</p>
+          <h2>10. Odoo dashboards: 8 KPIs that actually matter</h2>
+          <p>A useful dashboard is not a wall of numbers. For ERP execution, focus on a small set of decision KPIs: order cycle time, on-time delivery, gross margin, DSO, stock turns, support backlog, active adoption, and data quality.</p>
+          <p>Each KPI must have an owner and a defined corrective action. Without this action link, reporting may look reassuring but rarely improves operations.</p>
+        </article>
 
-      <article class="post" data-tags="souverainete secteur-public conformite">
-        <time datetime="2026-03-21">Created on 21 March 2026</time>
-        <h2><a href="article-cispe-cada-souverainete-ia-2026.html">Cloud &amp; AI Development Act: European cloud leaders call for executable AI sovereignty.</a></h2>
-        <p>CISPE's 17 March 2026 joint letter asks the EU to hard-code strict anti "sovereignty washing" criteria into CADA, a key signal for practical and auditable sovereign AI governance.</p>
+        <article class="post" id="article-11">
+          <p class="meta">April 5, 2026 · 7 min · Go-live</p>
+          <h2>11. Planning a phased go-live without operational disruption</h2>
+          <p>A phased go-live is often safer than a full cutover, especially when teams share core transactions. The key is to split by controllable scope: legal entity, product family, or process stream.</p>
+          <p>Build a precise cutover plan: who does what, at what time, and with which rollback criteria. This preparation significantly reduces stress and shortens critical incident windows.</p>
+        </article>
 
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.cispe.cloud/2026/03/17/european-cloud-ceos-seek-strict-sovereignty-criteria-in-eus-cloud-and-ai-development-act/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-cispe-cada-souverainete-ia-2026.html">Read full article</a>
-        </div>
-      </article>
+        <article class="post" id="article-12">
+          <p class="meta">April 4, 2026 · 5 min · Run</p>
+          <h2>12. After go-live: support model and continuous improvement</h2>
+          <p>ERP success is measured after launch. The first 90 days should include a clear operating model: incident triage, fit-for-purpose SLAs, enhancement prioritization, and monthly value reviews against business objectives.</p>
+          <p>This post-go-live governance turns a "finished project" into a living system that evolves with business needs. It is also the most reliable way to protect long-term Odoo ROI.</p>
+        </article>
+      </section>
+    </main>
 
-      <article class="post" data-tags="souverainete infrastructure finance">
-        <time datetime="2026-03-20">Created on 20 March 2026</time>
-        <h2><a href="article-nvidia-nebius-ai-factory-souveraine-2026.html">NVIDIA x Nebius: a major sovereign AI signal at gigawatt scale.</a></h2>
-        <p>NVIDIA's official 11 March 2026 release confirms a deeper Nebius partnership for full-stack AI factories, with a multi-gigawatt trajectory that raises the bar for operational sovereignty.</p>
+    <footer>
+      Underside · Odoo Blog · 5 Avenue Georges Lemaître · Charleroi
+    </footer>
+  </div>
 
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-finance">Finance</span></div>
-        <div class="meta">
-          <a class="source" href="https://nvidianews.nvidia.com/news/nvidia-and-nebius-partner-to-scale-full-stack-ai-cloud" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-nvidia-nebius-ai-factory-souveraine-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete secteur-public conformite">
-        <time datetime="2026-03-20">Created on 20 March 2026</time>
-        <h2><a href="article-digital-europe-capacites-souveraines-2026.html">Digital Europe 2026: Brussels strengthens sovereign AI capacity.</a></h2>
-        <p>The Commission's official 19 March 2026 Digibyte updates the Digital Europe Programme to accelerate strategic digital capacity, a concrete signal for European sovereign AI execution.</p>
-
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://digital-strategy.ec.europa.eu/en/news/digital-europe-programme-amended-continue-deployment-innovative-digital-capacities-across-eu" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-digital-europe-capacites-souveraines-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete infrastructure cloud">
-        <time datetime="2026-03-19">Created on 19 March 2026</time>
-        <h2><a href="article-crusoe-edge-zones-ia-souveraine-2026.html">Crusoe Edge Zones: sovereign AI moves to fast local deployment.</a></h2>
-        <p>Crusoe's official 12 March 2026 release introduces an Edge Zones architecture explicitly designed for sovereign AI deployments with low-latency execution and local data residency.</p>
-
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-cloud">Cloud</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.globenewswire.com/news-release/2026/03/12/3254875/0/en/Crusoe-Unveils-Crusoe-Edge-Zones-to-Deliver-High-Performance-AI-Infrastructure-Powered-by-Crusoe-Spark-Modular-AI-Data-Centers.html" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-crusoe-edge-zones-ia-souveraine-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete secteur-public infrastructure">
-        <time datetime="2026-03-18">Created on 18 March 2026</time>
-        <h2><a href="article-ipec-ia-industrielle-souveraine-2026.html">IPEC 2026: the European Commission spotlights sovereign industrial AI.</a></h2>
-        <p>The official IPEC 2026 event on 17 March 2026 places sovereign industrial AI at the center of execution priorities across defence, security, and critical value-chain resilience in Europe.</p>
-
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-infrastructure">Infrastructure</span></div>
-        <div class="meta">
-          <a class="source" href="https://defence-industry-space.ec.europa.eu/ipec-2026-defence-security-online-conference-2026-03-17_en" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-ipec-ia-industrielle-souveraine-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete secteur-public conformite">
-        <time datetime="2026-03-16">Created on  16 March 2026</time>
-        <h2><a href="article-eu-ai-week-souverainete-2026.html">EU AI Week 2026: Europe puts sovereign AI on an execution track.</a></h2>
-        <p>The official opening of EU AI Week 2026 on 16 March 2026 signals an execution phase: institutional coordination, industrial pace, and shared governance for European sovereign AI.</p>
-
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://euaiact.eu/eu-ai-week-2026" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-eu-ai-week-souverainete-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete infrastructure conformite">
-        <time datetime="2026-03-15">Created on  15 March 2026</time>
-        <h2><a href="article-nttdata-ai-factories-souverain-2026.html">NTT DATA x NVIDIA: enterprise AI factories move sovereign AI into industrial execution.</a></h2>
-        <p>The official 11 March 2026 release confirms a scale-up shift: enterprise AI factories frame AI execution with stronger governance, security, and sovereignty-aligned operating controls.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://us.nttdata.com/en/news/press-release/2026/march/ntt-data-unveils-nvidia-powered-enterprise-ai-factories" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-nttdata-ai-factories-souverain-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete secteur-public conformite">
-        <time datetime="2026-03-14">Created on  14 March 2026</time>
-        <h2><a href="article-schwarz-digits-aleph-alpha-workspace-2026.html">Schwarz Digits, Aleph Alpha, STACKIT and TU Dresden launch Sovereign AI Workspace.</a></h2>
-        <p>The official 12 March 2026 release launches an R&amp;D program for a sovereign AI collaborative suite, with a clear focus on sensitive public-sector and industrial use cases in Europe.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://news.cision.com/schwarz-digits/r/schwarz-digits--aleph-alpha--stackit-and-tu-dresden-are-joining-forces-to-research-and-develop-t,c4127697" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-schwarz-digits-aleph-alpha-workspace-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete secteur-public conformite">
-        <time datetime="2026-03-13">Created on  13 March 2026</time>
-        <h2><a href="article-ue-apply-ai-souverainete-2026.html">EU Apply AI strategy accelerates European technological sovereignty.</a></h2>
-        <p>The official update to the EU Apply AI strategy structures sector-scale AI adoption and strengthens a sovereignty trajectory based on execution, compliance, and control of critical data flows.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://digital-strategy.ec.europa.eu/en/policies/apply-ai-strategy" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-ue-apply-ai-souverainete-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete infrastructure cloud">
-        <time datetime="2026-03-12">Created on  12 March 2026</time>
-        <h2><a href="article-polarise-baviere-souverain-2026.html">Polarise: new 30 MW sovereign AI data center in Bavaria.</a></h2>
-        <p>Polarise's official announcement for a new 30 MW site in Bavaria confirms faster sovereign AI compute expansion in Europe, with a clear path from infrastructure build-out to production execution.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-cloud">Cloud</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.polarise.ai/news/polarise-doubles-germany-s-sovereign-ai-computing-power-with-new-30-mw-data-center-in-bavaria" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-polarise-baviere-souverain-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete infrastructure conformite">
-        <time datetime="2026-03-12">Created on  12 March 2026</time>
-        <h2><a href="article-redhat-telenor-souverain-2026.html">Red Hat x Telenor AI Factory: a new Nordic sovereign AI benchmark.</a></h2>
-        <p>The Red Hat x Telenor AI Factory announcement confirms a platform model for sovereign AI at production scale: in-region data control, multi-tenancy, and cloud-native governance.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.redhat.com/en/about/press-releases/red-hat-and-telenor-ai-factory-bring-scale-sovereignty-and-control-production-ai" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-redhat-telenor-souverain-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete secteur-public conformite">
-        <time datetime="2026-03-11">Created on  11 March 2026</time>
-        <h2><a href="article-bell-coveo-souverain-2026.html">Bell x Coveo: a new sovereign AI building block in Canada.</a></h2>
-        <p>Bell and Coveo announced a strategic alliance to deliver a sovereign AI stack for government bodies and regulated sectors, with data and AI operations kept in Canada under Canadian law.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://explore.business.bell.ca/news-and-events/strategic-sovereign-ai-partnership-coveo-advance-canada-digital-leadership" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-bell-coveo-souverain-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete cloud conformite">
-        <time datetime="2026-03-10">Created on  10 March 2026</time>
-        <h2><a href="article-crowdstrike-stackit-2026.html">CrowdStrike x Schwarz Digits: sovereign AI cybersecurity scales up.</a></h2>
-        <p>The CrowdStrike x Schwarz Digits partnership combines an AI-native security platform with STACKIT sovereign cloud infrastructure, offering a stronger option to protect critical environments in Europe.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-cloud">Cloud</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-and-schwarz-digits-partner-to-secure-european-organizations/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-crowdstrike-stackit-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete cloud conformite">
-        <time datetime="2026-03-10">Created on  10 March 2026</time>
-        <h2><a href="article-eviden-aws-souverain-2026.html">Eviden x AWS European Sovereign Cloud: a milestone for sovereign AI.</a></h2>
-        <p>Eviden joining as a launch partner of AWS European Sovereign Cloud highlights a key capability for sovereign AI: external control of encryption keys and auditable evidence for sensitive workloads.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-cloud">Cloud</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.globenewswire.com/news-release/2026/03/10/3252529/0/fr/Eviden-KMS-d%C3%A9sormais-disponible-sur-AWS-European-Sovereign-Cloud.html" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-eviden-aws-souverain-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="souverainete secteur-public finance">
-        <time datetime="2026-03-10">Created on  10 March 2026</time>
-        <h2><a href="article-espagne-ipcei-ia-2026.html">Spain: €100M for IPCEI-AI, a strong sovereignty signal.</a></h2>
-        <p>Spain's €100M investment in IPCEI-AI projects strengthens Europe’s sovereign AI industrialization path and pushes companies to structure partnerships and governance earlier.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-finance">Finance</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transformacion-digital-y-funcion-publica/paginas/2026/030326-lopez-ia-europa.aspx" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-espagne-ipcei-ia-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="productivite llm conformite">
-        <time datetime="2026-03-10">Created on  10 March 2026</time>
-        <h2><a href="article-chatgpt-excel-2026.html">ChatGPT for Excel: business acceleration and sovereignty requirements.</a></h2>
-        <p>ChatGPT in Excel creates a new productivity lever, but it also requires strict governance for sensitive data, access controls, and traceability to stay on a sovereign AI trajectory.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-productivite">Productivity</span><span class="tag-pill tag-llm">LLM</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://openai.com/index/chatgpt-for-excel/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-chatgpt-excel-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="llm infrastructure souverainete">
-        <time datetime="2026-03-10">Created on  10 March 2026</time>
-        <h2><a href="article-hypernova-60b-2026.html">HyperNova 60B open access: a sovereign AI accelerator.</a></h2>
-        <p>Publishing a compressed 60B model in open access creates a concrete path to reduce dependency on closed APIs: more hosting control, better reversibility, and stronger cost/performance tradeoffs.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-llm">LLM</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-souverainete">Sovereignty</span></div>
-        <div class="meta">
-          <a class="source" href="https://multiversecomputing.com/blog-hypernova-60b-open-access-hugging-face/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-hypernova-60b-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="infrastructure finance souverainete">
-        <time datetime="2026-03-10">Created on  10 March 2026</time>
-        <h2><a href="article-nvidia-resultats-2026.html">NVIDIA 2026 results: a critical signal for sovereign AI.</a></h2>
-        <p>NVIDIA's financial results confirm lasting pressure on GPU capacity. For companies, sovereign AI becomes a resilience strategy: secure compute access, preserve reversibility, and prioritize critical use cases.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-finance">Finance</span><span class="tag-pill tag-souverainete">Sovereignty</span></div>
-        <div class="meta">
-          <a class="source" href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-nvidia-resultats-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="finance infrastructure souverainete">
-        <time datetime="2026-03-10">Created on  10 March 2026</time>
-        <h2><a href="article-openai-financement-2026.html">$110B for OpenAI: what impact on sovereign AI?</a></h2>
-        <p>The OpenAI funding round reshapes the global AI infrastructure landscape. For European companies, the challenge is to combine innovation speed, reversibility, and control over critical components.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-finance">Finance</span><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-souverainete">Sovereignty</span></div>
-        <div class="meta">
-          <a class="source" href="https://openai.com/index/scaling-ai-for-everyone/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-openai-financement-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="secteur-public sovereign cloudete">
-        <time datetime="2026-03-10">Created on  10 March 2026</time>
-        <h2><a href="article-commission-cloud-ai-2025.html">European Commission: cloud + AI serving sovereignty.</a></h2>
-        <p>The European “Cloud and AI Development Services” tender marks a turning point: digital sovereignty becomes a structured requirement in public-sector cloud/AI choices, with direct impact on enterprise standards.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-cloud">Cloud</span><span class="tag-pill tag-souverainete">Sovereignty</span></div>
-        <div class="meta">
-          <a class="source" href="https://digital-strategy.ec.europa.eu/en/news/new-tender-cloud-and-ai-development-services-announced-european-commission" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-commission-cloud-ai-2025.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="infrastructure souverainete conformite">
-        <time datetime="2026-03-09">Created on  9 March 2026</time>
-        <h2><a href="article-gtc-2026.html">GTC 2026: NVIDIA acceleration for production AI.</a></h2>
-        <p>GTC 2026 confirms the importance of GPUs for AI performance and, more importantly, the need for full production architecture: orchestration, observability, security, and continuous cost governance.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-conformite">Compliance</span></div>
-        <div class="meta">
-          <a class="source" href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-gtc-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="cloud conformite souverainete">
-        <time datetime="2026-03-09">Created on  9 March 2026</time>
-        <h2><a href="article-openai-aws-2026.html">OpenAI x AWS: a new infrastructure equation for AI.</a></h2>
-        <p>The partnership changes the trade-off between execution speed and data control. The key is hybrid governance: clearly define what stays on-premise, what moves to cloud, and under which compliance evidence.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-cloud">Cloud</span><span class="tag-pill tag-conformite">Compliance</span><span class="tag-pill tag-souverainete">Sovereignty</span></div>
-        <div class="meta">
-          <a class="source" href="https://openai.com/index/amazon-partnership/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-openai-aws-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="infrastructure secteur-public souverainete">
-        <time datetime="2026-03-09">Created on  9 March 2026</time>
-        <h2><a href="article-eurohpc-2026.html">EuroHPC expands its mandate: focus on AI Gigafactories.</a></h2>
-        <p>EuroHPC’s evolution strengthens the credibility of sovereign options in Europe. For companies, it is an opportunity to align AI strategy, regulatory constraints, and a 24‑month industrial roadmap.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-infrastructure">Infrastructure</span><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-souverainete">Sovereignty</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.eurohpc-ju.europa.eu/eurohpc-jus-mandate-expanded-under-new-regulation-amendment-2026-01-20_en" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-eurohpc-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="secteur-public conformite souverainete">
-        <time datetime="2026-03-09">Created on  9 March 2026</time>
-        <h2><a href="article-consilium-2026.html">EU Council: official framework for AI Gigafactories.</a></h2>
-        <p>The EU Council decision reduces strategic uncertainty. It provides an institutional foundation to plan robust, traceable AI investments compatible with sovereignty requirements.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-secteur-public">Public sector</span><span class="tag-pill tag-conformite">Compliance</span><span class="tag-pill tag-souverainete">Sovereignty</span></div>
-        <div class="meta">
-          <a class="source" href="https://www.consilium.europa.eu/en/press/press-releases/2026/01/16/artificial-intelligence-council-paves-the-way-for-the-creation-of-ai-gigafactories/" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-consilium-2026.html">Read full article</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="conformite souverainete secteur-public">
-        <time datetime="2026-03-09">Created on  9 March 2026</time>
-        <h2><a href="article-gpai-2025.html">GPAI Code of Practice: a new compliance baseline.</a></h2>
-        <p>The GPAI code provides an operational framework to structure AI compliance obligations. The challenge is no longer only legal: it is now operational, through controls, evidence, and governance tooling.</p>
-        
-        <div class="post-tags" aria-label="Article tags"><span class="tag-pill tag-conformite">Compliance</span><span class="tag-pill tag-souverainete">Sovereignty</span><span class="tag-pill tag-secteur-public">Public sector</span></div>
-        <div class="meta">
-          <a class="source" href="https://digital-strategy.ec.europa.eu/en/news/general-purpose-ai-code-practice-now-available" target="_blank" rel="noopener">Source</a>
-          <a class="cta-mini" href="article-gpai-2025.html">Read full article</a>
-        </div>
-      </article>
-    </section>
-    <button id="blogLoadSentinel" class="load-sentinel" type="button" hidden aria-label="Show more articles">
-      <span class="load-dot" aria-hidden="true"></span>
-      <span id="blogLoadHint">Scroll to load more</span>
-    </button>
-
-    <div class="no-results" id="noTagResults">No articles for this tag at the moment.</div>
-
-    <section class="bottom">
-      <p>Want to turn these signals into an executable sovereign AI roadmap?</p>
-      <a class="cta" href="index.html#contact">Request a diagnostic</a>
-    </section>
-    <div class="legal-row"><a href="gdpr.html">GDPR Policy</a></div>
-  </main>
-  <script>
-    (function () {
-      function initProgressiveTagPills() {
-        var groups = document.querySelectorAll(".post-tags");
-        groups.forEach(function (group) {
-          var pills = Array.prototype.slice.call(group.querySelectorAll(".tag-pill"));
-          if (pills.length <= 2) return;
-
-          var extras = pills.slice(2);
-          extras.forEach(function (pill) {
-            pill.classList.add("is-extra");
-            pill.hidden = true;
-          });
-
-          var toggle = document.createElement("button");
-          toggle.type = "button";
-          toggle.className = "tag-pill tag-pill-more";
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.textContent = "+" + extras.length;
-          group.appendChild(toggle);
-
-          var expanded = false;
-          toggle.addEventListener("click", function () {
-            expanded = !expanded;
-            toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
-            toggle.textContent = expanded ? "less" : "+" + extras.length;
-
-            if (expanded) {
-              extras.forEach(function (pill, idx) {
-                pill.hidden = false;
-                window.setTimeout(function () {
-                  pill.classList.add("is-visible");
-                }, idx * 70);
-              });
-            } else {
-              extras.forEach(function (pill, idx) {
-                window.setTimeout(function () {
-                  pill.classList.remove("is-visible");
-                  window.setTimeout(function () {
-                    pill.hidden = true;
-                  }, 220);
-                }, idx * 45);
-              });
-            }
-          });
-        });
-      }
-
-      function initTagFilters() {
-        var filters = document.getElementById("tagFilters");
-        if (!filters) return;
-        var searchInput = document.getElementById("blogSearch");
-        var status = document.getElementById("blogFilterStatus");
-        var buttons = filters.querySelectorAll(".tag-filter");
-        var posts = document.querySelectorAll(".post[data-tags]");
-        var noResults = document.getElementById("noTagResults");
-        var sentinel = document.getElementById("blogLoadSentinel");
-        var sentinelHint = document.getElementById("blogLoadHint");
-        var activeTag = "all";
-        var query = "";
-        var batchSize = 8;
-        var renderLimit = batchSize;
-        var matchedPosts = [];
-        var hasScrolled = window.scrollY > 12;
-
-        function markScrolled() {
-          if (window.scrollY <= 12) return;
-          hasScrolled = true;
-          window.removeEventListener("scroll", markScrolled);
-        }
-        window.addEventListener("scroll", markScrolled, { passive: true });
-
-        function updateStatus(shown, total) {
-          if (!status) return;
-          if (total === 0) {
-            status.textContent = "0 articles shown";
-            return;
-          }
-          status.textContent = shown + " of " + total + " article" + (total > 1 ? "s" : "") + " shown";
-        }
-
-        function updateSentinel(shown, total) {
-          if (!sentinel) return;
-          var hasMore = shown < total;
-          sentinel.hidden = !hasMore;
-          sentinel.classList.toggle("is-active", hasMore);
-          if (sentinelHint && hasMore) {
-            var remaining = total - shown;
-            var next = Math.min(batchSize, remaining);
-            sentinelHint.textContent = "Scroll to load " + next + " more article" + (next > 1 ? "s" : "");
-          }
-        }
-
-        function renderMatched(resetLimit) {
-          if (resetLimit) renderLimit = batchSize;
-          var targetVisible = Math.min(renderLimit, matchedPosts.length);
-          var visiblePosts = new Set(matchedPosts.slice(0, targetVisible));
-          var shown = 0;
-
-          posts.forEach(function (post) {
-            var show = visiblePosts.has(post);
-            var wasVisible = post.dataset.visible === "1";
-
-            post.style.display = show ? "grid" : "none";
-            post.dataset.visible = show ? "1" : "0";
-            if (show && !wasVisible) {
-              post.style.setProperty("--reveal-delay", (shown % batchSize) * 42 + "ms");
-              post.classList.remove("is-shown");
-              void post.offsetWidth;
-              post.classList.add("is-shown");
-            } else if (!show) {
-              post.classList.remove("is-shown");
-              post.style.removeProperty("--reveal-delay");
-            }
-            if (show) shown++;
-          });
-
-          if (noResults) noResults.classList.toggle("is-visible", matchedPosts.length === 0);
-          updateStatus(shown, matchedPosts.length);
-          updateSentinel(shown, matchedPosts.length);
-        }
-
-        function computeMatches() {
-          matchedPosts = [];
-          posts.forEach(function (post) {
-            var tags = (post.getAttribute("data-tags") || "").split(/\s+/).filter(Boolean);
-            var text = post.textContent.toLowerCase();
-            var tagOk = activeTag === "all" || tags.indexOf(activeTag) !== -1;
-            var queryOk = !query || text.indexOf(query) !== -1;
-            if (tagOk && queryOk) matchedPosts.push(post);
-          });
-        }
-
-        function applyFilter(resetLimit) {
-          computeMatches();
-          renderMatched(resetLimit !== false);
-        }
-
-        function revealNextBatch(force) {
-          if (!matchedPosts.length || renderLimit >= matchedPosts.length) return;
-          if (!force && !hasScrolled) return;
-          renderLimit = Math.min(renderLimit + batchSize, matchedPosts.length);
-          renderMatched(false);
-        }
-
-        buttons.forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            activeTag = btn.getAttribute("data-filter") || "all";
-            buttons.forEach(function (b) {
-              var active = b === btn;
-              b.classList.toggle("is-active", active);
-              b.setAttribute("aria-pressed", active ? "true" : "false");
-            });
-            applyFilter(true);
-          });
-        });
-
-        if (searchInput) {
-          searchInput.addEventListener("input", function () {
-            query = searchInput.value.trim().toLowerCase();
-            applyFilter(true);
-          });
-        }
-
-        if (sentinel) {
-          sentinel.addEventListener("click", function () {
-            revealNextBatch(true);
-          });
-          if ("IntersectionObserver" in window) {
-            var observer = new IntersectionObserver(function (entries) {
-              entries.forEach(function (entry) {
-                if (!entry.isIntersecting) return;
-                revealNextBatch(false);
-              });
-            }, { rootMargin: "0px 0px 280px 0px", threshold: 0.01 });
-            observer.observe(sentinel);
-          }
-        }
-
-        applyFilter(true);
-      }
-      initProgressiveTagPills();
-      initTagFilters();
-    })();
-  </script>
   <script src="../page-transition.js" defer></script>
 </body>
 </html>
