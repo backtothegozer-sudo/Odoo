@@ -452,6 +452,26 @@
       background:
         linear-gradient(120deg, rgba(230, 75, 255, 0.08), rgba(75, 91, 255, 0.08));
     }
+    #clients {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    #clients::before {
+      content: "";
+      position: absolute;
+      width: min(58vw, 620px);
+      aspect-ratio: 1 / 1;
+      left: -180px;
+      top: -240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(230, 75, 255, 0.26) 0%, rgba(230, 75, 255, 0.14) 34%, rgba(230, 75, 255, 0.06) 56%, transparent 74%);
+      filter: blur(3px);
+      z-index: -1;
+      animation: clientsAuraPulse 10.5s ease-in-out infinite;
+      transform-origin: center;
+      pointer-events: none;
+    }
 
     .grid {
       margin-top: 24px;
@@ -774,6 +794,21 @@
     @keyframes drift {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-12px); }
+    }
+    @keyframes clientsAuraPulse {
+      0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.48;
+      }
+      50% {
+        transform: translate3d(16px, 10px, 0) scale(1.06);
+        opacity: 0.7;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #clients::before {
+        animation: none;
+      }
     }
   </style>
   <link rel="stylesheet" href="../page-transition.css" />
