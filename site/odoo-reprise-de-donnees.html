@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reprise de données Odoo: sécuriser qualité et fiabilité | Blog Odoo Underside</title>
+  <meta name="description" content="Méthode de reprise de données Odoo pour fiabiliser la migration et réduire les risques au go-live." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://odoo.underside.be/odoo-reprise-de-donnees.html" />
+  <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-reprise-de-donnees.html" />
+  <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-data-migration.html" />
+  <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-reprise-de-donnees.html" />
+  <link rel="icon" href="logo-underside-fav.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="page-transition.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#05060b; --panel:rgba(10,10,14,.92); --line:rgba(255,255,255,.12); --ink:#f5f7fb; --ink-soft:#cbd2dc; --accent:#e64bff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:radial-gradient(900px 540px at 50% -10%, rgba(230,75,255,.22), transparent 62%), var(--bg); }
+    .nav { max-width:1100px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand img { width:120px; height:auto; display:block; }
+    .nav-links { display:flex; gap:16px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .nav-links a { color:rgba(245,247,251,.84); text-decoration:none; }
+    .nav-links a.active,.nav-links a:hover { color:#fff; }
+    .wrap { max-width:860px; margin:0 auto; padding:20px 24px 56px; }
+    .meta { margin:0 0 10px; color:rgba(245,247,251,.66); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0 0 14px; font-size:clamp(30px,5vw,46px); line-height:1.08; }
+    .lang-switch { margin:0 0 18px; display:inline-flex; gap:10px; font-size:13px; }
+    .lang-switch a { color:rgba(245,247,251,.78); text-decoration:underline; text-decoration-color:rgba(230,75,255,.5); text-underline-offset:3px; }
+    .lang-switch a.current { color:#fff; font-weight:700; text-decoration:none; }
+    article { border:1px solid var(--line); border-radius:16px; background:var(--panel); padding:22px; }
+    article p, article li { color:var(--ink-soft); line-height:1.72; font-size:16px; }
+    article h2 { margin:22px 0 8px; font-size:23px; }
+    article ul { margin:8px 0 0; padding-left:20px; }
+    .back { margin-top:16px; display:inline-flex; border:1px solid rgba(230,75,255,.42); border-radius:999px; padding:8px 12px; background:rgba(230,75,255,.16); color:#fff; text-decoration:none; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    @media (max-width:920px){ .nav { flex-direction:column; align-items:flex-start; } .nav-links { flex-wrap:wrap; } .wrap { padding-left:18px; padding-right:18px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#method">Méthode</a>
+        <a href="index.html#clients">Références</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <p class="meta">16 avril 2026 · 9 min · Données</p>
+    <h1>Reprise de données Odoo: sécuriser qualité et fiabilité</h1>
+    <div class="lang-switch">
+      <a class="current" href="odoo-reprise-de-donnees.html">FR</a>
+      <a href="en/odoo-data-migration.html">EN</a>
+    </div>
+    <article>
+<p>La reprise de données est souvent sous-estimée dans les plannings ERP. Pourtant, c'est l'un des facteurs majeurs de réussite: des données incomplètes ou incohérentes dégradent l'adoption utilisateur, fragilisent les indicateurs et créent des charges de correction coûteuses dès les premières semaines de production.</p>
+<p>La méthode la plus robuste repose sur trois cycles successifs: préparation, migration test, validation métier. Ces cycles doivent être planifiés dès le cadrage et rythmés par des critères objectifs de passage. Sans critères explicites, la décision de go-live devient politique plutôt qu'opérationnelle.</p>
+<h2>Cycle 1: préparer et nettoyer</h2>
+<ul>
+  <li>Identifier les sources de données par domaine (clients, produits, stocks, comptabilité).</li>
+  <li>Définir des règles de qualité: doublons, champs obligatoires, formats, référentiels.</li>
+  <li>Nommer un responsable métier de validation par domaine.</li>
+</ul>
+<h2>Cycle 2: migrer en environnement de test</h2>
+<p>Ce cycle ne vise pas la perfection immédiate. Il sert à qualifier les mappings, vérifier les dépendances et mesurer le taux d'erreurs. Les anomalies constatées doivent être classées: bloquantes, majeures, mineures. Cette hiérarchisation permet de concentrer l'effort sur les impacts business réels.</p>
+<h2>Cycle 3: valider en conditions métier</h2>
+<p>La validation doit être réalisée par les équipes utilisatrices, sur des scénarios concrets: création de commande, traitement logistique, génération facture, extraction de reporting. Tant que ces scénarios ne passent pas de bout en bout, la reprise ne peut pas être considérée comme stabilisée.</p>
+<p>Pour un discours client/prospect crédible, il est utile de partager des indicateurs simples: pourcentage de données conformes, taux d'anomalies par domaine, temps moyen de correction. Ces métriques démontrent la maîtrise du processus et rassurent les parties prenantes.</p>
+<p>Une reprise de données réussie n'est pas un événement ponctuel: c'est une compétence de projet, fondée sur rigueur, ownership métier et pilotage continu.</p>
+    </article>
+    <a class="back" href="blog.html">Retour au blog</a>
+  </main>
+
+  <script src="page-transition.js" defer></script>
+</body>
+</html>

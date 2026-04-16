@@ -4,13 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Odoo Blog | Underside</title>
-  <meta name="description" content="Underside Odoo blog: 12 practical starter articles to scope, deploy and optimize your ERP program." />
+  <meta name="description" content="Underside Odoo blog: practical long-form articles for ERP decision-makers, project leads, and operations teams." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://odoo.underside.be/en/blog" />
   <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
   <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
   <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
   <link rel="icon" href="../logo-underside-fav.svg" type="image/svg+xml" />
+  <link rel="manifest" href="../site.webmanifest" />
   <link rel="stylesheet" href="../page-transition.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,10 +24,8 @@
       --ink: #f5f7fb;
       --ink-soft: #cbd2dc;
       --accent: #e64bff;
-      --accent-2: #4b5bff;
       --shadow: 0 18px 44px rgba(0, 0, 0, 0.38);
     }
-
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -37,37 +36,16 @@
         radial-gradient(700px 300px at 50% 100%, rgba(75, 91, 255, 0.18), transparent 68%),
         var(--bg);
     }
-
-    .page {
-      min-height: 100vh;
-    }
-
     .nav {
       max-width: 1180px;
       margin: 0 auto;
-      height: 92px;
+      padding: 18px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 14px;
-      padding: 0 24px;
     }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    .brand img {
-      width: 120px;
-      height: auto;
-      display: block;
-    }
-
+    .brand img { width: 120px; height: auto; display: block; }
     .nav-links {
       display: flex;
       align-items: center;
@@ -76,281 +54,150 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-
-    .nav-links a {
-      color: rgba(245, 247, 251, 0.84);
-      text-decoration: none;
-    }
-
+    .nav-links a { color: rgba(245,247,251,.84); text-decoration: none; }
     .nav-links a.active,
-    .nav-links a:hover {
-      color: #fff;
-    }
-
+    .nav-links a:hover { color: #fff; }
     .hero,
-    .content {
+    .content,
+    .footer-wrap {
       max-width: 1040px;
       margin: 0 auto;
       padding: 0 24px;
     }
-
-    .hero {
-      padding-top: 34px;
-      padding-bottom: 18px;
-    }
-
+    .hero { padding-top: 20px; padding-bottom: 18px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       margin: 0 0 16px;
       padding: 8px 14px;
-      border: 1px solid rgba(230, 75, 255, 0.45);
+      border: 1px solid rgba(230,75,255,.45);
       border-radius: 999px;
-      background: rgba(230, 75, 255, 0.14);
+      background: rgba(230,75,255,.14);
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
       color: #f3dcff;
     }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #8a7bff;
-    }
-
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #8a7bff; }
     h1 {
       margin: 0 0 12px;
-      font-size: clamp(34px, 6vw, 56px);
+      font-size: clamp(32px, 6vw, 54px);
       line-height: 1.03;
       letter-spacing: -0.02em;
     }
-
     .lead {
       margin: 0;
       color: var(--ink-soft);
       font-size: 18px;
       line-height: 1.65;
-      max-width: 72ch;
+      max-width: 74ch;
     }
-
-    .lang-switch {
-      margin-top: 16px;
-      display: inline-flex;
-      gap: 10px;
-      font-size: 13px;
-    }
-
+    .lang-switch { margin-top: 14px; display: inline-flex; gap: 10px; font-size: 13px; }
     .lang-switch a {
-      color: rgba(245, 247, 251, 0.75);
+      color: rgba(245,247,251,.76);
       text-decoration: underline;
-      text-decoration-color: rgba(230, 75, 255, 0.55);
+      text-decoration-color: rgba(230,75,255,.52);
       text-underline-offset: 3px;
     }
-
-    .lang-switch a.current {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
+    .lang-switch a.current { color: #fff; text-decoration: none; font-weight: 700; }
     .content {
       padding-top: 18px;
-      padding-bottom: 70px;
+      padding-bottom: 66px;
       display: grid;
-      gap: 14px;
+      gap: 12px;
     }
-
-    .post {
+    .post-card {
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: 16px;
       background: var(--panel);
       box-shadow: var(--shadow);
-      padding: 24px;
+      padding: 20px;
     }
-
     .meta {
       margin: 0 0 8px;
-      color: rgba(245, 247, 251, 0.65);
       font-size: 12px;
+      color: rgba(245,247,251,.66);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
-
-    h2 {
-      margin: 0 0 12px;
-      font-size: clamp(22px, 3vw, 30px);
-      line-height: 1.18;
-    }
-
-    .post p {
-      margin: 0 0 10px;
-      color: var(--ink-soft);
-      line-height: 1.68;
-      font-size: 16px;
-    }
-
-    .post p:last-child {
-      margin-bottom: 0;
-    }
-
-    footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 20px 24px 44px;
-      color: rgba(245, 247, 251, 0.7);
-      text-align: center;
+    h2 { margin: 0 0 10px; font-size: clamp(21px, 3vw, 30px); line-height: 1.2; }
+    .post-card p { margin: 0; color: var(--ink-soft); line-height: 1.65; }
+    .read-link {
+      margin-top: 14px;
+      display: inline-flex;
       font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid rgba(230,75,255,.42);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(230,75,255,.16);
     }
-
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 20px 0 40px;
+      color: rgba(245,247,251,.7);
+      font-size: 13px;
+      text-align: center;
+    }
     @media (max-width: 920px) {
-      .nav {
-        height: auto;
-        padding-top: 14px;
-        padding-bottom: 14px;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-      }
-
-      .hero,
-      .content {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      .post {
-        padding: 18px;
-      }
+      .nav { flex-direction: column; align-items: flex-start; }
+      .nav-links { flex-wrap: wrap; }
+      .hero, .content, .footer-wrap { padding-left: 18px; padding-right: 18px; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <nav class="nav">
-        <a class="brand" href="index.html">
-          <img src="../Underside2018_blanc.png" alt="Underside" />
-        </a>
-        <button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="nav-links">
-          <a href="index.html#services">Services</a>
-          <a href="index.html#modules">Modules</a>
-          <a href="index.html#method">Method</a>
-          <a href="index.html#clients">References</a>
-          <a class="active" href="blog.html">Blog</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
-      </nav>
-    </header>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="../Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#method">Method</a>
+        <a href="index.html#clients">References</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Underside Odoo Blog</p>
-        <h1>12 starter articles for your Odoo knowledge base.</h1>
-        <p class="lead">Short, practical and operations-focused content to help your teams scope, deploy and improve ERP delivery without timeline drift.</p>
-        <div class="lang-switch">
-          <a href="../blog.html">FR</a>
-          <a class="current" href="blog.html">EN</a>
-        </div>
-      </section>
+  <main>
+    <section class="hero">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Odoo Blog</p>
+      <h1>Long-form content for decision-makers and delivery teams.</h1>
+      <p class="lead">This section includes 12 practical deep-dive articles to launch your Odoo content base: scoping, rollout, adoption, integration, and post go-live governance.</p>
+      <div class="lang-switch">
+        <a href="../blog.html">FR</a>
+        <a class="current" href="blog.html">EN</a>
+      </div>
+    </section>
 
-      <section class="content">
-        <article class="post" id="article-01">
-          <p class="meta">April 15, 2026 · 6 min · Scoping</p>
-          <h2>1. How to start an Odoo project: scope in 3 workshops</h2>
-          <p>A fast project kickoff is not always a good kickoff. The three workshops that matter are: business goals, real-life processes, and deployment priorities. The objective is not to debate every Odoo option, but to define what must work by day 30 after go-live.</p>
-          <p>In practice, we recommend one leadership workshop, one operations workshop, and one finance workshop. This structure aligns expectations, avoids late arbitration, and secures a deliverable first phase.</p>
-        </article>
+    <section class="content">
+      <article class="post-card"><p class="meta">April 16, 2026 · 8 min</p><h2>1. Scope an Odoo project with 3 decision workshops</h2><p>A practical framework to align leadership, operations and finance from day one.</p><a class="read-link" href="odoo-project-scoping-3-workshops.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 7 min</p><h2>2. Standard vs custom: decide without weakening ROI</h2><p>How to arbitrate customization choices while protecting long-term scalability.</p><a class="read-link" href="odoo-standard-vs-custom.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 9 min</p><h2>3. Odoo data migration: quality and reliability checklist</h2><p>A complete method to prepare, test and validate migration data before production.</p><a class="read-link" href="odoo-data-migration.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 7 min</p><h2>4. User adoption: making ERP useful in daily operations</h2><p>How to structure change management with measurable outcomes for business teams.</p><a class="read-link" href="odoo-user-adoption.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 8 min</p><h2>5. Odoo and e-commerce integration: control points that matter</h2><p>The critical flows to secure in order, stock, invoicing and exception management.</p><a class="read-link" href="odoo-ecommerce-integration.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 7 min</p><h2>6. Multi-company rollout: governance and target model</h2><p>How to define what is global, what is local, and who decides when priorities conflict.</p><a class="read-link" href="odoo-multi-company-rollout.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 6 min</p><h2>7. Invoicing automation with accounting control</h2><p>Define robust controls before automation to avoid costly corrections later.</p><a class="read-link" href="odoo-invoicing-automation.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 8 min</p><h2>8. Inventory and logistics: stabilize flows in 6 weeks</h2><p>A pragmatic operating approach focused on service level and stock reliability.</p><a class="read-link" href="odoo-inventory-logistics.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 6 min</p><h2>9. Security and access rights: building a robust model</h2><p>Best practices to reduce risk without slowing down business execution.</p><a class="read-link" href="odoo-security-access-rights.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 7 min</p><h2>10. Odoo KPIs: design a dashboard for decision-making</h2><p>The indicators that drive corrective action, not just reporting volume.</p><a class="read-link" href="odoo-kpi-performance-dashboard.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 8 min</p><h2>11. Prepare a phased go-live without business disruption</h2><p>Plan by waves with explicit validation gates and rollback criteria.</p><a class="read-link" href="odoo-phased-go-live.html">Read article</a></article>
+      <article class="post-card"><p class="meta">April 16, 2026 · 7 min</p><h2>12. The first 90 days after go-live: support and improvement</h2><p>How to structure run governance to secure adoption and long-term performance.</p><a class="read-link" href="odoo-post-go-live-support.html">Read article</a></article>
+    </section>
+  </main>
 
-        <article class="post" id="article-02">
-          <p class="meta">April 14, 2026 · 5 min · Architecture</p>
-          <h2>2. Standard vs custom: making the decision without overspending</h2>
-          <p>The reflex of "let's build custom" is often more expensive than expected, especially when standard configuration can solve the issue. A practical rule is to customize only when it creates a clear operational advantage or addresses a strong compliance constraint.</p>
-          <p>Before coding, write a mini business case: build cost, maintenance cost, user impact, and upgrade risk. This discipline prevents the accumulation of custom modules that provide little long-term value.</p>
-        </article>
-
-        <article class="post" id="article-03">
-          <p class="meta">April 13, 2026 · 7 min · Data</p>
-          <h2>3. Data migration: an anti-regression method</h2>
-          <p>The quality of migrated data defines how much users trust the new ERP. A reliable migration uses three cycles: cleanup, test import, and business validation. Each cycle needs measurable expectations, explicit rejection criteria, and owner accountability.</p>
-          <p>The key is to assign one data owner per department. Without ownership, errors bounce between teams and resurface at go-live. With ownership, data quality improves quickly and stays under control.</p>
-        </article>
-
-        <article class="post" id="article-04">
-          <p class="meta">April 12, 2026 · 6 min · Adoption</p>
-          <h2>4. User adoption: avoiding the tunnel effect</h2>
-          <p>Training users only at the end of the project is a common mistake. Adoption must start during prototyping with concrete, role-based scenarios and short feedback loops. The earlier teams test real workflows, the lower the rejection rate in production.</p>
-          <p>A practical setup combines targeted demos, team-specific quick guides, and weekly friction reviews. The goal is not to teach "all of Odoo", but to make critical daily tasks smooth and repeatable.</p>
-        </article>
-
-        <article class="post" id="article-05">
-          <p class="meta">April 11, 2026 · 5 min · Integration</p>
-          <h2>5. Connecting Odoo to e-commerce without technical debt</h2>
-          <p>A strong e-commerce integration is more than order sync. You also need robust handling of statuses, refunds, stock availability, and logistics exceptions. Without this foundation, teams spend too much time fixing inconsistencies manually.</p>
-          <p>Prioritize critical flows first: order, payment, stock, invoice. Add retry logic and anomaly alerts from day one. This approach lowers support effort and protects growth as transaction volume increases.</p>
-        </article>
-
-        <article class="post" id="article-06">
-          <p class="meta">April 10, 2026 · 6 min · Governance</p>
-          <h2>6. Running a multi-company deployment</h2>
-          <p>In a multi-company context, success depends on balancing standardization and local autonomy. The most robust model defines a common core (finance, master data, security) while allowing controlled local variants for operational processes.</p>
-          <p>Document what is global, what is local, and who decides when conflicts appear. Without clear governance, exceptions multiply, test cycles get heavier, and delivery timelines become unpredictable.</p>
-        </article>
-
-        <article class="post" id="article-07">
-          <p class="meta">April 9, 2026 · 5 min · Finance</p>
-          <h2>7. Automating invoicing while keeping accounting control</h2>
-          <p>Automation is useful only when accounting rules are explicit and testable. Before enabling automatic invoices, secure VAT logic, exception handling, and validation workflows. Otherwise, you save time on entry but lose time in correction.</p>
-          <p>Keep controls lightweight but strict: variance logs, reconciliation views, and a weekly finance-operations review during the first production weeks.</p>
-        </article>
-
-        <article class="post" id="article-08">
-          <p class="meta">April 8, 2026 · 6 min · Supply</p>
-          <h2>8. Inventory and logistics: stabilizing flows in 6 weeks</h2>
-          <p>Most stock issues do not come from Odoo itself; they come from gaps between documented processes and real warehouse behavior. To stabilize quickly, start with high-frequency flows: receiving, picking, shipping, and cycle counting.</p>
-          <p>Track three KPIs: theoretical-vs-actual stock variance, processing lead time, and picking anomaly rate. With weekly review and ownership, measurable gains usually appear within the first month.</p>
-        </article>
-
-        <article class="post" id="article-09">
-          <p class="meta">April 7, 2026 · 5 min · Security</p>
-          <h2>9. Security and access rights: building a robust model</h2>
-          <p>An effective access model reflects real responsibilities, not an idealized org chart. Define clear role profiles, avoid individual one-off permissions, and trace sensitive approvals from the beginning.</p>
-          <p>Access reviews should be planned during implementation and repeated in run mode. This discipline reduces operational errors, fraud risk, and handover friction when teams change.</p>
-        </article>
-
-        <article class="post" id="article-10">
-          <p class="meta">April 6, 2026 · 6 min · Performance</p>
-          <h2>10. Odoo dashboards: 8 KPIs that actually matter</h2>
-          <p>A useful dashboard is not a wall of numbers. For ERP execution, focus on a small set of decision KPIs: order cycle time, on-time delivery, gross margin, DSO, stock turns, support backlog, active adoption, and data quality.</p>
-          <p>Each KPI must have an owner and a defined corrective action. Without this action link, reporting may look reassuring but rarely improves operations.</p>
-        </article>
-
-        <article class="post" id="article-11">
-          <p class="meta">April 5, 2026 · 7 min · Go-live</p>
-          <h2>11. Planning a phased go-live without operational disruption</h2>
-          <p>A phased go-live is often safer than a full cutover, especially when teams share core transactions. The key is to split by controllable scope: legal entity, product family, or process stream.</p>
-          <p>Build a precise cutover plan: who does what, at what time, and with which rollback criteria. This preparation significantly reduces stress and shortens critical incident windows.</p>
-        </article>
-
-        <article class="post" id="article-12">
-          <p class="meta">April 4, 2026 · 5 min · Run</p>
-          <h2>12. After go-live: support model and continuous improvement</h2>
-          <p>ERP success is measured after launch. The first 90 days should include a clear operating model: incident triage, fit-for-purpose SLAs, enhancement prioritization, and monthly value reviews against business objectives.</p>
-          <p>This post-go-live governance turns a "finished project" into a living system that evolves with business needs. It is also the most reliable way to protect long-term Odoo ROI.</p>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      Underside · Odoo Blog · 5 Avenue Georges Lemaître · Charleroi
-    </footer>
-  </div>
+  <footer>
+    <div class="footer-wrap">Underside · Odoo Blog · 5 Avenue Georges Lemaître · 6041 Charleroi</div>
+  </footer>
 
   <script src="../page-transition.js" defer></script>
 </body>

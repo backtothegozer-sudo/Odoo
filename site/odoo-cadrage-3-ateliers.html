@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadrer un projet Odoo en 3 ateliers décisionnels | Blog Odoo Underside</title>
+  <meta name="description" content="Méthode de cadrage Odoo en 3 ateliers pour aligner direction, finance et opérations avant le déploiement." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://odoo.underside.be/odoo-cadrage-3-ateliers.html" />
+  <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-cadrage-3-ateliers.html" />
+  <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-project-scoping-3-workshops.html" />
+  <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-cadrage-3-ateliers.html" />
+  <link rel="icon" href="logo-underside-fav.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="page-transition.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#05060b; --panel:rgba(10,10,14,.92); --line:rgba(255,255,255,.12); --ink:#f5f7fb; --ink-soft:#cbd2dc; --accent:#e64bff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:radial-gradient(900px 540px at 50% -10%, rgba(230,75,255,.22), transparent 62%), var(--bg); }
+    .nav { max-width:1100px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand img { width:120px; height:auto; display:block; }
+    .nav-links { display:flex; gap:16px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .nav-links a { color:rgba(245,247,251,.84); text-decoration:none; }
+    .nav-links a.active,.nav-links a:hover { color:#fff; }
+    .wrap { max-width:860px; margin:0 auto; padding:20px 24px 56px; }
+    .meta { margin:0 0 10px; color:rgba(245,247,251,.66); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0 0 14px; font-size:clamp(30px,5vw,46px); line-height:1.08; }
+    .lang-switch { margin:0 0 18px; display:inline-flex; gap:10px; font-size:13px; }
+    .lang-switch a { color:rgba(245,247,251,.78); text-decoration:underline; text-decoration-color:rgba(230,75,255,.5); text-underline-offset:3px; }
+    .lang-switch a.current { color:#fff; font-weight:700; text-decoration:none; }
+    article { border:1px solid var(--line); border-radius:16px; background:var(--panel); padding:22px; }
+    article p, article li { color:var(--ink-soft); line-height:1.72; font-size:16px; }
+    article h2 { margin:22px 0 8px; font-size:23px; }
+    article ul { margin:8px 0 0; padding-left:20px; }
+    .back { margin-top:16px; display:inline-flex; border:1px solid rgba(230,75,255,.42); border-radius:999px; padding:8px 12px; background:rgba(230,75,255,.16); color:#fff; text-decoration:none; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    @media (max-width:920px){ .nav { flex-direction:column; align-items:flex-start; } .nav-links { flex-wrap:wrap; } .wrap { padding-left:18px; padding-right:18px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#method">Méthode</a>
+        <a href="index.html#clients">Références</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <p class="meta">16 avril 2026 · 8 min · Cadrage</p>
+    <h1>Cadrer un projet Odoo en 3 ateliers décisionnels</h1>
+    <div class="lang-switch">
+      <a class="current" href="odoo-cadrage-3-ateliers.html">FR</a>
+      <a href="en/odoo-project-scoping-3-workshops.html">EN</a>
+    </div>
+    <article>
+<p>Un projet Odoo réussi ne commence pas par la configuration des modules. Il commence par un cadrage décisionnel exigeant, mené avec les bons interlocuteurs et orienté résultats. Dans la pratique, nous recommandons trois ateliers structurants: direction, opérations et finance.</p>
+<p>Le premier atelier, côté direction, vise à définir les résultats attendus dans les 12 à 18 mois: réduction des délais de traitement, amélioration du taux de service, fiabilité des indicateurs de pilotage, standardisation des pratiques entre équipes. Ce cadrage évite de transformer le projet ERP en simple exercice technique.</p>
+<h2>Les trois ateliers à conduire</h2>
+<ul>
+  <li><strong>Atelier direction:</strong> objectifs business, arbitrages de périmètre, gouvernance de décision.</li>
+  <li><strong>Atelier opérations:</strong> flux réels, exceptions terrain, points de friction quotidiens.</li>
+  <li><strong>Atelier finance:</strong> exigences comptables, règles de contrôle, impacts clôture.</li>
+</ul>
+<p>Le deuxième atelier, orienté opérations, est souvent le plus révélateur. Il permet d'identifier l'écart entre les processus documentés et la réalité d'exécution. C'est ici que l'on sécurise le futur modèle cible: ce qui doit être standardisé, ce qui doit rester flexible, et ce qui nécessite un accompagnement utilisateur renforcé.</p>
+<p>Le troisième atelier, avec la finance, sécurise la soutenabilité du projet. Sans alignement sur les règles de facturation, de rapprochement et de clôture, les gains opérationnels sont vite absorbés par des corrections comptables manuelles. Cet atelier doit donc être traité comme un pilier de fiabilité, pas comme une formalité.</p>
+<h2>Livrables indispensables de fin de cadrage</h2>
+<ul>
+  <li>Périmètre prioritaire de phase 1 validé par la direction.</li>
+  <li>Liste des processus critiques et critères de succès métier.</li>
+  <li>Plan de déploiement par vagues avec responsabilités nominatives.</li>
+  <li>Registre des risques et plan de mitigation associé.</li>
+</ul>
+<p>Présenter un cadrage solide aux clients et prospects exige une formulation claire: on ne promet pas "tout Odoo", on explicite ce qui sera réellement livré, pourquoi, et avec quel impact opérationnel. Cette transparence renforce la crédibilité et réduit les incompréhensions en cours de projet.</p>
+    </article>
+    <a class="back" href="blog.html">Retour au blog</a>
+  </main>
+
+  <script src="page-transition.js" defer></script>
+</body>
+</html>

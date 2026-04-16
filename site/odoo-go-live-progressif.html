@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Préparer un go-live progressif sans rupture d'activité | Blog Odoo Underside</title>
+  <meta name="description" content="Organiser un go-live Odoo progressif avec gouvernance de bascule, gestion des risques et continuité d'activité." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://odoo.underside.be/odoo-go-live-progressif.html" />
+  <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-go-live-progressif.html" />
+  <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-phased-go-live.html" />
+  <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-go-live-progressif.html" />
+  <link rel="icon" href="logo-underside-fav.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="page-transition.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#05060b; --panel:rgba(10,10,14,.92); --line:rgba(255,255,255,.12); --ink:#f5f7fb; --ink-soft:#cbd2dc; --accent:#e64bff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:radial-gradient(900px 540px at 50% -10%, rgba(230,75,255,.22), transparent 62%), var(--bg); }
+    .nav { max-width:1100px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand img { width:120px; height:auto; display:block; }
+    .nav-links { display:flex; gap:16px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .nav-links a { color:rgba(245,247,251,.84); text-decoration:none; }
+    .nav-links a.active,.nav-links a:hover { color:#fff; }
+    .wrap { max-width:860px; margin:0 auto; padding:20px 24px 56px; }
+    .meta { margin:0 0 10px; color:rgba(245,247,251,.66); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0 0 14px; font-size:clamp(30px,5vw,46px); line-height:1.08; }
+    .lang-switch { margin:0 0 18px; display:inline-flex; gap:10px; font-size:13px; }
+    .lang-switch a { color:rgba(245,247,251,.78); text-decoration:underline; text-decoration-color:rgba(230,75,255,.5); text-underline-offset:3px; }
+    .lang-switch a.current { color:#fff; font-weight:700; text-decoration:none; }
+    article { border:1px solid var(--line); border-radius:16px; background:var(--panel); padding:22px; }
+    article p, article li { color:var(--ink-soft); line-height:1.72; font-size:16px; }
+    article h2 { margin:22px 0 8px; font-size:23px; }
+    article ul { margin:8px 0 0; padding-left:20px; }
+    .back { margin-top:16px; display:inline-flex; border:1px solid rgba(230,75,255,.42); border-radius:999px; padding:8px 12px; background:rgba(230,75,255,.16); color:#fff; text-decoration:none; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    @media (max-width:920px){ .nav { flex-direction:column; align-items:flex-start; } .nav-links { flex-wrap:wrap; } .wrap { padding-left:18px; padding-right:18px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#method">Méthode</a>
+        <a href="index.html#clients">Références</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <p class="meta">16 avril 2026 · 8 min · Go-live</p>
+    <h1>Préparer un go-live progressif sans rupture d'activité</h1>
+    <div class="lang-switch">
+      <a class="current" href="odoo-go-live-progressif.html">FR</a>
+      <a href="en/odoo-phased-go-live.html">EN</a>
+    </div>
+    <article>
+<p>Le choix entre bascule globale et go-live progressif doit être guidé par la maîtrise du risque opérationnel. Dans la plupart des contextes PME/ETI, un déploiement par vagues est plus sécurisé, car il permet d'isoler les incidents et d'apprendre rapidement entre deux phases.</p>
+<p>Un go-live progressif ne s'improvise pas. Il repose sur une préparation détaillée: périmètre de chaque vague, critères d'entrée/sortie, plan de support renforcé, et scénario de retour arrière documenté. Cette préparation réduit considérablement le stress de mise en service.</p>
+<h2>Éléments clés du plan de bascule</h2>
+<ul>
+  <li>Découpage par entité, processus ou ligne de produits.</li>
+  <li>Checkpoints de validation métier avant ouverture de la vague suivante.</li>
+  <li>RACI explicite pour la nuit et les jours de bascule.</li>
+  <li>Seuils d'alerte et procédure d'escalade.</li>
+</ul>
+<p>La communication interne est un facteur de succès majeur. Les équipes doivent connaître précisément le calendrier, les impacts attendus, les changements de procédure et les canaux de support. Une communication floue crée des tensions évitables et augmente les erreurs de manipulation.</p>
+<p>En contexte prospect, il est important de présenter un go-live progressif comme une stratégie de continuité d'activité, pas comme un signe de prudence excessive. C'est une méthode de maîtrise qui protège la production et accélère la stabilisation.</p>
+<p>La réussite d'une bascule se mesure dans les jours qui suivent: capacité à traiter les flux critiques, qualité des données opérationnelles et vitesse de résolution des incidents.</p>
+    </article>
+    <a class="back" href="blog.html">Retour au blog</a>
+  </main>
+
+  <script src="page-transition.js" defer></script>
+</body>
+</html>
