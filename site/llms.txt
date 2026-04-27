@@ -1,97 +1,55 @@
-# Underside - IA Souveraine
+# Underside - Odoo
 
-> Site vitrine et éditorial sur l'IA souveraine pour les entreprises, avec contenu en français et en anglais.
+> Bilingual Odoo consulting site for ERP implementation, delivery governance, and long-form operational content in French and English.
 
 ## Canonical
-- https://ai.underside.be/
+- https://odoo.underside.be/
 
 ## Primary Pages (FR)
-- https://ai.underside.be/
-- https://ai.underside.be/actualites
-- https://ai.underside.be/blog
-- https://ai.underside.be/diagnostic-ia-souveraine
-- https://ai.underside.be/gdpr
-- https://ai.underside.be/evenements
+- https://odoo.underside.be/
+- https://odoo.underside.be/blog
+- https://odoo.underside.be/gdpr
 
 ## Primary Pages (EN)
-- https://ai.underside.be/en/
-- https://ai.underside.be/en/actualites
-- https://ai.underside.be/en/blog
-- https://ai.underside.be/en/diagnostic-ia-souveraine
-- https://ai.underside.be/en/gdpr
-- https://ai.underside.be/en/evenements
+- https://odoo.underside.be/en/
+- https://odoo.underside.be/en/blog
+- https://odoo.underside.be/en/gdpr
 
 ## Technical Discovery
-- https://ai.underside.be/sitemap.xml
-- https://ai.underside.be/robots.txt
-- https://ai.underside.be/.well-known/mcp.json
-- https://ai.underside.be/google7af869e5e0e8f999.html
+- https://odoo.underside.be/sitemap.xml
+- https://odoo.underside.be/robots.txt
+- https://odoo.underside.be/.well-known/mcp.json
+- https://odoo.underside.be/google7af869e5e0e8f999.html
 
-## Articles (FR)
-- https://ai.underside.be/article-atos-agentic-studios-souverain-2026.html
-- https://ai.underside.be/article-eu-japan-digital-week-souverainete-2026.html
-- https://ai.underside.be/article-accenture-mistral-autonomie-souveraine-2026.html
-- https://ai.underside.be/article-sap-cccs-souverain-2026.html
-- https://ai.underside.be/article-palantir-nvidia-aios-souveraine-2026.html
-- https://ai.underside.be/article-amd-upstage-souverain-2026.html
-- https://ai.underside.be/article-cispe-cada-souverainete-ia-2026.html
-- https://ai.underside.be/article-nvidia-nebius-ai-factory-souveraine-2026.html
-- https://ai.underside.be/article-digital-europe-capacites-souveraines-2026.html
-- https://ai.underside.be/article-crusoe-edge-zones-ia-souveraine-2026.html
-- https://ai.underside.be/article-ipec-ia-industrielle-souveraine-2026.html
-- https://ai.underside.be/article-eu-ai-week-souverainete-2026.html
-- https://ai.underside.be/article-nttdata-ai-factories-souverain-2026.html
-- https://ai.underside.be/article-schwarz-digits-aleph-alpha-workspace-2026.html
-- https://ai.underside.be/article-ue-apply-ai-souverainete-2026.html
-- https://ai.underside.be/article-polarise-baviere-souverain-2026.html
-- https://ai.underside.be/article-redhat-telenor-souverain-2026.html
-- https://ai.underside.be/article-bell-coveo-souverain-2026.html
-- https://ai.underside.be/article-chatgpt-excel-2026.html
-- https://ai.underside.be/article-commission-cloud-ai-2025.html
-- https://ai.underside.be/article-consilium-2026.html
-- https://ai.underside.be/article-crowdstrike-stackit-2026.html
-- https://ai.underside.be/article-espagne-ipcei-ia-2026.html
-- https://ai.underside.be/article-eurohpc-2026.html
-- https://ai.underside.be/article-eviden-aws-souverain-2026.html
-- https://ai.underside.be/article-gpai-2025.html
-- https://ai.underside.be/article-gtc-2026.html
-- https://ai.underside.be/article-hypernova-60b-2026.html
-- https://ai.underside.be/article-nvidia-resultats-2026.html
-- https://ai.underside.be/article-openai-aws-2026.html
-- https://ai.underside.be/article-openai-financement-2026.html
+## Blog Articles (FR)
+- https://odoo.underside.be/odoo-cadrage-3-ateliers.html
+- https://odoo.underside.be/odoo-standard-ou-sur-mesure.html
+- https://odoo.underside.be/odoo-reprise-de-donnees.html
+- https://odoo.underside.be/odoo-adoption-utilisateurs.html
+- https://odoo.underside.be/odoo-integration-ecommerce.html
+- https://odoo.underside.be/odoo-deploiement-multi-societes.html
+- https://odoo.underside.be/odoo-automatisation-facturation.html
+- https://odoo.underside.be/odoo-stock-logistique.html
+- https://odoo.underside.be/odoo-securite-droits-acces.html
+- https://odoo.underside.be/odoo-kpi-pilotage.html
+- https://odoo.underside.be/odoo-go-live-progressif.html
+- https://odoo.underside.be/odoo-run-support-amelioration.html
+- https://odoo.underside.be/odoo-entreprise-belgique-france.html
 
-## Articles (EN)
-- https://ai.underside.be/en/article-atos-agentic-studios-souverain-2026.html
-- https://ai.underside.be/en/article-eu-japan-digital-week-souverainete-2026.html
-- https://ai.underside.be/en/article-accenture-mistral-autonomie-souveraine-2026.html
-- https://ai.underside.be/en/article-sap-cccs-souverain-2026.html
-- https://ai.underside.be/en/article-palantir-nvidia-aios-souveraine-2026.html
-- https://ai.underside.be/en/article-amd-upstage-souverain-2026.html
-- https://ai.underside.be/en/article-cispe-cada-souverainete-ia-2026.html
-- https://ai.underside.be/en/article-nvidia-nebius-ai-factory-souveraine-2026.html
-- https://ai.underside.be/en/article-digital-europe-capacites-souveraines-2026.html
-- https://ai.underside.be/en/article-crusoe-edge-zones-ia-souveraine-2026.html
-- https://ai.underside.be/en/article-ipec-ia-industrielle-souveraine-2026.html
-- https://ai.underside.be/en/article-eu-ai-week-souverainete-2026.html
-- https://ai.underside.be/en/article-nttdata-ai-factories-souverain-2026.html
-- https://ai.underside.be/en/article-schwarz-digits-aleph-alpha-workspace-2026.html
-- https://ai.underside.be/en/article-ue-apply-ai-souverainete-2026.html
-- https://ai.underside.be/en/article-polarise-baviere-souverain-2026.html
-- https://ai.underside.be/en/article-redhat-telenor-souverain-2026.html
-- https://ai.underside.be/en/article-bell-coveo-souverain-2026.html
-- https://ai.underside.be/en/article-chatgpt-excel-2026.html
-- https://ai.underside.be/en/article-commission-cloud-ai-2025.html
-- https://ai.underside.be/en/article-consilium-2026.html
-- https://ai.underside.be/en/article-crowdstrike-stackit-2026.html
-- https://ai.underside.be/en/article-espagne-ipcei-ia-2026.html
-- https://ai.underside.be/en/article-eurohpc-2026.html
-- https://ai.underside.be/en/article-eviden-aws-souverain-2026.html
-- https://ai.underside.be/en/article-gpai-2025.html
-- https://ai.underside.be/en/article-gtc-2026.html
-- https://ai.underside.be/en/article-hypernova-60b-2026.html
-- https://ai.underside.be/en/article-nvidia-resultats-2026.html
-- https://ai.underside.be/en/article-openai-aws-2026.html
-- https://ai.underside.be/en/article-openai-financement-2026.html
+## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-project-scoping-3-workshops.html
+- https://odoo.underside.be/en/odoo-standard-vs-custom.html
+- https://odoo.underside.be/en/odoo-data-migration.html
+- https://odoo.underside.be/en/odoo-user-adoption.html
+- https://odoo.underside.be/en/odoo-ecommerce-integration.html
+- https://odoo.underside.be/en/odoo-multi-company-rollout.html
+- https://odoo.underside.be/en/odoo-invoicing-automation.html
+- https://odoo.underside.be/en/odoo-inventory-logistics.html
+- https://odoo.underside.be/en/odoo-security-access-rights.html
+- https://odoo.underside.be/en/odoo-kpi-performance-dashboard.html
+- https://odoo.underside.be/en/odoo-phased-go-live.html
+- https://odoo.underside.be/en/odoo-post-go-live-support.html
+- https://odoo.underside.be/en/odoo-enterprise-belgium-france.html
 
 ## Contact
-- https://ai.underside.be/#contact
+- https://odoo.underside.be/#contact
