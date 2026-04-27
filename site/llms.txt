@@ -35,6 +35,7 @@
 - https://odoo.underside.be/odoo-go-live-progressif.html
 - https://odoo.underside.be/odoo-run-support-amelioration.html
 - https://odoo.underside.be/odoo-entreprise-belgique-france.html
+- https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
 - https://odoo.underside.be/en/odoo-project-scoping-3-workshops.html
@@ -50,6 +51,7 @@
 - https://odoo.underside.be/en/odoo-phased-go-live.html
 - https://odoo.underside.be/en/odoo-post-go-live-support.html
 - https://odoo.underside.be/en/odoo-enterprise-belgium-france.html
+- https://odoo.underside.be/en/odoo-integrator-belgium-france.html
 
 ## Contact
 - https://odoo.underside.be/#contact
