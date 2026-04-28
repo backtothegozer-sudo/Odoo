@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odoo Audit in Belgium and France: 7 checks before migration or recovery | Underside Odoo Blog</title>
+  <meta name="description" content="Odoo audit for Belgium and France: 7 practical checks before migration, project recovery, or Odoo Enterprise optimization." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://odoo.underside.be/en/odoo-audit-belgium-france.html" />
+  <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-audit-belgique-france.html" />
+  <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-audit-belgium-france.html" />
+  <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-audit-belgique-france.html" />
+  <link rel="icon" href="../logo-underside-fav.svg?v=20260416c" type="image/svg+xml" />
+  <link rel="stylesheet" href="../page-transition.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta property="og:title" content="Odoo Audit in Belgium and France: 7 checks before migration or recovery" />
+  <meta property="og:description" content="A practical framework to audit Odoo Belgium, Odoo France, and Odoo Enterprise before migration, redesign, or project recovery." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://odoo.underside.be/en/odoo-audit-belgium-france.html" />
+  <meta property="og:image" content="https://odoo.underside.be/favicon-512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Odoo Audit in Belgium and France: 7 checks before migration or recovery" />
+  <meta name="twitter:description" content="How to audit an Odoo Enterprise project before migration or recovery across Belgium and France." />
+  <meta name="twitter:image" content="https://odoo.underside.be/favicon-512.png" />
+  <link rel="alternate" type="application/json" title="MCP Connectors" href="../.well-known/mcp.json" />
+  <style>
+    :root { --bg:#05060b; --panel:rgba(10,10,14,.92); --line:rgba(255,255,255,.12); --ink:#f5f7fb; --ink-soft:#cbd2dc; --accent:#e64bff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:radial-gradient(900px 540px at 50% -10%, rgba(230,75,255,.22), transparent 62%), var(--bg); }
+    .nav { max-width:1100px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand img { width:120px; height:auto; display:block; }
+    .nav-links { display:flex; gap:16px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .nav-links a { color:rgba(245,247,251,.84); text-decoration:none; }
+    .nav-links a.active,.nav-links a:hover { color:#fff; }
+    .wrap { max-width:860px; margin:0 auto; padding:20px 24px 56px; }
+    .meta { margin:0 0 10px; color:rgba(245,247,251,.66); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0 0 14px; font-size:clamp(30px,5vw,46px); line-height:1.08; }
+    article { border:1px solid var(--line); border-radius:16px; background:var(--panel); padding:22px; }
+    article p, article li { color:var(--ink-soft); line-height:1.72; font-size:16px; }
+    article h2 { margin:22px 0 8px; font-size:23px; }
+    article ul { margin:8px 0 0; padding-left:20px; }
+    .box { margin-top:18px; padding:18px; border:1px solid rgba(230,75,255,.28); border-radius:14px; background:rgba(230,75,255,.08); }
+    .back { margin-top:16px; display:inline-flex; border:1px solid rgba(230,75,255,.42); border-radius:999px; padding:8px 12px; background:rgba(230,75,255,.16); color:#fff; text-decoration:none; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    @media (max-width:920px){ .nav { flex-direction:column; align-items:flex-start; } .nav-links { flex-wrap:wrap; } .wrap { padding-left:18px; padding-right:18px; } }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Odoo Audit in Belgium and France: 7 checks before migration or recovery",
+          "description": "Odoo audit for Belgium and France: 7 practical checks before migration, project recovery, or Odoo Enterprise optimization.",
+          "datePublished": "2026-04-28",
+          "dateModified": "2026-04-28",
+          "inLanguage": "en-BE",
+          "author": { "@type": "Organization", "name": "Underside" },
+          "publisher": { "@type": "Organization", "name": "Underside" },
+          "mainEntityOfPage": "https://odoo.underside.be/en/odoo-audit-belgium-france.html"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "When should an Odoo audit be run before migration?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An Odoo audit is useful before an upgrade, a project recovery, a multi-country rollout, or whenever customization debt starts slowing down operations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should an Odoo Enterprise audit review Belgium and France separately?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The functional core may stay shared, but tax, accounting documents, and local operating rules still need country-specific review."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the first warning sign in an Odoo project?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The first warning sign is usually unclear governance between standard usage, custom code, data quality, and support ownership."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="../Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#method">Method</a>
+        <a href="index.html#clients">References</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <p class="meta">April 28, 2026 · 8 min · Odoo Belgium · Odoo France · Odoo Enterprise</p>
+    <h1>Odoo Audit in Belgium and France: 7 checks before migration or recovery</h1>
+    <article>
+      <p>An Odoo audit becomes necessary as soon as a project starts accumulating weak signals: slower issue resolution, unreliable reporting, difficult-to-maintain customizations, or visible divergence between Belgian and French operating teams. In an Odoo Enterprise context, the goal is not to produce a theoretical report. It is to verify what actually holds up in daily operations.</p>
+      <p>For a company active in Belgium, France, or both, the audit should support fast decisions: keep the current model, simplify the standard, prepare a migration, or reset project governance on a cleaner basis.</p>
+
+      <h2>1. Map what belongs to the standard and what belongs to custom work</h2>
+      <p>The first check is to separate standard Odoo functionality, advanced configuration, custom development, and business workarounds. Without that map, it is impossible to estimate the real cost of migration or project recovery.</p>
+      <p>For an Odoo Belgium or Odoo France environment, this also highlights where custom code was used to compensate for weak process design rather than a durable business requirement.</p>
+
+      <h2>2. Verify the quality of critical data</h2>
+      <p>Customers, vendors, products, chart of accounts, tax rules, order history, and invoicing records all matter. If these data sets are incomplete or inconsistent, every later decision remains fragile. A proper Odoo audit measures master-data reliability and the strength of business controls before any migration.</p>
+      <ul>
+        <li>Identify duplicates and uncontrolled fields.</li>
+        <li>Check validation rules on sensitive data.</li>
+        <li>Confirm business ownership for each master-data domain.</li>
+      </ul>
+
+      <h2>3. Review the differences between Belgium and France</h2>
+      <p>When a company operates across countries, the audit has to separate the shared operating core from local constraints. VAT handling, accounting validation, document sequences, invoice formats, or approval logic are not always identical in Belgium and France.</p>
+      <p>This avoids rebuilding two parallel ERP models when a shared Odoo Enterprise core can often remain intact.</p>
+
+      <h2>4. Measure integration debt</h2>
+      <p>Interfaces with e-commerce, BI, WMS, carriers, or third-party accounting systems usually concentrate a large share of operational risk. The audit should review flow robustness, error logs, recovery mechanics, and ownership visibility.</p>
+      <p>A useful Odoo audit does not just list connectors. It measures the real ability to diagnose and correct an incident without disrupting the business.</p>
+
+      <h2>5. Test access-rights and approval governance</h2>
+      <p>An Odoo Enterprise model becomes difficult to run when access rules grow without a clear logic. Who can validate an invoice, override a price, bypass a workflow, or correct an entry? The audit should confirm that the security model supports the actual operating responsibilities of the organization.</p>
+      <p>This is especially important before any upgrade because authorization drift spreads quickly.</p>
+
+      <h2>6. Review support and maintenance as an operating process</h2>
+      <p>Many troubled projects do not suffer from a bad tool. They suffer from an unstructured run model. Review how tickets are prioritized, how recurring incidents are handled, which response times are met, and how minor improvements are arbitrated.</p>
+      <p>For an Odoo Belgium or Odoo France organization, a good audit restores visibility on true workload, recurring friction points, and the capacity decisions that need to be made.</p>
+
+      <h2>7. Decide the next move: simplify, migrate, or relaunch</h2>
+      <p>The last check is not technical. It translates the findings into a trajectory. If the standard base is still healthy, simplification and stronger governance may be enough. If debt is too high, an Odoo migration or controlled relaunch can be more rational than an endless series of fixes.</p>
+      <p>The audit therefore has to end with a concrete, dated, prioritized action plan rather than an open-ended recommendation list.</p>
+
+      <h2>Quick FAQ</h2>
+      <ul>
+        <li><strong>When should Odoo be audited?</strong> Before migration, project recovery, a complex go-live, or whenever run operations become too costly to steer.</li>
+        <li><strong>Why mention Odoo Belgium and Odoo France?</strong> Because the same ERP core often needs to absorb distinct local constraints without losing global coherence.</li>
+        <li><strong>What is the purpose of an Odoo Enterprise audit?</strong> To make debt, data quality, integrations, and governance measurable before further investment.</li>
+      </ul>
+
+      <div class="box">
+        <p>Before migration or recovery, a short Odoo audit helps identify what should be kept, simplified, or rebuilt across your Belgium, France, and Odoo Enterprise scope.</p>
+      </div>
+    </article>
+    <a class="back" href="blog.html">Back to blog</a>
+  </main>
+
+  <script src="../page-transition.js" defer></script>
+</body>
+</html>
