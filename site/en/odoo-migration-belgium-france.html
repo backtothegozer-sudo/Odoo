@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odoo Migration in Belgium and France: 7 checkpoints before go-live | Underside Odoo Blog</title>
+  <meta name="description" content="Odoo migration for Belgium and France: 7 practical checkpoints to secure data, tests, integrations, and Odoo Enterprise governance before cutover." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://odoo.underside.be/en/odoo-migration-belgium-france.html" />
+  <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-migration-belgique-france.html" />
+  <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-migration-belgium-france.html" />
+  <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-migration-belgique-france.html" />
+  <link rel="icon" href="../logo-underside-fav.svg?v=20260416c" type="image/svg+xml" />
+  <link rel="stylesheet" href="../page-transition.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta property="og:title" content="Odoo Migration in Belgium and France: 7 checkpoints before go-live" />
+  <meta property="og:description" content="How to prepare an Odoo Belgium, Odoo France, and Odoo Enterprise migration without losing control of data, testing, and run operations." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://odoo.underside.be/en/odoo-migration-belgium-france.html" />
+  <meta property="og:image" content="https://odoo.underside.be/favicon-512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Odoo Migration in Belgium and France: 7 checkpoints before go-live" />
+  <meta name="twitter:description" content="A practical method to secure an Odoo Enterprise migration across Belgium and France." />
+  <meta name="twitter:image" content="https://odoo.underside.be/favicon-512.png" />
+  <link rel="alternate" type="application/json" title="MCP Connectors" href="../.well-known/mcp.json" />
+  <style>
+    :root { --bg:#05060b; --panel:rgba(10,10,14,.92); --line:rgba(255,255,255,.12); --ink:#f5f7fb; --ink-soft:#cbd2dc; --accent:#e64bff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:radial-gradient(900px 540px at 50% -10%, rgba(230,75,255,.22), transparent 62%), var(--bg); }
+    .nav { max-width:1100px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand img { width:120px; height:auto; display:block; }
+    .nav-links { display:flex; gap:16px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .nav-links a { color:rgba(245,247,251,.84); text-decoration:none; }
+    .nav-links a.active,.nav-links a:hover { color:#fff; }
+    .wrap { max-width:860px; margin:0 auto; padding:20px 24px 56px; }
+    .meta { margin:0 0 10px; color:rgba(245,247,251,.66); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0 0 14px; font-size:clamp(30px,5vw,46px); line-height:1.08; }
+    article { border:1px solid var(--line); border-radius:16px; background:var(--panel); padding:22px; }
+    article p, article li { color:var(--ink-soft); line-height:1.72; font-size:16px; }
+    article h2 { margin:22px 0 8px; font-size:23px; }
+    article ul { margin:8px 0 0; padding-left:20px; }
+    .box { margin-top:18px; padding:18px; border:1px solid rgba(230,75,255,.28); border-radius:14px; background:rgba(230,75,255,.08); }
+    .back { margin-top:16px; display:inline-flex; border:1px solid rgba(230,75,255,.42); border-radius:999px; padding:8px 12px; background:rgba(230,75,255,.16); color:#fff; text-decoration:none; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    @media (max-width:920px){ .nav { flex-direction:column; align-items:flex-start; } .nav-links { flex-wrap:wrap; } .wrap { padding-left:18px; padding-right:18px; } }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Odoo Migration in Belgium and France: 7 checkpoints before go-live",
+          "description": "Odoo migration for Belgium and France: 7 practical checkpoints to secure data, tests, integrations, and Odoo Enterprise governance before cutover.",
+          "datePublished": "2026-04-29",
+          "dateModified": "2026-04-29",
+          "inLanguage": "en-BE",
+          "author": { "@type": "Organization", "name": "Underside" },
+          "publisher": { "@type": "Organization", "name": "Underside" },
+          "mainEntityOfPage": "https://odoo.underside.be/en/odoo-migration-belgium-france.html"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "When should Odoo migration preparation start?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Preparation should start before technical cutover, as soon as the target scope, migration data, and critical flows are known."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why separate Odoo Belgium and Odoo France in a migration plan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Because local obligations, accounting rules, document sequencing, and approval paths may differ while still sharing a common Odoo Enterprise core."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the main risk in an Odoo Enterprise migration?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The main risk is going live without clear governance for data, testing, integrations, and first-line support."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="../Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#method">Method</a>
+        <a href="index.html#clients">References</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <p class="meta">April 29, 2026 · 8 min · Odoo Belgium · Odoo France · Odoo Enterprise</p>
+    <h1>Odoo Migration in Belgium and France: 7 checkpoints before go-live</h1>
+    <article>
+      <p>A successful Odoo migration is not just a version change or a data move. For a company operating in Belgium, France, or both, the migration has to secure business processes, integrations, master-data quality, and the support model that will absorb the first days after cutover.</p>
+      <p>In an Odoo Enterprise context, the goal is not only to deliver a new instance. The real objective is to realign the standard model, local differences, and operating rules so the move improves execution instead of simply moving debt elsewhere.</p>
+
+      <h2>1. Freeze a target scope that people can understand</h2>
+      <p>The first checkpoint is to define what really changes: affected modules, rules to simplify, custom elements to keep, flows to retire, and workstreams that are explicitly deferred. An Odoo Belgium or Odoo France migration becomes risky when the target model still moves in the final days.</p>
+      <p>The right level of scope fits into a clear decision list: what enters the cutover, what stays out, and who decides when tradeoffs appear.</p>
+
+      <h2>2. Clean critical data before loading it</h2>
+      <p>An Odoo Enterprise migration does not magically fix weak master data. Customers, vendors, products, taxes, accounts, open transactions, and stock data all need review before extraction and before loading.</p>
+      <ul>
+        <li>Remove duplicates and obsolete values.</li>
+        <li>Confirm the fields that are required for run operations and reporting.</li>
+        <li>Assign business ownership to each critical data domain.</li>
+      </ul>
+
+      <h2>3. Separate local differences between Belgium and France</h2>
+      <p>An Odoo Belgium and Odoo France program should separate the shared operating core from local variants. VAT handling, accounting validation, invoice wording, document sequences, or approval paths may need distinct treatment.</p>
+      <p>This checkpoint prevents unnecessary process duplication. The principle is straightforward: standardize what can be shared and document precisely what must remain local.</p>
+
+      <h2>4. Test integrations like production flows</h2>
+      <p>Migrations often fail at the edges: e-commerce, WMS, BI, carriers, POS, EDI, or third-party accounting tools. Interfaces therefore need testing with real business scenarios, not only isolated technical calls.</p>
+      <p>For an Odoo Enterprise rollout, the right tests cover errors, retries, timing, logs, and ownership of corrective action when a production flow breaks.</p>
+
+      <h2>5. Build a test cycle that supports decisions</h2>
+      <p>Testing should not become an endless inventory. It should confirm that sales, purchasing, inventory, finance, and support teams can operate on the target environment using realistic cases. An Odoo Belgium or Odoo France migration needs a short but demanding validation cycle.</p>
+      <p>Each critical scenario should have an owner, an expected result, and an exit decision: accepted, must be fixed before go-live, or isolated into a post-cutover plan.</p>
+
+      <h2>6. Prepare the first-days run model</h2>
+      <p>Cutover is only a passage. What matters next is the ability to prioritize incidents, restore critical flows quickly, and protect key users. An Odoo Enterprise migration without an explicit support setup generates friction immediately.</p>
+      <p>Before go-live, define contact points, coverage windows, escalation paths, and how blocking issues are triaged and decided.</p>
+
+      <h2>7. Measure success beyond day one</h2>
+      <p>The last checkpoint is deciding how success will be judged after cutover. Without explicit criteria, every stakeholder projects a different definition. Useful indicators include migrated-data quality, flow stability, critical-incident volume, and recovery speed.</p>
+      <p>For an Odoo Belgium, Odoo France, or multi-country organization, that discipline makes the next phase steerable: stabilization, optimization, or further simplification.</p>
+
+      <h2>Quick FAQ</h2>
+      <ul>
+        <li><strong>When should Odoo migration preparation start?</strong> As soon as the functional target and migration data are known, not during cutover week.</li>
+        <li><strong>Why mention Odoo Belgium and Odoo France?</strong> Because the migration has to absorb local constraints without breaking the shared ERP core.</li>
+        <li><strong>What does a solid Odoo Enterprise migration secure?</strong> Data, business validation rules, integrations, and first-days support.</li>
+      </ul>
+
+      <div class="box">
+        <p>Before migrating Odoo, the real challenge is not just production cutover. It is making the Belgium, France, and Odoo Enterprise scope easier to understand, test, and run from day one.</p>
+      </div>
+    </article>
+    <a class="back" href="blog.html">Back to blog</a>
+  </main>
+
+  <script src="../page-transition.js" defer></script>
+</body>
+</html>

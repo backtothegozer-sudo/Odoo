@@ -22,6 +22,8 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-migration-belgique-france.html
+- https://odoo.underside.be/odoo-audit-belgique-france.html
 - https://odoo.underside.be/odoo-cadrage-3-ateliers.html
 - https://odoo.underside.be/odoo-standard-ou-sur-mesure.html
 - https://odoo.underside.be/odoo-reprise-de-donnees.html
@@ -38,6 +40,8 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-migration-belgium-france.html
+- https://odoo.underside.be/en/odoo-audit-belgium-france.html
 - https://odoo.underside.be/en/odoo-project-scoping-3-workshops.html
 - https://odoo.underside.be/en/odoo-standard-vs-custom.html
 - https://odoo.underside.be/en/odoo-data-migration.html
