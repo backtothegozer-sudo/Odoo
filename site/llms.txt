@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-budget-belgique-france.html
 - https://odoo.underside.be/odoo-support-belgique-france.html
 - https://odoo.underside.be/odoo-implementation-pme-belgique-france.html
 - https://odoo.underside.be/odoo-migration-belgique-france.html
@@ -42,6 +43,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-budget-belgium-france.html
 - https://odoo.underside.be/en/odoo-support-belgium-france.html
 - https://odoo.underside.be/en/odoo-implementation-sme-belgium-france.html
 - https://odoo.underside.be/en/odoo-migration-belgium-france.html
