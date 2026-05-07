@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-formation-belgique-france.html
 - https://odoo.underside.be/odoo-roi-belgique-france.html
 - https://odoo.underside.be/odoo-budget-belgique-france.html
 - https://odoo.underside.be/odoo-support-belgique-france.html
@@ -44,6 +45,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-training-belgium-france.html
 - https://odoo.underside.be/en/odoo-roi-belgium-france.html
 - https://odoo.underside.be/en/odoo-budget-belgium-france.html
 - https://odoo.underside.be/en/odoo-support-belgium-france.html
