@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odoo Manufacturing in Belgium and France: 7 decisions to stabilize production with Odoo Enterprise | Underside Odoo Blog</title>
+  <meta name="description" content="Odoo Manufacturing in Belgium and France: 7 decisions to structure bills of materials, work orders, capacity, quality, and cost control with Odoo Enterprise." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://odoo.underside.be/en/odoo-manufacturing-belgium-france.html" />
+  <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-fabrication-belgique-france.html" />
+  <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-manufacturing-belgium-france.html" />
+  <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-fabrication-belgique-france.html" />
+  <link rel="icon" href="../logo-underside-fav.svg?v=20260416c" type="image/svg+xml" />
+  <link rel="stylesheet" href="../page-transition.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta property="og:title" content="Odoo Manufacturing in Belgium and France: 7 decisions to stabilize production with Odoo Enterprise" />
+  <meta property="og:description" content="A practical guide to structure Odoo Manufacturing in Belgium, France, and Odoo Enterprise with useful rules for bills of materials, work orders, and costs." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://odoo.underside.be/en/odoo-manufacturing-belgium-france.html" />
+  <meta property="og:image" content="https://odoo.underside.be/favicon-512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Odoo Manufacturing in Belgium and France: 7 decisions to stabilize production with Odoo Enterprise" />
+  <meta name="twitter:description" content="How to structure Odoo Manufacturing across Odoo Belgium, Odoo France, and Odoo Enterprise with stronger control over planning, quality, and cost." />
+  <meta name="twitter:image" content="https://odoo.underside.be/favicon-512.png" />
+  <link rel="alternate" type="application/json" title="MCP Connectors" href="../.well-known/mcp.json" />
+  <style>
+    :root { --bg:#05060b; --panel:rgba(10,10,14,.92); --line:rgba(255,255,255,.12); --ink:#f5f7fb; --ink-soft:#cbd2dc; --accent:#e64bff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:radial-gradient(900px 540px at 50% -10%, rgba(230,75,255,.22), transparent 62%), var(--bg); }
+    .nav { max-width:1100px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand img { width:120px; height:auto; display:block; }
+    .nav-links { display:flex; gap:16px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .nav-links a { color:rgba(245,247,251,.84); text-decoration:none; }
+    .nav-links a.active,.nav-links a:hover { color:#fff; }
+    .wrap { max-width:860px; margin:0 auto; padding:20px 24px 56px; }
+    .meta { margin:0 0 10px; color:rgba(245,247,251,.66); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0 0 14px; font-size:clamp(30px,5vw,46px); line-height:1.08; }
+    article { border:1px solid var(--line); border-radius:16px; background:var(--panel); padding:22px; }
+    article p, article li { color:var(--ink-soft); line-height:1.72; font-size:16px; }
+    article h2 { margin:22px 0 8px; font-size:23px; }
+    article ul { margin:8px 0 0; padding-left:20px; }
+    .box { margin-top:18px; padding:18px; border:1px solid rgba(230,75,255,.28); border-radius:14px; background:rgba(230,75,255,.08); }
+    .back { margin-top:16px; display:inline-flex; border:1px solid rgba(230,75,255,.42); border-radius:999px; padding:8px 12px; background:rgba(230,75,255,.16); color:#fff; text-decoration:none; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    @media (max-width:920px){ .nav { flex-direction:column; align-items:flex-start; } .nav-links { flex-wrap:wrap; } .wrap { padding-left:18px; padding-right:18px; } }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Odoo Manufacturing in Belgium and France: 7 decisions to stabilize production with Odoo Enterprise",
+          "description": "Odoo Manufacturing in Belgium and France: 7 decisions to structure bills of materials, work orders, capacity, quality, and cost control with Odoo Enterprise.",
+          "datePublished": "2026-05-12",
+          "dateModified": "2026-05-12",
+          "inLanguage": "en-BE",
+          "author": { "@type": "Organization", "name": "Underside" },
+          "publisher": { "@type": "Organization", "name": "Underside" },
+          "mainEntityOfPage": "https://odoo.underside.be/en/odoo-manufacturing-belgium-france.html"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why frame Odoo Manufacturing before releasing work orders?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Because poorly structured production settings quickly create stock variances, delays, and hidden costs between the shop floor, purchasing, and finance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which KPI should manufacturing teams track first in Odoo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The gap between standard cost and actual cost by manufacturing order, because it quickly exposes time, component, and quality deviations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Odoo Enterprise suitable for production sites across Belgium and France?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if bills of materials, routings, quality checks, and planning rules are standardized while local constraints are handled explicitly."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="../Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#method">Method</a>
+        <a href="index.html#clients">References</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <p class="meta">May 12, 2026 · 8 min</p>
+    <h1>Odoo Manufacturing in Belgium and France: 7 decisions to stabilize production with Odoo Enterprise</h1>
+
+    <article>
+      <p><strong>Odoo Manufacturing</strong> becomes a major lever as soon as a business wants better synchronization between sales, purchasing, inventory, the shop floor, and finance. In <strong>Belgium</strong>, <strong>France</strong>, and multi-site environments, production quickly drifts when bills of materials, operation times, replenishment logic, and quality checks are not clearly framed. In <strong>Odoo Enterprise</strong>, the challenge is not only to release work orders. It is to build an execution chain that stays reliable, visible, and profitable.</p>
+      <p>Here are seven practical decisions to structure <strong>Odoo Belgium</strong>, <strong>Odoo France</strong>, and <strong>Odoo Enterprise</strong> around planning, bills of materials, quality, costs, and industrial reporting.</p>
+
+      <h2>1. Stabilize bills of materials before automating the shop floor</h2>
+      <p>Many projects try to accelerate scheduling while bills of materials are still unstable. Teams first need to decide which versions are active, who validates changes, how variants are managed, and where approved substitutions are documented. Without that discipline, production executes orders that look correct in the ERP but are wrong in reality.</p>
+      <p>In an <strong>Odoo Manufacturing Belgium</strong> or <strong>Odoo Manufacturing France</strong> rollout, this prevents each site from rebuilding its own rules inside the platform.</p>
+
+      <h2>2. Frame routings and operation times with shop-floor teams</h2>
+      <p>Cycle times entered too quickly create false product costs, weak delivery promises, and unstable capacity planning. Teams need to validate work centers, setup times, run times, operation dependencies, and under-capacity scenarios. In <strong>Odoo Enterprise</strong>, that precision directly shapes the quality of load calculations.</p>
+      <ul>
+        <li>Clarify which operations really need to be tracked on the floor.</li>
+        <li>Separate standard times, observed times, and tolerated variances.</li>
+        <li>Define who can adjust a routing and under which conditions.</li>
+      </ul>
+
+      <h2>3. Connect manufacturing with purchasing and inventory without blind spots</h2>
+      <p>Production cannot be managed well if critical components, supplier lead times, or replenishment rules are misaligned. <strong>Odoo Manufacturing</strong> becomes useful when a work order reflects actual availability, possible shortages, and the right trade-offs between purchasing, safety stock, and substitution.</p>
+      <p>For <strong>Odoo Belgium</strong> and <strong>Odoo France</strong>, this is especially sensitive when several warehouses or legal entities feed the same production flow.</p>
+
+      <h2>4. Make the quality policy explicit</h2>
+      <p>Quality control cannot remain informal. Teams should decide where inspections happen, which product families are checked, what acceptance criteria apply, how non-conformities are recorded, and how rework flows are handled. In <strong>Odoo Enterprise</strong>, quality is not an isolated module. It changes lead times, costs, and trust in production data.</p>
+      <p>This framework helps avoid discovering defects too late, when goods are already about to ship or accounts are about to close.</p>
+
+      <h2>5. Track actual cost by manufacturing order</h2>
+      <p>A plant can look productive while quietly destroying margin if actual time, scrap, component consumption, or rework stays invisible. Teams need to compare standard cost with actual cost, read variances by order, and separate what comes from master data issues, organization gaps, or execution discipline. That is where <strong>Odoo Enterprise</strong> becomes an industrial management tool rather than a transaction system.</p>
+      <p>In an <strong>Odoo France</strong> or <strong>Odoo Belgium</strong> context, this helps leadership arbitrate between commercial flexibility and industrial robustness.</p>
+
+      <h2>6. Define planning priorities before the next emergency</h2>
+      <p>Most plants suffer less from missing features than from unclear priority rules. Teams should decide how to arbitrate between urgent customer orders, make-to-stock production, long runs, setup changes, and capacity constraints. If that logic is not shared, the ERP ends up reflecting disorder instead of reducing it.</p>
+      <p>With <strong>Odoo Manufacturing</strong>, planning becomes credible when operational priorities are explicit and consistently enforced.</p>
+
+      <h2>7. Build reporting that helps an operations director decide</h2>
+      <p>Production reporting should go beyond the number of released orders. It should highlight delays, bottlenecks, abnormal consumption, restarted orders, recurring non-conformities, cost variances, and the reliability of promised dates. A good dashboard helps teams decide quickly. It does not simply produce reassuring slides.</p>
+      <p>For <strong>Odoo Belgium</strong>, <strong>Odoo France</strong>, and <strong>Odoo Enterprise</strong> rollouts, this reporting improves service quality, working-capital control, and production profitability.</p>
+
+      <h2>Quick FAQ</h2>
+      <ul>
+        <li><strong>Why frame Odoo Manufacturing before releasing work orders?</strong> Because weak production settings quickly create stock variances, delays, and hidden costs.</li>
+        <li><strong>Which KPI should come first?</strong> The variance between standard and actual cost by order, because it exposes time, component, and quality drift quickly.</li>
+        <li><strong>Is Odoo Enterprise enough to industrialize a plant?</strong> No. The software helps significantly, but it still depends on clean data, shared rules, and real execution discipline.</li>
+      </ul>
+
+      <div class="box">
+        <p>A well-structured manufacturing model in Odoo helps teams produce more reliably, promise with more confidence, and protect margin across Belgium, France, and multi-site organizations.</p>
+      </div>
+    </article>
+    <a class="back" href="blog.html">Back to blog</a>
+  </main>
+
+  <script src="../page-transition.js" defer></script>
+</body>
+</html>
