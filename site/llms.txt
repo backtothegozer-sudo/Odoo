@@ -22,6 +22,9 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-planning-belgique-france.html
+- https://odoo.underside.be/odoo-projets-belgique-france.html
+- https://odoo.underside.be/odoo-rh-belgique-france.html
 - https://odoo.underside.be/odoo-maintenance-belgique-france.html
 - https://odoo.underside.be/odoo-fabrication-belgique-france.html
 - https://odoo.underside.be/odoo-ventes-belgique-france.html
@@ -52,6 +55,9 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-planning-belgium-france.html
+- https://odoo.underside.be/en/odoo-projects-belgium-france.html
+- https://odoo.underside.be/en/odoo-hr-belgium-france.html
 - https://odoo.underside.be/en/odoo-maintenance-belgium-france.html
 - https://odoo.underside.be/en/odoo-manufacturing-belgium-france.html
 - https://odoo.underside.be/en/odoo-sales-belgium-france.html
