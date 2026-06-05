@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-documents-belgique-france.html
 - https://odoo.underside.be/odoo-feuilles-de-temps-belgique-france.html
 - https://odoo.underside.be/odoo-notes-de-frais-belgique-france.html
 - https://odoo.underside.be/odoo-abonnements-belgique-france.html
@@ -60,6 +61,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-documents-belgium-france.html
 - https://odoo.underside.be/en/odoo-timesheets-belgium-france.html
 - https://odoo.underside.be/en/odoo-expenses-belgium-france.html
 - https://odoo.underside.be/en/odoo-subscriptions-belgium-france.html
