@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odoo Inventory and Logistics in Belgium and France: 7 decisions to make stock flows more reliable with Odoo Enterprise | Underside Odoo Blog</title>
+  <meta name="description" content="Odoo Inventory and Logistics in Belgium and France: 7 decisions to structure stock accuracy, receiving, picking, traceability, and performance with Odoo Enterprise." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://odoo.underside.be/en/odoo-inventory-logistics-belgium-france.html" />
+  <link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-inventaire-logistique-belgique-france.html" />
+  <link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-inventory-logistics-belgium-france.html" />
+  <link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-inventaire-logistique-belgique-france.html" />
+  <link rel="icon" href="../logo-underside-fav.svg?v=20260416c" type="image/svg+xml" />
+  <link rel="stylesheet" href="../page-transition.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta property="og:title" content="Odoo Inventory and Logistics in Belgium and France: 7 decisions to make stock flows more reliable with Odoo Enterprise" />
+  <meta property="og:description" content="A practical method to frame Odoo Inventory and Logistics in Belgium, France, and Odoo Enterprise with useful rules for stock accuracy, picking, and traceability." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://odoo.underside.be/en/odoo-inventory-logistics-belgium-france.html" />
+  <meta property="og:image" content="https://odoo.underside.be/favicon-512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Odoo Inventory and Logistics in Belgium and France: 7 decisions to make stock flows more reliable with Odoo Enterprise" />
+  <meta name="twitter:description" content="How to frame Odoo Inventory and Logistics across Odoo Belgium, Odoo France, and Odoo Enterprise with tighter control over stock accuracy, receiving, and traceability." />
+  <meta name="twitter:image" content="https://odoo.underside.be/favicon-512.png" />
+  <link rel="alternate" type="application/json" title="MCP Connectors" href="../.well-known/mcp.json" />
+  <style>
+    :root { --bg:#05060b; --panel:rgba(10,10,14,.92); --line:rgba(255,255,255,.12); --ink:#f5f7fb; --ink-soft:#cbd2dc; --accent:#e64bff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:radial-gradient(900px 540px at 50% -10%, rgba(230,75,255,.22), transparent 62%), var(--bg); }
+    .nav { max-width:1100px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand img { width:120px; height:auto; display:block; }
+    .nav-links { display:flex; gap:16px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .nav-links a { color:rgba(245,247,251,.84); text-decoration:none; }
+    .nav-links a.active,.nav-links a:hover { color:#fff; }
+    .wrap { max-width:860px; margin:0 auto; padding:20px 24px 56px; }
+    .meta { margin:0 0 10px; color:rgba(245,247,251,.66); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0 0 14px; font-size:clamp(30px,5vw,46px); line-height:1.08; }
+    article { border:1px solid var(--line); border-radius:16px; background:var(--panel); padding:22px; }
+    article p, article li { color:var(--ink-soft); line-height:1.72; font-size:16px; }
+    article h2 { margin:22px 0 8px; font-size:23px; }
+    article ul { margin:8px 0 0; padding-left:20px; }
+    .box { margin-top:18px; padding:18px; border:1px solid rgba(230,75,255,.28); border-radius:14px; background:rgba(230,75,255,.08); }
+    .back { margin-top:16px; display:inline-flex; border:1px solid rgba(230,75,255,.42); border-radius:999px; padding:8px 12px; background:rgba(230,75,255,.16); color:#fff; text-decoration:none; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    @media (max-width:920px){ .nav { flex-direction:column; align-items:flex-start; } .nav-links { flex-wrap:wrap; } .wrap { padding-left:18px; padding-right:18px; } }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Odoo Inventory and Logistics in Belgium and France: 7 decisions to make stock flows more reliable with Odoo Enterprise",
+          "description": "Odoo Inventory and Logistics in Belgium and France: 7 decisions to structure stock accuracy, receiving, picking, traceability, and performance with Odoo Enterprise.",
+          "datePublished": "2026-06-06",
+          "dateModified": "2026-06-06",
+          "inLanguage": "en-BE",
+          "author": { "@type": "Organization", "name": "Underside" },
+          "publisher": { "@type": "Organization", "name": "Underside" },
+          "mainEntityOfPage": "https://odoo.underside.be/en/odoo-inventory-logistics-belgium-france.html"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why should inventory and logistics be treated as a priority in Odoo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Because stock variances, receiving delays, and picking errors damage customer service, margin, and trust in ERP data at the same time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What should be decided first?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Teams should decide the target operating model: storage units, locations, reservation rules, control levels, and responsibilities across sales, purchasing, and warehouse operations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which metric should be tracked first?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The variance between theoretical and physical stock, complemented by the picking error rate and receiving-to-shipping lead time."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="../Underside2018_blanc.png" alt="Underside" /></a>
+      <button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#method">Method</a>
+        <a href="index.html#clients">References</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <p class="meta">June 6, 2026 · 8 min · Odoo Inventory</p>
+    <h1>Odoo Inventory and Logistics in Belgium and France: 7 decisions to make stock flows more reliable with Odoo Enterprise</h1>
+
+    <article>
+      <p><strong>Odoo Inventory</strong> and logistics are often assessed only through stock movement features. That is too narrow. In practice, stock quality drives customer promise, margin, execution speed, and the credibility of the ERP as a whole. In <strong>Belgium</strong>, <strong>France</strong>, and organizations serving multiple channels, weak logistics framing creates stock variances, poorly handled receipts, picking errors, and costly daily tradeoffs. With <strong>Odoo Enterprise</strong>, the goal is not only to trace items, but to organize reliable flows from receiving to shipping.</p>
+      <p>Here are seven practical decisions to structure <strong>Odoo Belgium</strong>, <strong>Odoo France</strong>, and <strong>Odoo Enterprise</strong> around stock accuracy, locations, picking, traceability, and logistics performance.</p>
+
+      <h2>1. Define a readable warehouse model before adding locations everywhere</h2>
+      <p>The first decision is to choose a simple model: receiving, available stock, quarantine, picking, returns, and inventory zones. Without that base, <strong>Odoo Inventory</strong> becomes a confusing mirror of local habits that vary by team. In <strong>Odoo Enterprise</strong>, a readable warehouse model is stronger than an over-detailed map that no one applies consistently.</p>
+      <p>For an <strong>Odoo Belgium</strong> or <strong>Odoo France</strong> scope, that clarity reduces unnecessary moves and makes variances easier to spot.</p>
+
+      <h2>2. Set receiving rules before talking about automation</h2>
+      <p>Stock issues often start at receiving: unchecked quantities, uncontrolled quality, missing lot data, or temporary locations that never get resolved. Teams need to decide what is checked on arrival, what can enter stock directly, and what stays blocked until validation. In <strong>Odoo Enterprise</strong>, those rules prevent upstream errors from contaminating sales, manufacturing, and service operations.</p>
+      <ul>
+        <li>Define mandatory controls by item family.</li>
+        <li>Clarify when partial receipts are acceptable.</li>
+        <li>Decide how quarantine and non-conformities are handled.</li>
+      </ul>
+
+      <h2>3. Choose a consistent reservation and picking logic</h2>
+      <p>Theoretical stock accuracy is not enough if orders are not prepared correctly. Teams must frame reservation, priorities, allowed substitutions, and picking sequences. In <strong>Odoo Inventory</strong>, overly implicit preparation logic multiplies apparent shortages and manual corrections.</p>
+      <p>For <strong>Odoo France</strong>, <strong>Odoo Belgium</strong>, and multi-site organizations, this decision directly improves service level and shipping speed.</p>
+
+      <h2>4. Decide the right traceability level without overloading execution</h2>
+      <p>Lots, serial numbers, dates, quality controls, and movement evidence should serve a clear purpose. The right tradeoff is to track what truly protects the business, not to create an input burden that slows teams down. In <strong>Odoo Enterprise</strong>, traceability should stay proportionate to product, regulatory, and customer risk.</p>
+      <p>In an <strong>Odoo Belgium</strong> or <strong>Odoo France</strong> program, this prevents both under-traceability and excessive logistics administration.</p>
+
+      <h2>5. Run cycle counts as a management ritual</h2>
+      <p>Inventory should not be a painful year-end event. Teams need to choose a frequency by category, define acceptable variances, assign analysis responsibility, and enforce a correction loop. In <strong>Odoo Inventory</strong>, cycle counts help fix issues quickly and learn even faster.</p>
+      <p>For <strong>Odoo Belgium</strong>, <strong>Odoo France</strong>, and <strong>Odoo Enterprise</strong>, that ritual is often more profitable than a one-off cleanup project.</p>
+
+      <h2>6. Align purchasing, sales, manufacturing, and logistics on the same stock rules</h2>
+      <p>Many drifts come from conflicting decisions between teams: sales promises, purchasing receipts, manufacturing consumption, and logistics corrections. Shared rules on availability, reservations, urgencies, and exceptions therefore need to be explicit. In <strong>Odoo Enterprise</strong>, that alignment reduces last-minute arbitration and protects stock data quality.</p>
+      <p>For organizations operating in <strong>Belgium</strong> and <strong>France</strong>, this consistency becomes decisive as soon as several warehouses or companies share flows.</p>
+
+      <h2>7. Track fewer indicators, but the ones that truly change decisions</h2>
+      <p>Strong logistics steering depends on a few simple measures: theoretical versus physical stock variance, picking error rate, receiving lead time, shipping lead time, and volume of manual corrections. In <strong>Odoo Belgium</strong>, <strong>Odoo France</strong>, and <strong>Odoo Enterprise</strong> settings, those indicators show quickly whether flows are becoming more reliable or whether teams are still compensating for model weaknesses.</p>
+      <p>Without that visibility, logistics can appear stable until delays and disputes expose a structural issue.</p>
+
+      <h2>Quick FAQ</h2>
+      <ul>
+        <li><strong>Why prioritize Odoo Inventory and logistics?</strong> Because stock variances damage customer service, margin, and trust in ERP data.</li>
+        <li><strong>What should be decided first?</strong> The target warehouse model, receiving rules, and control ownership.</li>
+        <li><strong>Which KPI should come first?</strong> The variance between theoretical and physical stock, complemented by the picking error rate.</li>
+      </ul>
+
+      <div class="box">
+        <p>A short Odoo Inventory and logistics scoping phase helps reduce variances, speed up flows, and make customer promises more reliable without adding unnecessary operational complexity.</p>
+      </div>
+    </article>
+    <a class="back" href="blog.html">Back to blog</a>
+  </main>
+
+  <script src="../page-transition.js" defer></script>
+</body>
+</html>
