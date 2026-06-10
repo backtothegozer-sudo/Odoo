@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-recrutement-belgique-france.html
 - https://odoo.underside.be/odoo-approbations-belgique-france.html
 - https://odoo.underside.be/odoo-point-de-vente-belgique-france.html
 - https://odoo.underside.be/odoo-inventaire-logistique-belgique-france.html
@@ -64,6 +65,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-recruitment-belgium-france.html
 - https://odoo.underside.be/en/odoo-approvals-belgium-france.html
 - https://odoo.underside.be/en/odoo-point-of-sale-belgium-france.html
 - https://odoo.underside.be/en/odoo-inventory-logistics-belgium-france.html
