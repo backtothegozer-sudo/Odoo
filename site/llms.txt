@@ -22,6 +22,8 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-knowledge-belgique-france.html
+- https://odoo.underside.be/odoo-signature-belgique-france.html
 - https://odoo.underside.be/odoo-studio-belgique-france.html
 - https://odoo.underside.be/odoo-facturation-belgique-france.html
 - https://odoo.underside.be/odoo-conges-absences-belgique-france.html
@@ -68,6 +70,8 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-knowledge-belgium-france.html
+- https://odoo.underside.be/en/odoo-sign-belgium-france.html
 - https://odoo.underside.be/en/odoo-studio-belgium-france.html
 - https://odoo.underside.be/en/odoo-invoicing-belgium-france.html
 - https://odoo.underside.be/en/odoo-time-off-belgium-france.html
