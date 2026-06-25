@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-website-belgique-france.html
 - https://odoo.underside.be/odoo-marketing-automation-belgique-france.html
 - https://odoo.underside.be/odoo-knowledge-belgique-france.html
 - https://odoo.underside.be/odoo-signature-belgique-france.html
@@ -71,6 +72,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-website-belgium-france.html
 - https://odoo.underside.be/en/odoo-marketing-automation-belgium-france.html
 - https://odoo.underside.be/en/odoo-knowledge-belgium-france.html
 - https://odoo.underside.be/en/odoo-sign-belgium-france.html
