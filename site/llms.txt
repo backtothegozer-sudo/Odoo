@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-rendez-vous-belgique-france.html
 - https://odoo.underside.be/odoo-sondages-belgique-france.html
 - https://odoo.underside.be/odoo-elearning-belgique-france.html
 - https://odoo.underside.be/odoo-website-belgique-france.html
@@ -74,6 +75,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-appointments-belgium-france.html
 - https://odoo.underside.be/en/odoo-surveys-belgium-france.html
 - https://odoo.underside.be/en/odoo-elearning-belgium-france.html
 - https://odoo.underside.be/en/odoo-website-belgium-france.html
