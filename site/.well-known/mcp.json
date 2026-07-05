@@ -1,9 +1,9 @@
 {
   "name": "Underside Odoo MCP Discovery",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP-ready discovery layer for Odoo implementation content in French and English.",
   "website": "https://odoo.underside.be/",
-  "updated_at": "2026-07-02",
+  "updated_at": "2026-07-05",
   "resources": {
     "sitemap": "https://odoo.underside.be/sitemap.xml",
     "robots": "https://odoo.underside.be/robots.txt",
@@ -12,8 +12,8 @@
     "homepage_en": "https://odoo.underside.be/en/",
     "blog_fr": "https://odoo.underside.be/blog",
     "blog_en": "https://odoo.underside.be/en/blog",
-    "latest_article_fr": "https://odoo.underside.be/odoo-whatsapp-belgique-france.html",
-    "latest_article_en": "https://odoo.underside.be/en/odoo-whatsapp-belgium-france.html",
+    "latest_article_fr": "https://odoo.underside.be/odoo-parc-automobile-belgique-france.html",
+    "latest_article_en": "https://odoo.underside.be/en/odoo-fleet-belgium-france.html",
     "gdpr_fr": "https://odoo.underside.be/gdpr",
     "gdpr_en": "https://odoo.underside.be/en/gdpr",
     "google_verification": "https://odoo.underside.be/google7af869e5e0e8f999.html"

@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-parc-automobile-belgique-france.html
 - https://odoo.underside.be/odoo-whatsapp-belgique-france.html
 - https://odoo.underside.be/odoo-live-chat-belgique-france.html
 - https://odoo.underside.be/odoo-evenements-belgique-france.html
@@ -78,6 +79,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-fleet-belgium-france.html
 - https://odoo.underside.be/en/odoo-whatsapp-belgium-france.html
 - https://odoo.underside.be/en/odoo-live-chat-belgium-france.html
 - https://odoo.underside.be/en/odoo-events-belgium-france.html
