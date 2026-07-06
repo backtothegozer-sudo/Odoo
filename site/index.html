@@ -360,6 +360,35 @@
       gap: 12px;
       flex-wrap: wrap;
     }
+    .partner-proof {
+      margin-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(245, 247, 251, 0.78);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .partner-proof::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #8a7bff;
+      box-shadow: 0 0 16px rgba(138, 123, 255, 0.72);
+      flex: 0 0 auto;
+    }
+    .partner-proof a {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-color: rgba(230, 75, 255, 0.5);
+      text-underline-offset: 4px;
+      transition: text-decoration-color 0.2s ease, color 0.2s ease;
+    }
+    .partner-proof a:hover {
+      color: #f3dbff;
+      text-decoration-color: rgba(230, 75, 255, 0.95);
+    }
     .hero-trust {
       margin-top: 24px;
       display: flex;
@@ -377,14 +406,6 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: rgba(245, 247, 251, 0.8);
-    }
-    a.hero-pill {
-      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
-    }
-    a.hero-pill:hover {
-      border-color: rgba(230, 75, 255, 0.56);
-      background: rgba(230, 75, 255, 0.14);
-      color: #fff;
     }
 
     .hero-panel {
@@ -861,11 +882,14 @@
             <a class="cta" href="#contact">Parler de mon projet</a>
             <a class="cta secondary" href="mailto:info@underside.be">Écrire à l'équipe</a>
           </div>
+          <p class="partner-proof reveal delay-3">
+            Partenaire Odoo officiel:
+            <a href="https://www.odoo.com/fr_FR/partners/underside-9315588" target="_blank" rel="noopener">voir notre fiche sur odoo.com</a>
+          </p>
           <div class="hero-trust reveal delay-3">
             <span class="hero-pill">PME &amp; ETI</span>
             <span class="hero-pill">Projet pilote ou reprise d'existant</span>
             <span class="hero-pill">Go-live progressif sans rupture</span>
-            <a class="hero-pill" href="https://www.odoo.com/fr_FR/partners/underside-9315588" target="_blank" rel="noopener">Fiche partenaire Odoo</a>
           </div>
         </div>
 
