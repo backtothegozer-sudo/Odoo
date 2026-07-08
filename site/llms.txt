@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-multi-societes-belgique-france.html
 - https://odoo.underside.be/odoo-reparations-belgique-france.html
 - https://odoo.underside.be/odoo-parc-automobile-belgique-france.html
 - https://odoo.underside.be/odoo-securite-droits-acces-belgique-france.html
@@ -81,6 +82,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-multi-company-belgium-france.html
 - https://odoo.underside.be/en/odoo-repairs-belgium-france.html
 - https://odoo.underside.be/en/odoo-fleet-belgium-france.html
 - https://odoo.underside.be/en/odoo-security-access-rights-belgium-france.html
