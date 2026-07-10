@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-plm-belgique-france.html
 - https://odoo.underside.be/odoo-codes-barres-belgique-france.html
 - https://odoo.underside.be/odoo-multi-societes-belgique-france.html
 - https://odoo.underside.be/odoo-reparations-belgique-france.html
@@ -83,6 +84,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-plm-belgium-france.html
 - https://odoo.underside.be/en/odoo-barcode-belgium-france.html
 - https://odoo.underside.be/en/odoo-multi-company-belgium-france.html
 - https://odoo.underside.be/en/odoo-repairs-belgium-france.html
