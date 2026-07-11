@@ -1,9 +1,9 @@
 {
   "name": "Underside Odoo MCP Discovery",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "MCP-ready discovery layer for Odoo implementation content in French and English.",
   "website": "https://odoo.underside.be/",
-  "updated_at": "2026-07-09",
+  "updated_at": "2026-07-11",
   "resources": {
     "sitemap": "https://odoo.underside.be/sitemap.xml",
     "robots": "https://odoo.underside.be/robots.txt",
@@ -12,8 +12,8 @@
     "homepage_en": "https://odoo.underside.be/en/",
     "blog_fr": "https://odoo.underside.be/blog",
     "blog_en": "https://odoo.underside.be/en/blog",
-    "latest_article_fr": "https://odoo.underside.be/odoo-codes-barres-belgique-france.html",
-    "latest_article_en": "https://odoo.underside.be/en/odoo-barcode-belgium-france.html",
+    "latest_article_fr": "https://odoo.underside.be/odoo-iot-belgique-france.html",
+    "latest_article_en": "https://odoo.underside.be/en/odoo-iot-belgium-france.html",
     "gdpr_fr": "https://odoo.underside.be/gdpr",
     "gdpr_en": "https://odoo.underside.be/en/gdpr",
     "google_verification": "https://odoo.underside.be/google7af869e5e0e8f999.html"
