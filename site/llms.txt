@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-facturation-electronique-france-tolerance-2026.html
 - https://odoo.underside.be/odoo-presences-belgique-france.html
 - https://odoo.underside.be/odoo-sous-traitance-belgique-france.html
 - https://odoo.underside.be/odoo-iot-belgique-france.html
@@ -87,6 +88,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-france-e-invoicing-tolerance-2026.html
 - https://odoo.underside.be/en/odoo-attendances-belgium-france.html
 - https://odoo.underside.be/en/odoo-subcontracting-belgium-france.html
 - https://odoo.underside.be/en/odoo-iot-belgium-france.html
