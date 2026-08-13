@@ -1,6 +1,6 @@
 {
   "name": "Underside Odoo MCP Discovery",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "MCP-ready discovery layer for Odoo implementation content in French and English.",
   "website": "https://odoo.underside.be/",
   "updated_at": "2026-08-13",
@@ -12,8 +12,8 @@
     "homepage_en": "https://odoo.underside.be/en/",
     "blog_fr": "https://odoo.underside.be/blog",
     "blog_en": "https://odoo.underside.be/en/blog",
-    "latest_article_fr": "https://odoo.underside.be/odoo-facturation-electronique-france-tolerance-2026.html",
-    "latest_article_en": "https://odoo.underside.be/en/odoo-france-e-invoicing-tolerance-2026.html",
+    "latest_article_fr": "https://odoo.underside.be/odoo-19-4-analyse-migration.html",
+    "latest_article_en": "https://odoo.underside.be/en/odoo-19-4-upgrade-analysis.html",
     "gdpr_fr": "https://odoo.underside.be/gdpr",
     "gdpr_en": "https://odoo.underside.be/en/gdpr",
     "google_verification": "https://odoo.underside.be/google7af869e5e0e8f999.html"

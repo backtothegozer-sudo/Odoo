@@ -10,6 +10,14 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://odoo.underside.be/odoo-19-4-analyse-migration.html</loc><lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-19-4-analyse-migration.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-19-4-upgrade-analysis.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-19-4-analyse-migration.html" /><changefreq>weekly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://odoo.underside.be/en/odoo-19-4-upgrade-analysis.html</loc><lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-19-4-analyse-migration.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-19-4-upgrade-analysis.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-19-4-analyse-migration.html" /><changefreq>weekly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://odoo.underside.be/blog</loc>
     <lastmod>2026-08-13</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
