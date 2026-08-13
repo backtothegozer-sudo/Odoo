@@ -364,21 +364,38 @@
       margin-top: 16px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 14px;
+      padding: 10px 14px 10px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.05);
       color: rgba(245, 247, 251, 0.78);
       font-size: 13px;
       line-height: 1.4;
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
-    .partner-proof a {
+    .partner-proof img {
+      display: block;
+      width: 112px;
+      height: auto;
+      flex: 0 0 auto;
+    }
+    .partner-proof span {
+      max-width: 18ch;
+    }
+    .partner-proof strong {
+      display: block;
       color: #fff;
-      text-decoration: underline;
-      text-decoration-color: rgba(230, 75, 255, 0.5);
-      text-underline-offset: 4px;
-      transition: text-decoration-color 0.2s ease, color 0.2s ease;
+      font-weight: 600;
     }
-    .partner-proof a:hover {
+    .partner-proof:hover {
+      transform: translateY(-2px);
+      border-color: rgba(230, 75, 255, 0.42);
+      background: rgba(255, 255, 255, 0.075);
+    }
+    .partner-proof:hover strong {
       color: #f3dbff;
-      text-decoration-color: rgba(230, 75, 255, 0.95);
     }
     .hero-trust {
       margin-top: 24px;
@@ -802,6 +819,12 @@
       .contact-actions .cta {
         width: 100%;
       }
+      .partner-proof {
+        gap: 11px;
+      }
+      .partner-proof img {
+        width: 96px;
+      }
     }
 
     @keyframes rise {
@@ -869,10 +892,10 @@
             Underside vous accompagne de l'analyse à la mise en production: cadrage fonctionnel, configuration des modules,
             développement sur-mesure, migration de données, formation et support. Objectif: un ERP utile, adopté et durable.
           </p>
-          <p class="partner-proof reveal delay-3">
-            Partenaire Odoo officiel:
-            <a href="https://www.odoo.com/fr_FR/partners/underside-9315588" target="_blank" rel="noopener">voir notre fiche sur odoo.com</a>
-          </p>
+          <a class="partner-proof reveal delay-3" href="https://www.odoo.com/fr_FR/partners/underside-9315588" target="_blank" rel="noopener" aria-label="Voir le profil officiel d'Underside, partenaire Odoo">
+            <img src="media/partners/odoo-partner.png" alt="Odoo Partner" width="1200" height="600" />
+            <span><strong>Partenaire officiel</strong>Voir notre profil sur odoo.com</span>
+          </a>
           <div class="hero-actions reveal delay-2">
             <a class="cta" href="#contact">Parler de mon projet</a>
             <a class="cta secondary" href="mailto:info@underside.be">Écrire à l'équipe</a>
