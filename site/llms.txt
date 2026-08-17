@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-vida-tva-numerique-europe-2030.html
 - https://odoo.underside.be/odoo-e-reporting-belgique-2026.html
 - https://odoo.underside.be/odoo-19-4-analyse-migration.html
 - https://odoo.underside.be/odoo-facturation-electronique-france-tolerance-2026.html
@@ -90,6 +91,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-vida-digital-vat-europe-2030.html
 - https://odoo.underside.be/en/odoo-belgium-e-reporting-2026.html
 - https://odoo.underside.be/en/odoo-19-4-upgrade-analysis.html
 - https://odoo.underside.be/en/odoo-france-e-invoicing-tolerance-2026.html
