@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://odoo.underside.be/odoo-droit-douane-3-euros-ecommerce-2026.html</loc><lastmod>2026-08-22</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-droit-douane-3-euros-ecommerce-2026.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-ecommerce-eu-3-euro-customs-duty-2026.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-droit-douane-3-euros-ecommerce-2026.html" /><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://odoo.underside.be/en/odoo-ecommerce-eu-3-euro-customs-duty-2026.html</loc><lastmod>2026-08-22</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-droit-douane-3-euros-ecommerce-2026.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-ecommerce-eu-3-euro-customs-duty-2026.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-droit-douane-3-euros-ecommerce-2026.html" /><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://odoo.underside.be/odoo-etiquettes-electroniques-pricer.html</loc><lastmod>2026-08-21</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-etiquettes-electroniques-pricer.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-electronic-shelf-labels-pricer.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-etiquettes-electroniques-pricer.html" /><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://odoo.underside.be/en/odoo-electronic-shelf-labels-pricer.html</loc><lastmod>2026-08-21</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-etiquettes-electroniques-pricer.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-electronic-shelf-labels-pricer.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-etiquettes-electroniques-pricer.html" /><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://odoo.underside.be/odoo-json-2-migration-api-2028.html</loc><lastmod>2026-08-20</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-json-2-migration-api-2028.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-json-2-api-migration-2028.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-json-2-migration-api-2028.html" /><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -37,7 +39,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/blog</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
