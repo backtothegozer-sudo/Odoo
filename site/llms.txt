@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-19-gestion-expeditions-transport.html
 - https://odoo.underside.be/odoo-droit-douane-3-euros-ecommerce-2026.html
 - https://odoo.underside.be/odoo-etiquettes-electroniques-pricer.html
 - https://odoo.underside.be/odoo-json-2-migration-api-2028.html
@@ -96,6 +97,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-19-dispatch-management.html
 - https://odoo.underside.be/en/odoo-ecommerce-eu-3-euro-customs-duty-2026.html
 - https://odoo.underside.be/en/odoo-electronic-shelf-labels-pricer.html
 - https://odoo.underside.be/en/odoo-json-2-api-migration-2028.html
