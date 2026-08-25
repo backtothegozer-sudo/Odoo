@@ -22,6 +22,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-19-mode-hors-ligne-continuite.html
 - https://odoo.underside.be/odoo-19-stockage-cloud-pieces-jointes.html
 - https://odoo.underside.be/odoo-19-gestion-expeditions-transport.html
 - https://odoo.underside.be/odoo-droit-douane-3-euros-ecommerce-2026.html
@@ -98,6 +99,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-19-offline-mode-business-continuity.html
 - https://odoo.underside.be/en/odoo-19-cloud-storage-attachments.html
 - https://odoo.underside.be/en/odoo-19-dispatch-management.html
 - https://odoo.underside.be/en/odoo-ecommerce-eu-3-euro-customs-duty-2026.html
