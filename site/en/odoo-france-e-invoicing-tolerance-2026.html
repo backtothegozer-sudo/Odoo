@@ -48,17 +48,18 @@
     @media (max-width:920px){ .nav { flex-direction:column; align-items:flex-start; } .nav-links { flex-wrap:wrap; } .wrap { padding-left:18px; padding-right:18px; } }
   </style>
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"France e-invoicing 2026 with Odoo: tolerance does not postpone the deadline","description":"What France’s launch tolerance changes and the Odoo controls businesses must complete before September 1, 2026.","datePublished":"2026-08-13","dateModified":"2026-08-13","inLanguage":"en","author":{"@type":"Organization","name":"Underside"},"publisher":{"@type":"Organization","name":"Underside"},"mainEntityOfPage":"https://odoo.underside.be/en/odoo-france-e-invoicing-tolerance-2026.html"}
+    {"@context":"https://schema.org","@type":"Article","headline":"France e-invoicing 2026 with Odoo: tolerance does not postpone the deadline","description":"What France’s launch tolerance changes and the Odoo controls businesses must complete before September 1, 2026.","datePublished":"2026-08-13","dateModified":"2026-08-30","inLanguage":"en","author":{"@type":"Organization","name":"Underside"},"publisher":{"@type":"Organization","name":"Underside"},"mainEntityOfPage":"https://odoo.underside.be/en/odoo-france-e-invoicing-tolerance-2026.html"}
   </script>
 </head>
 <body>
   <header><nav class="nav"><a class="brand" href="index.html"><img src="../Underside2018_blanc.png" alt="Underside" /></a><button class="burger-btn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-links"><a href="index.html#services">Services</a><a href="index.html#modules">Modules</a><a href="index.html#method">Method</a><a href="index.html#clients">References</a><a class="active" href="blog.html">Blog</a><a href="index.html#contact">Contact</a></div></nav></header>
   <main class="wrap">
-    <p class="meta">August 13, 2026 · 9 min · Electronic invoicing</p>
+    <p class="meta">August 13, 2026 · updated August 30, 2026 · 10 min · Electronic invoicing</p>
     <h1>France e-invoicing 2026 with Odoo: tolerance does not postpone the deadline</h1>
     <article>
       <p>The French government has confirmed a tolerant, supportive approach at the start of mandatory e-invoicing. That is reassuring, but it is not a postponement: the <strong>September 1, 2026</strong> timetable remains in force. Every VAT-liable business established in France must be able to receive electronic invoices; large companies and mid-sized enterprises must also issue them and report the required data.</p>
       <p>For an <strong>Odoo France</strong> project, configuration, data preparation, testing, and governance therefore remain urgent. Tolerance offers protection when a business acting in good faith encounters a launch problem; it does not turn a lack of preparation into a compliance strategy.</p>
+      <div class="box"><p><strong>August 30 update:</strong> France’s tax authority updated its preparation hub and practical launch guide on August 27. With two days left, the priority is no longer to add features: each entity must be able to demonstrate registration, complete its critical scenarios, and organize exception handling from day one.</p></div>
       <h2>What the announcement changes—and what it does not</h2>
       <p>The July 11 statement says that the administration will prioritize dialogue, good faith, and proportionality during launch. It indicates that businesses acting in good faith will not initially be sanctioned when they encounter a problem and take the necessary steps to correct it. The related practical guide addresses blocked invoices, payment and accounting treatment, deduction rights, and platform outages.</p>
       <p>However, it does not move the September 2026 receipt obligation, the issue obligation for large and mid-sized businesses, or the September 2027 issue deadline for SMEs and micro-businesses. Nor does an ordinary PDF sent by email become a compliant electronic invoice.</p>
@@ -67,6 +68,7 @@
       <p>Domestic B2B, B2C, cross-border B2B, public-sector, and exempt transactions must be distinguished. In Odoo, they do not all follow the same route: domestic B2B falls under e-invoicing, while certain B2C and cross-border operations feed e-reporting. Finance and tax advisers should validate this matrix rather than inferring it from customer type alone.</p>
       <h3>2. Activate and review the French configuration</h3>
       <p>Odoo 19 documentation describes the <code>l10n_fr_pdp</code> module, authentication by a legal representative, SIREN registration, and e-reporting settings. Odoo states that it is an approved platform and supports Factur-X, UBL, and CII for receipt, with UBL for issue. The project team must verify the database version, installed modules, and options actually available before promising a production flow.</p>
+      <p>In Odoo’s documented workflow, the pilot option only applies until September 1, 2026, and a change to that option takes effect the following day. Completing the setup also registers the business in the directory from the next day; registration on the French network automatically includes Peppol registration. These delays make a last-minute activation risky unless the identifier, incoming journal, and actual receiving capability are checked again the following day.</p>
       <h3>3. Clean the data used to address invoices</h3>
       <p>Routing depends on reliable master data. SIREN, country, legal identity, billing and delivery addresses, taxes, and transaction category all need review. From September 1, 2026, the reform also adds four invoice particulars: the customer’s SIREN, transaction category, the option to account for VAT on debits where applicable, and the full delivery address when different from the billing address.</p>
       <h3>4. Test the full lifecycle, not just sending</h3>
@@ -85,10 +87,13 @@
         <li>Document fallback operation, escalation, and incident evidence.</li>
         <li>Monitor statuses and exceptions daily after launch.</li>
       </ul>
+      <h2>The final 48-hour control</h2>
+      <p>Each French company needs evidence of its directory routing, a receiving test, and—when it enters the issue mandate in 2026—an issuing test. Also verify the incoming journal, outbound queue, accountants’ permissions, and who may correct a business partner or handle a rejection. If activation was just changed, schedule a next-day check explicitly instead of treating the confirmation screen as proof of production readiness.</p>
       <h2>Official sources</h2>
       <ul>
         <li><a href="https://presse.economie.gouv.fr/facturation-electronique-david-amiel-ministre-de-laction-et-des-comptes-publics-annonce-une-approche-de-tolerance-et-de-bienveillance-dans-la-mise-en-oeuvre-de-la-reforme-de-la-facturation-electroniq/" target="_blank" rel="noopener">French Ministry for the Economy—July 11, 2026 statement</a>.</li>
         <li><a href="https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises" target="_blank" rel="noopener">French Ministry for the Economy—timetable and requirements</a>.</li>
+        <li><a href="https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique" target="_blank" rel="noopener">French tax authority—preparation hub and practical guide, updated August 27, 2026</a>.</li>
         <li><a href="https://www.odoo.com/documentation/19.0/applications/finance/fiscal_localizations/france.html" target="_blank" rel="noopener">Odoo 19 documentation—France localization and e-invoicing</a>.</li>
       </ul>
       <div class="box"><p>Underside helps businesses scope, configure, and test invoicing flows in Odoo. A focused pre-cutover review separates the data, process, and integration gaps that genuinely threaten accounting continuity.</p></div>
