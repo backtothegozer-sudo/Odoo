@@ -7,11 +7,13 @@
 
 ## Primary Pages (FR)
 - https://odoo.underside.be/
+- https://odoo.underside.be/odoo-entreprises-travaux-equipes-terrain.html
 - https://odoo.underside.be/blog
 - https://odoo.underside.be/gdpr
 
 ## Primary Pages (EN)
 - https://odoo.underside.be/en/
+- https://odoo.underside.be/en/odoo-contractors-field-teams.html
 - https://odoo.underside.be/en/blog
 - https://odoo.underside.be/en/gdpr
 

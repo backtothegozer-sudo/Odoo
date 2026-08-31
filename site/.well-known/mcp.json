@@ -1,6 +1,6 @@
 {
   "name": "Underside Odoo MCP Discovery",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "MCP-ready discovery layer for Odoo implementation content in French and English.",
   "website": "https://odoo.underside.be/",
   "updated_at": "2026-08-31",
@@ -10,6 +10,8 @@
     "llms_txt": "https://odoo.underside.be/llms.txt",
     "homepage_fr": "https://odoo.underside.be/",
     "homepage_en": "https://odoo.underside.be/en/",
+    "field_operations_fr": "https://odoo.underside.be/odoo-entreprises-travaux-equipes-terrain.html",
+    "field_operations_en": "https://odoo.underside.be/en/odoo-contractors-field-teams.html",
     "blog_fr": "https://odoo.underside.be/blog",
     "blog_en": "https://odoo.underside.be/en/blog",
     "latest_article_fr": "https://odoo.underside.be/odoo-19-webhooks-studio-securite.html",
