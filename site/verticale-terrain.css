@@ -36,6 +36,9 @@ header{position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255
 .card .num{display:block;margin-bottom:16px;color:#ef86ff;font-size:13px;font-weight:800;letter-spacing:.1em}
 .card h3{margin:0 0 10px;font-size:19px}
 .card p{margin:0;color:var(--muted);line-height:1.65;font-size:15px}
+.workflow-viewport{position:relative}
+.workflow-viewport::after{content:"";position:absolute;z-index:3;top:25px;right:0;bottom:18px;width:clamp(54px,8vw,100px);pointer-events:none;background:linear-gradient(90deg,rgba(6,6,7,0),rgba(6,6,7,.9))}
+.workflow-scroll-hint{display:block;margin:0 8px 7px 0;color:#f09aff;font-size:11px;font-weight:800;letter-spacing:.08em;text-align:right;text-transform:uppercase}
 .workflow{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 18px;scrollbar-color:var(--accent) transparent}
 .flow-step{position:relative;flex:0 0 180px;min-height:114px;padding:20px 18px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--muted);font-size:14px;line-height:1.4}
 .flow-step::after{content:"→";position:absolute;right:-12px;top:42px;color:#ed78ff;font-size:20px;z-index:2}
@@ -115,6 +118,7 @@ footer{padding:30px 24px 60px;color:rgba(203,210,220,.9);font-size:13px}
 .hero-visual .hero-panel{width:calc(100% - 44px);margin:-90px auto 0}
 .workflow-intro{grid-template-columns:1fr;gap:28px}
 .field-photo-pair{min-height:440px}
+.workflow-viewport::after{width:72px}
 }
 @media(max-width:620px){
 .hero{gap:22px}
@@ -126,4 +130,6 @@ footer{padding:30px 24px 60px;color:rgba(203,210,220,.9);font-size:13px}
 .field-photo{position:relative;inset:auto;aspect-ratio:3/2;border-radius:18px}
 .field-photo-coordination{z-index:auto}
 .field-photo figcaption{font-size:10px}
+.workflow-scroll-hint{display:none}
+.workflow-viewport::after{top:0;bottom:18px;width:38px;background:linear-gradient(90deg,rgba(6,6,7,0),rgba(6,6,7,.74))}
 }
