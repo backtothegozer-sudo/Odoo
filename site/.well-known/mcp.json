@@ -1,9 +1,9 @@
 {
   "name": "Underside Odoo MCP Discovery",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "MCP-ready discovery layer for Odoo implementation content in French and English.",
   "website": "https://odoo.underside.be/",
-  "updated_at": "2026-08-29",
+  "updated_at": "2026-08-31",
   "resources": {
     "sitemap": "https://odoo.underside.be/sitemap.xml",
     "robots": "https://odoo.underside.be/robots.txt",
