@@ -561,20 +561,22 @@
     .vertical-grid {
       margin-top: 24px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
       gap: 16px;
     }
-    .vertical-card { min-width: 0; }
+    .vertical-card {
+      min-width: 0;
+      container-type: inline-size;
+    }
     .vertical-card-link {
-      min-height: 250px;
-      display: flex;
-      flex-direction: column;
+      min-height: 290px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(260px, 2fr);
       position: relative;
       overflow: hidden;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 20px;
-      padding: 22px;
       box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
       transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
@@ -597,6 +599,49 @@
     .vertical-card-link:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 3px;
+    }
+    .vertical-card-content {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+      position: relative;
+      z-index: 2;
+    }
+    .vertical-card-media {
+      min-width: 0;
+      min-height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .vertical-card-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--card) 0, transparent 24%);
+      pointer-events: none;
+    }
+    .vertical-card-media img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: 52% center;
+      transition: transform 0.45s ease;
+    }
+    .vertical-card-link:hover .vertical-card-media img { transform: scale(1.025); }
+    @container (max-width: 520px) {
+      .vertical-card-link {
+        min-height: 0;
+        grid-template-columns: 1fr;
+      }
+      .vertical-card-media {
+        min-height: 220px;
+        aspect-ratio: 3 / 2;
+      }
+      .vertical-card-media::after {
+        background: linear-gradient(180deg, var(--card) 0, transparent 24%);
+      }
     }
     .vertical-card h3 {
       margin: 0 0 10px;
@@ -839,9 +884,6 @@
       .cta.nav-cta {
         display: none;
       }
-      .vertical-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
     }
 
     @media (max-width: 900px) {
@@ -901,7 +943,18 @@
         width: 96px;
       }
       .vertical-grid { grid-template-columns: 1fr; }
-      .vertical-card-link { min-height: 0; }
+      .vertical-card-link {
+        min-height: 0;
+        grid-template-columns: 1fr;
+      }
+      .vertical-card-content { padding: 24px; }
+      .vertical-card-media {
+        min-height: 220px;
+        aspect-ratio: 3 / 2;
+      }
+      .vertical-card-media::after {
+        background: linear-gradient(180deg, var(--card) 0, transparent 24%);
+      }
     }
 
     @keyframes rise {
@@ -1035,9 +1088,23 @@
           <!-- Duplicate this article when a new industry vertical is ready. -->
           <article class="vertical-card reveal">
             <a class="vertical-card-link" href="odoo-entreprises-travaux-equipes-terrain.html">
-              <h3>Travaux &amp; équipes terrain</h3>
-              <p>Devis, chantiers, planning, techniciens, achats, stocks, interventions, contrats et rentabilité dans un même environnement.</p>
-              <span class="vertical-card-cta">Découvrir cette verticale</span>
+              <div class="vertical-card-content">
+                <h3>Travaux &amp; équipes terrain</h3>
+                <p>Devis, chantiers, planning, techniciens, achats, stocks, interventions, contrats et rentabilité dans un même environnement.</p>
+                <span class="vertical-card-cta">Découvrir cette verticale</span>
+              </div>
+              <div class="vertical-card-media">
+                <img
+                  src="assets/verticales/travaux/worker-walkie-talkie-720.webp"
+                  srcset="assets/verticales/travaux/worker-walkie-talkie-720.webp 720w, assets/verticales/travaux/worker-walkie-talkie-1200.webp 1200w"
+                  sizes="(max-width: 720px) calc(100vw - 36px), 40vw"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Technicien coordonnant une intervention sur le terrain"
+                >
+              </div>
             </a>
           </article>
         </div>
