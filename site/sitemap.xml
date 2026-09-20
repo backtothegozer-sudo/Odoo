@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://odoo.underside.be/odoo-retours-avoirs-belgique-france.html</loc><lastmod>2026-09-20</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-retours-avoirs-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-returns-credit-notes-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-retours-avoirs-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odoo.underside.be/en/odoo-returns-credit-notes-belgium-france.html</loc><lastmod>2026-09-20</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-retours-avoirs-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-returns-credit-notes-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-retours-avoirs-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-lots-peremption-belgique-france.html</loc><lastmod>2026-09-19</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-lots-peremption-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-lots-expiry-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-lots-peremption-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/en/odoo-lots-expiry-belgium-france.html</loc><lastmod>2026-09-19</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-lots-peremption-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-lots-expiry-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-lots-peremption-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-reapprovisionnement-belgique-france.html</loc><lastmod>2026-09-18</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-reapprovisionnement-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-replenishment-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-reapprovisionnement-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -55,7 +57,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/blog</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
@@ -847,7 +849,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/en/blog</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
