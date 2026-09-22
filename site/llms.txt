@@ -24,6 +24,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-inventaires-tournants-belgique-france.html
 - https://odoo.underside.be/odoo-frais-approche-belgique-france.html
 - https://odoo.underside.be/odoo-retours-avoirs-belgique-france.html
 - https://odoo.underside.be/odoo-lots-peremption-belgique-france.html
@@ -108,6 +109,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-cycle-counts-belgium-france.html
 - https://odoo.underside.be/en/odoo-landed-costs-belgium-france.html
 - https://odoo.underside.be/en/odoo-returns-credit-notes-belgium-france.html
 - https://odoo.underside.be/en/odoo-lots-expiry-belgium-france.html
