@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://odoo.underside.be/odoo-stock-consignation-belgique-france.html</loc><lastmod>2026-09-25</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-stock-consignation-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-consignment-stock-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-stock-consignation-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odoo.underside.be/en/odoo-consignment-stock-belgium-france.html</loc><lastmod>2026-09-25</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-stock-consignation-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-consignment-stock-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-stock-consignation-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-controle-factures-fournisseurs-belgique-france.html</loc><lastmod>2026-09-24</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-controle-factures-fournisseurs-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-vendor-bill-control-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-controle-factures-fournisseurs-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/en/odoo-vendor-bill-control-belgium-france.html</loc><lastmod>2026-09-24</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-controle-factures-fournisseurs-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-vendor-bill-control-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-controle-factures-fournisseurs-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-commandes-ouvertes-belgique-france.html</loc><lastmod>2026-09-23</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-commandes-ouvertes-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-blanket-orders-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-commandes-ouvertes-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -65,7 +67,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/blog</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
@@ -857,7 +859,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/en/blog</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />

@@ -24,6 +24,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-stock-consignation-belgique-france.html
 - https://odoo.underside.be/odoo-controle-factures-fournisseurs-belgique-france.html
 - https://odoo.underside.be/odoo-commandes-ouvertes-belgique-france.html
 - https://odoo.underside.be/odoo-inventaires-tournants-belgique-france.html
@@ -111,6 +112,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-consignment-stock-belgium-france.html
 - https://odoo.underside.be/en/odoo-vendor-bill-control-belgium-france.html
 - https://odoo.underside.be/en/odoo-blanket-orders-belgium-france.html
 - https://odoo.underside.be/en/odoo-cycle-counts-belgium-france.html
