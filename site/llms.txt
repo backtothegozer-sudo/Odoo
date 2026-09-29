@@ -24,6 +24,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-cross-docking-belgique-france.html
 - https://odoo.underside.be/odoo-conditions-paiement-belgique-france.html
 - https://odoo.underside.be/odoo-listes-prix-belgique-france.html
 - https://odoo.underside.be/odoo-livraison-directe-belgique-france.html
@@ -115,6 +116,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-cross-docking-belgium-france.html
 - https://odoo.underside.be/en/odoo-payment-terms-belgium-france.html
 - https://odoo.underside.be/en/odoo-pricelists-belgium-france.html
 - https://odoo.underside.be/en/odoo-dropshipping-belgium-france.html
