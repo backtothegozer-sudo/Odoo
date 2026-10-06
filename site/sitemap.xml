@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://odoo.underside.be/odoo-postes-travail-dependances-belgique-france.html</loc><lastmod>2026-10-06</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-postes-travail-dependances-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-work-centers-dependencies-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-postes-travail-dependances-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odoo.underside.be/en/odoo-work-centers-dependencies-belgium-france.html</loc><lastmod>2026-10-06</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-postes-travail-dependances-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-work-centers-dependencies-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-postes-travail-dependances-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odoo.underside.be/odoo-valorisation-stocks-odoo-19-belgique-france.html</loc><lastmod>2026-10-04</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-valorisation-stocks-odoo-19-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-19-inventory-valuation-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-valorisation-stocks-odoo-19-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odoo.underside.be/en/odoo-19-inventory-valuation-belgium-france.html</loc><lastmod>2026-10-04</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-valorisation-stocks-odoo-19-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-19-inventory-valuation-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-valorisation-stocks-odoo-19-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-categories-stockage-belgique-france.html</loc><lastmod>2026-10-03</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-categories-stockage-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-storage-categories-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-categories-stockage-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/en/odoo-storage-categories-belgium-france.html</loc><lastmod>2026-10-03</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-categories-stockage-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-storage-categories-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-categories-stockage-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-regles-rangement-belgique-france.html</loc><lastmod>2026-10-02</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-regles-rangement-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-putaway-rules-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-regles-rangement-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -83,7 +87,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/blog</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
@@ -875,7 +879,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/en/blog</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />

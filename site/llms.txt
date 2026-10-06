@@ -24,6 +24,8 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-postes-travail-dependances-belgique-france.html
+- https://odoo.underside.be/odoo-valorisation-stocks-odoo-19-belgique-france.html
 - https://odoo.underside.be/odoo-categories-stockage-belgique-france.html
 - https://odoo.underside.be/odoo-regles-rangement-belgique-france.html
 - https://odoo.underside.be/odoo-points-controle-qualite-belgique-france.html
@@ -120,6 +122,8 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-work-centers-dependencies-belgium-france.html
+- https://odoo.underside.be/en/odoo-19-inventory-valuation-belgium-france.html
 - https://odoo.underside.be/en/odoo-storage-categories-belgium-france.html
 - https://odoo.underside.be/en/odoo-putaway-rules-belgium-france.html
 - https://odoo.underside.be/en/odoo-quality-control-points-belgium-france.html
