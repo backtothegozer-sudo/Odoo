@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://odoo.underside.be/odoo-maintenance-preventive-belgique-france.html</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-maintenance-preventive-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-preventive-maintenance-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-maintenance-preventive-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odoo.underside.be/en/odoo-preventive-maintenance-belgium-france.html</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-maintenance-preventive-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-preventive-maintenance-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-maintenance-preventive-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-alertes-qualite-belgique-france.html</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-alertes-qualite-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-quality-alerts-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-alertes-qualite-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/en/odoo-quality-alerts-belgium-france.html</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-alertes-qualite-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-quality-alerts-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-alertes-qualite-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-plan-directeur-production-belgique-france.html</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-plan-directeur-production-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-master-production-schedule-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-plan-directeur-production-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -95,7 +97,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/blog</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
@@ -887,7 +889,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/en/blog</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
