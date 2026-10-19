@@ -24,6 +24,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-cartes-cadeaux-ewallet-belgique-france.html
 - https://odoo.underside.be/odoo-conditionnements-belgique-france.html
 - https://odoo.underside.be/odoo-variantes-produits-belgique-france.html
 - https://odoo.underside.be/odoo-maintenance-corrective-belgique-france.html
@@ -130,6 +131,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-gift-cards-ewallet-belgium-france.html
 - https://odoo.underside.be/en/odoo-packaging-belgium-france.html
 - https://odoo.underside.be/en/odoo-product-variants-belgium-france.html
 - https://odoo.underside.be/en/odoo-corrective-maintenance-belgium-france.html
