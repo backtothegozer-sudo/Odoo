@@ -24,6 +24,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-fidelite-promotions-belgique-france.html
 - https://odoo.underside.be/odoo-commissions-commerciales-belgique-france.html
 - https://odoo.underside.be/odoo-paiements-en-ligne-belgique-france.html
 - https://odoo.underside.be/odoo-delivrabilite-email-marketing-belgique-france.html
@@ -134,6 +135,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-loyalty-promotions-belgium-france.html
 - https://odoo.underside.be/en/odoo-sales-commissions-belgium-france.html
 - https://odoo.underside.be/en/odoo-online-payments-belgium-france.html
 - https://odoo.underside.be/en/odoo-email-marketing-deliverability-belgium-france.html
