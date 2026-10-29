@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://odoo.underside.be/odoo-modeles-emails-belgique-france.html</loc><lastmod>2026-10-29</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-modeles-emails-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-email-templates-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-modeles-emails-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odoo.underside.be/en/odoo-email-templates-belgium-france.html</loc><lastmod>2026-10-29</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-modeles-emails-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-email-templates-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-modeles-emails-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-bureau-inscription-evenements-belgique-france.html</loc><lastmod>2026-10-28</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-bureau-inscription-evenements-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-event-registration-desk-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-bureau-inscription-evenements-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/en/odoo-event-registration-desk-belgium-france.html</loc><lastmod>2026-10-28</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-bureau-inscription-evenements-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-event-registration-desk-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-bureau-inscription-evenements-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-social-marketing-campagnes-belgique-france.html</loc><lastmod>2026-10-27</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-social-marketing-campagnes-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-social-marketing-campaigns-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-social-marketing-campagnes-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -119,7 +121,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/blog</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
@@ -911,7 +913,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/en/blog</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
