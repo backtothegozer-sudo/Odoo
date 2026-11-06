@@ -24,6 +24,8 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-19-emplacements-defaillance-belgique-france.html
+- https://odoo.underside.be/odoo-19-calendrier-maintenance-belgique-france.html
 - https://odoo.underside.be/odoo-19-fiches-intervention-belgique-france.html
 - https://odoo.underside.be/odoo-19-taches-recurrentes-belgique-france.html
 - https://odoo.underside.be/odoo-19-tableau-bord-projet-belgique-france.html
@@ -142,6 +144,8 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-19-failure-locations-belgium-france.html
+- https://odoo.underside.be/en/odoo-19-maintenance-calendar-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-field-service-worksheets-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-recurring-tasks-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-project-dashboard-belgium-france.html
