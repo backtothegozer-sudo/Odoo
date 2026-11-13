@@ -24,6 +24,9 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-19-planification-production-belgique-france.html
+- https://odoo.underside.be/odoo-19-activites-pilotage-belgique-france.html
+- https://odoo.underside.be/odoo-19-click-collect-belgique-france.html
 - https://odoo.underside.be/odoo-19-modeles-devis-belgique-france.html
 - https://odoo.underside.be/odoo-19-demandes-maintenance-belgique-france.html
 - https://odoo.underside.be/odoo-19-fiche-equipement-maintenance-belgique-france.html
@@ -148,6 +151,9 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-19-manufacturing-scheduling-belgium-france.html
+- https://odoo.underside.be/en/odoo-19-activities-governance-belgium-france.html
+- https://odoo.underside.be/en/odoo-19-click-and-collect-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-quotation-templates-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-maintenance-requests-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-equipment-record-maintenance-belgium-france.html
