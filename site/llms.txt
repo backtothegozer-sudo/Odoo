@@ -24,6 +24,7 @@
 - https://odoo.underside.be/google7af869e5e0e8f999.html
 
 ## Blog Articles (FR)
+- https://odoo.underside.be/odoo-20-numerisation-factures-fournisseurs-belgique-france.html
 - https://odoo.underside.be/odoo-19-flux-logistiques-etapes-belgique-france.html
 - https://odoo.underside.be/odoo-19-ordres-travail-belgique-france.html
 - https://odoo.underside.be/odoo-19-planification-production-belgique-france.html
@@ -153,6 +154,7 @@
 - https://odoo.underside.be/odoo-integrateur-belgique-france.html
 
 ## Blog Articles (EN)
+- https://odoo.underside.be/en/odoo-20-vendor-bill-digitization-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-warehouse-flows-steps-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-work-orders-belgium-france.html
 - https://odoo.underside.be/en/odoo-19-manufacturing-scheduling-belgium-france.html
