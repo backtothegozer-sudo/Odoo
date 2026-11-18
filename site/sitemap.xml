@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://odoo.underside.be/odoo-20-documents-gouvernance-belgique-france.html</loc><lastmod>2026-11-18</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-20-documents-gouvernance-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-20-documents-governance-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-20-documents-gouvernance-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odoo.underside.be/en/odoo-20-documents-governance-belgium-france.html</loc><lastmod>2026-11-18</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-20-documents-gouvernance-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-20-documents-governance-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-20-documents-gouvernance-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-20-numerisation-factures-fournisseurs-belgique-france.html</loc><lastmod>2026-11-17</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-20-numerisation-factures-fournisseurs-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-20-vendor-bill-digitization-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-20-numerisation-factures-fournisseurs-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/en/odoo-20-vendor-bill-digitization-belgium-france.html</loc><lastmod>2026-11-17</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-20-numerisation-factures-fournisseurs-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-20-vendor-bill-digitization-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-20-numerisation-factures-fournisseurs-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://odoo.underside.be/odoo-19-flux-logistiques-etapes-belgique-france.html</loc><lastmod>2026-11-16</lastmod><xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/odoo-19-flux-logistiques-etapes-belgique-france.html" /><xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/odoo-19-warehouse-flows-steps-belgium-france.html" /><xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/odoo-19-flux-logistiques-etapes-belgique-france.html" /><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -151,7 +153,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/blog</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
@@ -943,7 +945,7 @@
   </url>
   <url>
     <loc>https://odoo.underside.be/en/blog</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://odoo.underside.be/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://odoo.underside.be/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoo.underside.be/blog" />
